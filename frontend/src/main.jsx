@@ -1,35 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import { AuthContextProvider, AuthContext } from './context/AuthContext';
-import App from './App';
-import './index.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarComponent from './components/NavBar';
-import { MovieContextProvider } from './context/MovieContext';
-import { EventsContextProvider } from './context/EventsContext';
+// src/main.jsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App.jsx";
+import "./index.css";
+import { AuthContextProvider } from "./context/AuthContext";
 
-function Root() {
-  const auth = React.useContext(AuthContext);
+const enableMocking = async () => {
+  if (!import.meta.env.DEV) {
+    return;
+  }
 
-  return (
-    <>
-      {auth?.user && <NavbarComponent />}
-      <App />
-    </>
+  const { worker } = await import("./mocks/browser");
+  await worker.start({
+    onUnhandledRequest: "bypass",
+  });
+};
+
+enableMocking().then(() => {
+  ReactDOM.createRoot(document.getElementById("root")).render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <AuthContextProvider>
+          <App />
+        </AuthContextProvider>
+      </BrowserRouter>
+    </React.StrictMode>
   );
-}
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <AuthContextProvider>
-        <MovieContextProvider>
-          <EventsContextProvider>
-            <Root />
-          </EventsContextProvider>
-        </MovieContextProvider>
-      </AuthContextProvider>
-    </BrowserRouter>
-  </React.StrictMode>
-);
+});

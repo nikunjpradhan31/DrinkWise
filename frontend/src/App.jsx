@@ -1,40 +1,47 @@
+// src/App.jsx
 import { useContext } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+import { AuthContext } from "./context/AuthContext";
+import NavBar from "./components/NavBar";
+
 import LoginPage from "./pages/Login";
 import RegisterPage from "./pages/Register";
-import { AuthContext } from "./context/AuthContext";
-import MoviesPage from "./pages/Movies";
-import MovieDetailsPage from "./pages/SIngleMovie";
-import WatchlistPage from "./pages/WatchList";
-import FriendsPage from "./pages/Friends";
-import SearchMoviesPage from "./pages/SearchMovies";
-import UserPage from "./pages/UserPage";
-import './index.css';
+import LandingPage from "./pages/Landing";
+import DrinkPage from "./pages/DrinkPage";
+import AccountPage from "./pages/Account";
 
 const App = () => {
-    const authContext = useContext(AuthContext);
+  const auth = useContext(AuthContext);
+  if (!auth) {
+    throw new Error("AuthContext must be used within AuthContextProvider");
+  }
+  const { user } = auth;
 
-    if (!authContext) {
-        throw new Error("AuthContext must be used within an AuthContextProvider");
-    }
+  const PrivateRoute = (Component) =>
+    user ? <Component /> : <Navigate to="/login" replace />;
 
-    const { user } = authContext;
-
-    return (
-        <Routes>
-            <Route path="/" element={user ? <MoviesPage /> : <LoginPage />} />
-            <Route path="/register" element={user ? <MoviesPage /> : <RegisterPage />} />
-            <Route path="/login" element={user ? <MoviesPage /> : <LoginPage />} />
-            <Route path="*" element={<Navigate to="/" />} />
-            <Route path="/movie/:id" element={<MovieDetailsPage />} />
-            <Route path="/watchlist" element={<WatchlistPage />} />
-            <Route path="/search-movies" element={<SearchMoviesPage />} />
-            <Route path="/profile/:user_id" element={<UserPage />} />
-
-            {/* <Route path="/events" element={<EventsPage />} /> */}
-            <Route path="/friends" element={<FriendsPage />} />
-        </Routes>
-    );
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">
+      {user && <NavBar />}
+      <Routes>
+        <Route
+          path="/"
+          element={user ? <LandingPage /> : <Navigate to="/login" replace />}
+        />
+        <Route
+          path="/login"
+          element={!user ? <LoginPage /> : <Navigate to="/" replace />}
+        />
+        <Route
+          path="/register"
+          element={!user ? <RegisterPage /> : <Navigate to="/" replace />}
+        />
+        <Route path="/drink/:id" element={PrivateRoute(DrinkPage)} />
+        <Route path="/account" element={PrivateRoute(AccountPage)} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </div>
+  );
 };
 
 export default App;

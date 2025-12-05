@@ -1,9 +1,20 @@
+// src/utils/axiosHelper.js
 import axios from "axios";
-export const axiosInstance = axios.create({baseURL: import.meta.env.VITE_BACKEND_URL,headers: {'Content-Type': 'application/json'}});
 
+// Base URL comes from Vite env or falls back to localhost
+const baseURL =
+  import.meta.env.VITE_BACKEND_URL || "http://localhost:8000";
+
+export const axiosInstance = axios.create({
+  baseURL,
+  withCredentials: false,
+});
+
+// Optional: basic response error logging
 axiosInstance.interceptors.response.use(
-    (response) => response,
-    (error) => {
-        return Promise.reject(error.response ? error.response.data : error);
-    }
+  (response) => response,
+  (error) => {
+    console.error("API error:", error?.response || error);
+    throw error?.response?.data || error;
+  }
 );
