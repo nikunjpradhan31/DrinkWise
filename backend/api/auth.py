@@ -232,7 +232,7 @@ async def resend_verification_email(
     
     try:
         email_obj = validate_email(email, check_deliverability=False)
-        email_obj = email_obj.email
+        email_obj = email_obj.normalized
 
     except:
         raise HTTPException(
@@ -271,7 +271,7 @@ async def verify_email(
     
     try:
         email_obj = validate_email(email, check_deliverability=False)
-        email_obj = email_obj.email
+        email_obj = email_obj.normalized
     except:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
@@ -333,7 +333,7 @@ async def check_email_availability(
     
     try:
         email_obj = validate_email(email, check_deliverability=False)
-        email_obj = email_obj.email
+        email_obj = email_obj.normalized
     except:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
@@ -365,7 +365,7 @@ async def request_password_reset(
     
     try:
         email_obj = validate_email(email, check_deliverability=False)
-        email_obj = email_obj.email
+        email_obj = email_obj.normalized
     except:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
@@ -441,7 +441,7 @@ async def refresh_token(
     
     Requires valid JWT token in Authorization header.
     """
-    from ..middleware.auth_middleware import create_access_token
+    from middleware.auth_middleware import create_access_token
     
     # Create new access token
     new_access_token = create_access_token({

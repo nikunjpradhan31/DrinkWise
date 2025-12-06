@@ -7,6 +7,7 @@ from pydantic import BaseModel, EmailStr, Field, validator
 from typing import Optional, List, Dict, Any, Union
 from datetime import datetime
 from enum import Enum
+from email_validator import EmailNotValidError, validate_email
 
 # =========================
 # AUTHENTICATION MODELS
@@ -397,7 +398,8 @@ class RecommendationParams(BaseModel):
 def validate_email_format(email: str) -> bool:
     """Validate email format."""
     try:
-        EmailStr(email)
+        email_obj = validate_email(email, check_deliverability=False)
+        email_obj = email_obj.normalized
         return True
     except:
         return False

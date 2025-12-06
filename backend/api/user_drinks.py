@@ -17,7 +17,7 @@ from pydantic_models import (
     FavoriteDrink, ErrorResponse
 )
 
-router = APIRouter(prefix="/user-drinks", tags=["user-drinks"])
+router = APIRouter(prefix="/user-drinks", tags=["user_drinks"])
 
 async def get_user_drinks_service(
     db: AsyncSession = Depends(get_db_async)

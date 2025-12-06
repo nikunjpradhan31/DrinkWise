@@ -157,7 +157,7 @@ async def get_current_user(
         # Query user from database
         from sqlalchemy import select
         result = await db.execute(
-            select(Users).where(Users.user_id == token_data["user_id"])
+            select(Users).where(Users.user_id == int(token_data["user_id"]))
         )
         user = result.scalar_one_or_none()
         

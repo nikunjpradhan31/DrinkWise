@@ -177,26 +177,27 @@ app.include_router(user_drinks_router, prefix="/api/v0", tags=["user_drinks"])
 app.include_router(catalog_router, prefix="/api/v0", tags=["catalog"])
 
 
-# Global exception handler
-@app.exception_handler(Exception)
-async def global_exception_handler(request, exc):
-    """Global exception handler"""
-    logger.error(f"Unexpected error: {str(exc)}", exc_info=True)
-    return ErrorResponse(
-        error="Internal Server Error",
-        message="An unexpected error occurred",
-        details={"error_type": type(exc).__name__}
-    )
+# # Global exception handler
+# @app.exception_handler(Exception)
+# async def global_exception_handler(request, exc):
+#     """Global exception handler"""
+#     logger.error(f"Unexpected error: {str(exc)}", exc_info=True)
+#     print(request, exc)
+#     return ErrorResponse(
+#         error="Internal Server Error",
+#         message="An unexpected error occurred",
+#         details={"error_type": type(exc).__name__}
+#     )
 
-# HTTP exception handler
-@app.exception_handler(HTTPException)
-async def http_exception_handler(request, exc):
-    """HTTP exception handler"""
-    return ErrorResponse(
-        error="HTTP Error",
-        message=exc.detail,
-        details={"status_code": exc.status_code}
-    )
+# # HTTP exception handler
+# @app.exception_handler(HTTPException)
+# async def http_exception_handler(request, exc):
+#     """HTTP exception handler"""
+#     return ErrorResponse(
+#         error="HTTP Error",
+#         message=exc.detail,
+#         details={"status_code": exc.status_code}
+#     )
 
 if __name__ == "__main__":
     import uvicorn
