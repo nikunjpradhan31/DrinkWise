@@ -1,0 +1,1768 @@
+drink_id,ingredient_name,quantity,is_allergen
+1,Tequila,1 1/2 oz,f
+1,Triple sec,1/2 oz,f
+1,Lime juice,1 oz,f
+1,Salt,,f
+2,Tequila,1 1/2 oz,f
+2,Blue Curacao,1 oz,f
+2,Lime juice,1 oz,f
+2,Salt,Coarse,f
+3,Tequila,4.5 cl,f
+3,Lime Juice,1.5 cl,f
+3,Agave syrup,2 spoons,f
+4,Ice,1 cup,f
+4,Tequila,2 oz,f
+4,Cream of coconut,1/4 cup,f
+4,Lime juice,3 tblsp fresh,f
+5,Strawberry schnapps,1/2 oz,f
+5,Tequila,1 oz,f
+5,Triple sec,1/2 oz,f
+5,Lemon juice,1 oz,f
+5,Strawberries,1 oz,f
+5,Salt,,f
+397,Gin,6 cl,f
+397,Vodka,1.5 cl,f
+397,Lillet Blanc,0.75 cl,f
+398,Gin,1 1/2 oz,f
+398,Sweet Vermouth,1/2 oz,f
+398,Brandy,1/2 oz,f
+7,Tequila,1 1/2 oz,f
+7,Triple sec,1/2 oz,f
+7,Lime juice,1 oz,f
+7,Salt,,f
+8,Tequila,1 1/2 oz,f
+8,Blue Curacao,1 oz,f
+8,Lime juice,1 oz,f
+8,Salt,Coarse,f
+9,Tequila,4.5 cl,f
+9,Lime Juice,1.5 cl,f
+9,Agave syrup,2 spoons,f
+10,Ice,1 cup,f
+10,Tequila,2 oz,f
+10,Cream of coconut,1/4 cup,f
+10,Lime juice,3 tblsp fresh,f
+11,Strawberry schnapps,1/2 oz,f
+11,Tequila,1 oz,f
+11,Triple sec,1/2 oz,f
+11,Lemon juice,1 oz,f
+11,Strawberries,1 oz,f
+11,Salt,,f
+12,Watermelon,1/2 cup,f
+12,Mint,5,f
+12,Grapefruit Juice,1/3 Cup,f
+12,Lime,Juice of 1/2,f
+12,Tequila,1 shot,f
+13,Gin,1 3/4 shot,f
+13,Grand Marnier,1 Shot,f
+13,Lemon Juice,1/4 Shot,f
+13,Grenadine,1/8 Shot,f
+14,Amaretto,1/3,f
+14,Baileys irish cream,1/3,f
+14,Cognac,1/3,f
+15,Gin,2 shots,f
+15,Grenadine,1/2 shot,f
+15,Heavy cream,1/2 shot,f
+15,Milk,1/2 shot,f
+15,Egg White,1/2 Fresh,f
+16,151 proof rum,1 oz Bacardi,f
+16,Wild Turkey,1 oz,f
+17,Absolut Vodka,1 oz,f
+17,Gin,1 oz,f
+17,Tonic water,4 oz,f
+18,Dark rum,2 oz,f
+18,Lemon juice,1 oz,f
+18,Grenadine,1 tsp,f
+19,Applejack,1 1/2 oz,f
+19,Grapefruit juice,1 oz,f
+20,Strawberry schnapps,2 oz,f
+20,Orange juice,2 oz,f
+20,Cranberry juice,2 oz,f
+20,Club soda,,f
+21,Vodka,3 parts,f
+21,Pisang Ambon,1 part,f
+21,Apple juice,6 parts,f
+21,Lemon juice,1 1/2 part,f
+21,Lemonade,,f
+22,Orange juice,4 cl,f
+22,Grapefruit juice,3 cl,f
+22,Apple juice,1 cl,f
+22,Maraschino cherry,1,f
+23,Dark rum,2 oz,f
+23,Kahlua,1 oz,f
+23,Egg white,1,f
+24,Dark rum,1 1/2 oz,f
+24,Peach nectar,2 oz,f
+24,Orange juice,3 oz,f
+25,Gin,1 1/2 shot,f
+25,Vermouth,1 1/2 shot,f
+26,Gin,4.5 cl,f
+26,lemon juice,1.5 cl,f
+26,maraschino liqueur,1.5 cl,f
+27,Applejack,1 oz,f
+27,Triple sec,1 oz,f
+27,Lemon juice,1 oz,f
+28,Scotch,1 1/2 oz,f
+28,Sweet Vermouth,1 oz,f
+28,Dry Vermouth,1 oz,f
+28,Orange bitters,2 dashes,f
+29,Light rum,1 1/2 oz,f
+29,Triple sec,1 1/2 tsp,f
+29,Lime juice,1 tblsp,f
+29,Sugar,1 tsp,f
+29,Egg white,1,f
+29,Mint,1,f
+30,Gin,1/2 oz,f
+30,Creme de Cacao,1/2 oz white,f
+30,Light cream,2 oz,f
+30,Nutmeg,,f
+31,Crown Royal,1 shot,f
+31,Kahlua,1 shot,f
+31,Cream,Fill with,f
+32,Dry Vermouth,1 oz,f
+32,Bourbon,1 oz,f
+32,Blackberry brandy,1 1/2 tsp,f
+32,Lemon juice,1 1/2 tsp,f
+32,Lemon peel,1 twist of,f
+33,Campari,1 oz,f
+33,Sweet Vermouth,1 oz red,f
+33,Lemon peel,Twist of,f
+33,Orange peel,Twist of,f
+34,Blended whiskey,1 1/2 oz,f
+34,Dry Vermouth,1 oz,f
+34,Pineapple juice,1 oz,f
+35,Sweet Vermouth,1 1/2 tsp,f
+35,Gin,1 1/2 oz,f
+35,Bitters,2 dashes,f
+36,Grenadine,1 part,f
+36,Orange juice,4 parts,f
+36,Pineapple juice,4 parts,f
+37,Sweet Vermouth,2 shots,f
+37,Dry Vermouth,1 shot,f
+37,Soda Water,Top up with,f
+38,Baileys irish cream,1/3,f
+38,Grand Marnier,1/3,f
+38,Kahlua,1/4,f
+39,Kahlua,1/3 shot,f
+39,Sambuca,1/3 shot,f
+39,Grand Marnier,1/3 shot,f
+40,Orange Bitters,1 dash,f
+40,Green Chartreuse,1 oz,f
+40,Gin,1 oz,f
+40,Sweet Vermouth,1 oz,f
+41,Gin,1 1/2 oz,f
+41,Triple sec,1 oz,f
+41,Lemon juice,1 tsp,f
+41,Grenadine,1/2 tsp,f
+41,Egg white,1,f
+42,Irish cream,1/2 oz,f
+42,Goldschlager,1/2 oz,f
+43,Champagne,6 oz,f
+43,Peach schnapps,1 oz,f
+44,Gin,4 cl,f
+44,lemon juice,1.5 cl,f
+44,Sugar syrup,1 cl,f
+44,Creme de Mure,1.5 cl,f
+45,Scotch,1 1/2 oz,f
+45,Sweet Vermouth,1/2 oz,f
+45,Dry Vermouth,1/2 oz,f
+45,Bitters,2 dashes,f
+46,Gin,1 1/2 oz,f
+46,Triple sec,1/2 oz,f
+46,Blue Curacao,1/2 oz,f
+46,Bitters,2 dashes,f
+46,Maraschino cherry,1,f
+46,Lemon peel,1 twist of,f
+47,Rye Whiskey,2 oz,f
+47,Dry Vermouth,1 oz,f
+47,Maraschino Liqueur,1/4 oz,f
+47,Angostura Bitters,3 dashes,f
+47,Maraschino Cherry,1,f
+48,Pineapple juice,10 cl,f
+48,Passion fruit juice,6 cl,f
+48,Lemon juice,1 cl,f
+48,Grenadine,1 cl,f
+49,Gin,2 oz,f
+49,Dry Vermouth,1/2 oz,f
+49,Bitters,2 dashes,f
+49,Maraschino liqueur,1/2 tsp,f
+49,Maraschino cherry,1,f
+50,Rum,4.5 cl,f
+50,Galliano,1.5 cl,f
+50,Pineapple Juice,6 cl,f
+50,Lime Juice,1 dash,f
+50,Prosecco,top up,f
+51,Hot Chocolate,4 oz,f
+51,Green Chartreuse,1 oz,f
+51,Cherry Heering,1 oz,f
+52,151 proof rum,1 shot,f
+52,Scotch,1/2 shot,f
+52,Bitters,3 drops,f
+52,Wormwood,1 Fresh,f
+52,Ice,cubes,f
+53,Corona,1,f
+53,Bacardi Limon,1 shot,f
+54,Everclear,1 fifth,f
+54,Vodka,1 fifth Smirnoff red label,f
+54,Mountain Dew,2 L,f
+54,Surge,2 L,f
+54,Lemon juice,1 small bottle,f
+54,Rum,1 pint,f
+55,Sweet Vermouth,1 oz,f
+55,Sloe gin,1 1/2 oz,f
+55,Lemon peel,1 twist of,f
+56,Midori melon liqueur,1/2 oz,f
+56,Jägermeister,1/2 oz,f
+56,Goldschlager,1/2 oz,f
+57,Southern Comfort,2 oz,f
+57,Triple sec,1/2 oz,f
+57,Lime,2 wedges,f
+57,Sour mix,2 oz,f
+58,Vodka,1/4,f
+58,Banana liqueur,1/4,f
+58,Orange juice,1/4,f
+58,Peach schnapps,1/4,f
+59,Baileys irish cream,1/3 oz,f
+59,Kahlua,1/3 oz,f
+59,Sambuca,1/3 oz,f
+60,Kahlua,2 oz,f
+60,Milk,8 oz,f
+60,Vanilla ice-cream,2 scoops,f
+61,Blended whiskey,2 oz,f
+61,Lemon,Juice of 1/2,f
+61,Powdered sugar,1 tsp,f
+61,Egg white,1,f
+61,Cherry,1,f
+62,Rum,3 parts,f
+62,Dark Rum,1 part,f
+62,Banana liqueur,1 part,f
+62,Grenadine,1 part,f
+62,Pineapple Juice,2 parts,f
+62,Orange Juice,2 parts,f
+62,Sweet and Sour,1 part,f
+63,Gin,2 oz,f
+63,Maraschino liqueur,1/4 tsp,f
+63,Lemon juice,1/4 tsp,f
+63,Orange bitters,2 dashes,f
+63,Cherry,1,f
+64,Coffee,,f
+64,Milk,1/2 oz,f
+64,Triple sec,1/2 oz,f
+64,Brandy,,f
+65,Sugar,2 tsp,f
+65,Lime,1,f
+65,Cachaca,2 1/2 oz,f
+66,Spiced rum,1 oz,f
+66,Ginger ale,,f
+67,Dark rum,1-2 shot,f
+67,Lime,Squeeze,f
+67,Coca-Cola,Fill with,f
+67,Ice,,f
+68,Light rum,1 1/4 oz,f
+68,Cherry brandy,1 1/2 tsp,f
+68,Light cream,1 tblsp,f
+69,Light rum,2 oz,f
+69,Lime,Juice of 1/2,f
+69,Coca-Cola,,f
+70,Lime,1/2,f
+70,Falernum,1/3 oz,f
+70,Angostura Bitters,2 dashes,f
+70,Añejo rum,1 oz,f
+70,blackstrap rum,1 oz,f
+71,Bacardi Limon,1 part,f
+71,Coca-Cola,2 parts,f
+72,Light rum,2 oz,f
+72,Triple sec,1 1/2 tsp,f
+72,Lime juice,1 1/2 tsp,f
+72,Maraschino liqueur,1 1/2 tsp,f
+73,Gin,1 1/2 oz,f
+73,Grenadine,2 tsp,f
+73,Lemon,Juice of 1/2,f
+73,Egg white,1,f
+74,Lime,2,f
+74,Sugar,2 tblsp,f
+74,White rum,2-3 oz,f
+74,Ice,crushed,f
+75,Brandy,2 oz,f
+75,Triple sec,1/2 oz,f
+75,Lemon juice,1 tblsp,f
+76,Lager,1 bottle,f
+76,Campari,1 1/2 cl,f
+77,Light rum,1 oz,f
+77,Port,1 oz,f
+77,Lemon,Juice of 1/2,f
+77,Powdered sugar,1 tsp,f
+77,Egg white,1,f
+77,Carbonated water,,f
+78,Vodka,1 1/4 oz,f
+78,Lime juice,1/4 oz,f
+78,Cointreau,1/4 oz,f
+78,Cranberry juice,1/4 cup,f
+79,Water,2 cups,f
+79,Sugar,2 cups white,f
+79,Coffee,1/2 cup instant,f
+79,Vanilla,1/2,f
+79,Vodka,1 1/2 cup,f
+79,Caramel coloring,,f
+80,Gin,2 oz,f
+80,Lemon juice,1/2 oz,f
+80,Maraschino liqueur,1 tsp,f
+80,Orange bitters,1 dash,f
+80,Egg yolk,1,f
+81,Gin,3/4 oz,f
+81,Triple Sec,3/4 oz,f
+81,Lillet Blanc,3/4 oz,f
+81,Lemon Juice,3/4 oz,f
+81,Absinthe,1 dash,f
+82,Chocolate liqueur,1/2 shot,f
+82,Milk,1/2 shot,f
+82,Amaretto,1 dash,f
+83,Sweet Vermouth,1 oz,f
+83,Sloe gin,1/2 oz,f
+83,Wine,1/2 oz Muscatel,f
+84,Coffee,10 tblsp instant,f
+84,Vanilla extract,4 tblsp,f
+84,Sugar,2 1/2 cups,f
+84,Vodka,1 qt,f
+84,Water,2 1/2 cups,f
+85,Coca-Cola,1 dl,f
+85,Lemon juice,7 drops,f
+86,Chocolate,125 gr,f
+86,Milk,3/4 L,f
+86,Water,,f
+87,Cranberry juice,4 cups,f
+87,Sugar,1 1/2 cup,f
+87,Pineapple juice,4 cups,f
+87,Almond flavoring,1 tblsp,f
+87,Ginger ale,2 qt,f
+88,gin,6 cl,f
+88,Peach Bitters,2 dashes,f
+88,Mint,2 Fresh leaves,f
+89,Lager,1/2 pint,f
+89,Cider,1/2 pint,f
+89,Blackcurrant cordial,1 dash,f
+90,Light rum,1 1/2 oz,f
+90,Lime,Juice of 1/2,f
+90,Powdered sugar,1 tsp,f
+91,Coffee,3 parts,f
+91,Everclear,1 part,f
+92,Fruit punch,2 part,f
+92,Sprite,1 part,f
+92,Tequila,2 shots,f
+92,151 proof rum,Float Bacardi,f
+93,Gin,1 1/2 oz,f
+93,Ginger ale,4 oz,f
+93,Lime,1,f
+94,Gin,1 2/3 oz,f
+94,Dry Vermouth,1/3 oz,f
+94,Olive,1,f
+95,Scotch,2 1/2 oz,f
+95,Dry Vermouth,1 1/2 tsp,f
+95,Lemon peel,1 twist of,f
+96,Kahlua,,f
+96,Sambuca,,f
+96,Baileys irish cream,,f
+97,Vodka,70ml/2fl oz,f
+97,Dry Vermouth,1 tbsp,f
+97,Olive Brine,2 tbsp,f
+97,Lemon,1 wedge,f
+97,Olive,1,f
+98,Cherry Heering,1 part,f
+98,Soda water,1 part,f
+98,Orange juice,1 part,f
+98,Ice,cubes,f
+99,Dark Rum,5 cl,f
+99,Ginger Beer,10 cl,f
+100,demerara Sugar,2 tsp,f
+100,Lime,1,f
+100,Cachaca,2 1/2 oz,f
+101,Pisco,5 cl,f
+101,Lime Juice,2.5 cl,f
+101,Pineapple Syrup,2.5 cl,f
+101,St. Germain,1.5 cl,f
+101,Angostura Bitters,2 Dashes,f
+101,Pepper,Pinch,f
+101,Lavender,2 sprigs,f
+102,Whiskey,0.75 oz,f
+102,Hot Damn,0.25 oz,f
+103,Dubonnet Rouge,1 1/2 oz,f
+103,Gin,3/4 oz,f
+103,Bitters,1 dash,f
+103,Lemon peel,1 twist of,f
+104,Heavy cream,2 oz,f
+104,Milk,6-8 oz,f
+104,Cinnamon,1 stick,f
+104,Vanilla,1,f
+104,Chocolate,2 oz finely chopped dark,f
+104,Whipped cream,Fresh,f
+105,Absinthe,2 shots,f
+105,Champagne,Top,f
+106,Chocolate syrup,2 tblsp,f
+106,Milk,6 oz whole,f
+106,Soda water,6 oz,f
+107,Egg yolk,6,f
+107,Sugar,1/4 cup,f
+107,Milk,2 cups,f
+107,Light rum,1/2 cup,f
+107,Bourbon,1/2 cup,f
+107,Vanilla extract,1 tsp,f
+107,Salt,1/4 tsp,f
+107,Whipping cream,1 cup,f
+107,Egg white,6,f
+107,Nutmeg,Ground,f
+108,Brandy,3/4 oz,f
+108,Gin,3/4 oz,f
+108,Sweet Vermouth,3/4 oz,f
+108,Carbonated water,,f
+108,Lemon peel,,f
+109,Vodka,5 cl,f
+109,Kahlua,1 cl,f
+109,Sugar syrup,1 dash,f
+110,Rum,1 shot,f
+110,Vanilla syrup,1/2 shot,f
+110,Espresso,1 shot,f
+110,Coffee,1 shot,f
+111,Egg,1/2 cup,f
+111,Sugar,3 tblsp,f
+111,Condensed milk,13 oz skimmed,f
+111,Milk,3/4 cup skimmed,f
+111,Vanilla extract,1 tsp,f
+111,Rum,1 tsp,f
+111,Nutmeg,,f
+112,Apricot brandy,3/4 oz,f
+112,Gin,1 1/2 oz,f
+112,Dry Vermouth,3/4 oz,f
+112,Grenadine,1 tsp,f
+112,Lemon juice,1/4 tsp,f
+112,Cherry,1,f
+113,Cachaca,60 ml,f
+113,Lime,1,f
+113,Elderflower cordial,3 cl,f
+114,Egg,6,f
+114,Sugar,1/4 cup,f
+114,Salt,1/4 tsp,f
+114,Milk,1 qt,f
+114,Vanilla extract,1 tsp,f
+115,Mezcal,2 oz,f
+115,Chocolate liqueur,3/4 oz,f
+115,Coffee liqueur,1/2 oz,f
+116,Rose,750 ml,f
+116,Sugar,1/2 cup,f
+116,Strawberries,8 oz,f
+116,Lemon Juice,2-3 oz,f
+117,Coffee,1/2 cup black,f
+117,Milk,1/2 cup,f
+117,Sugar,1-2 tsp,f
+118,Amaretto,1/2 oz,f
+118,Creme de Cacao,1/2 oz,f
+118,Light cream,2 oz,f
+119,Gin,1 1/2 oz,f
+119,Sugar,2 tsp superfine,f
+119,Lemon juice,1 1/2 oz,f
+119,Champagne,4 oz Chilled,f
+119,Orange,1,f
+119,Maraschino cherry,1,f
+120,Vodka,2 oz,f
+120,Honey,1 tsp,f
+120,Figs,3,f
+120,Thyme,1 Sprig,f
+120,Angostura Bitters,2 dashes,f
+120,Tonic Water,Top,f
+121,Blended whiskey,2 oz,f
+121,Benedictine,1/2 oz,f
+121,Lemon,Juice of 1/4,f
+121,Lime,Juice of 1/2,f
+122,Yoghurt,1 cup fruit,f
+122,Banana,1,f
+122,Orange juice,4 oz frozen,f
+122,Fruit,1/2 piece textural,f
+122,Ice,6,f
+123,Apple juice,1 can frozen,f
+123,Strawberries,1 cup,f
+123,Sugar,2 tblsp,f
+123,Lemon,1,f
+123,Apple,1,f
+123,Soda water,1 L,f
+123,Ice,,f
+124,Jägermeister,1/2 oz,f
+124,Sambuca,1/2 oz,f
+124,Vodka,1/2 oz,f
+125,Rum,2 shots,f
+125,Apricot Nectar,1 shot,f
+125,Pomegranate juice,1 shot,f
+125,lemon,Juice of 1/2,f
+125,Soda Water,Top,f
+126,Coffee,1/2,f
+126,Peach schnapps,1/2,f
+127,Vodka,4.5 cl,f
+127,Raspberry Liqueur,1.5 cl,f
+127,pineapple juice,1.5 cl,f
+128,Gin,1 oz,f
+128,Lillet,1 oz,f
+128,Sweet Vermouth,1 oz,f
+128,Orange Peel,1,f
+129,Firewater,1/2 oz,f
+129,Absolut Peppar,1/2 oz,f
+129,Tabasco sauce,1 dash,f
+130,Gin,2 oz,f
+130,Triple sec,1/2 oz,f
+131,Light rum,1 1/2 oz,f
+131,Triple sec,1 tblsp,f
+131,Lime juice,1 1/2 oz,f
+131,Sugar,1 tsp,f
+131,Cherry,1,f
+131,Ice,1 cup crushed,f
+132,Yoghurt,1 cup,f
+132,Fruit juice,1 cup,f
+133,Scotch,1 oz,f
+133,Sweet Vermouth,1 oz,f
+133,Bitters,1 dash,f
+133,Sugar syrup,1/4 tsp,f
+134,Cognac,1 1/2 oz,f
+134,Amaretto,3/4 oz,f
+135,Amaretto,1 oz,f
+135,Vodka,1 oz,f
+135,151 proof rum,1 oz Bacardi,f
+135,Dr. Pepper,1 oz,f
+135,Beer,1 oz,f
+136,Kahlua,1 oz,f
+136,Sambuca,1 oz,f
+136,Blue Curacao,1 oz,f
+136,Baileys irish cream,1 oz,f
+137,Sambuca,1/4 glass,f
+137,Sarsaparilla,3/4 glass,f
+138,Light rum,2 oz,f
+138,Lime juice,1 tblsp,f
+138,Mint,6,f
+138,Sugar,1 tsp,f
+139,Light rum,1 1/2 oz,f
+139,Pineapple,4 chunks,f
+139,Lime juice,1 tblsp,f
+139,Sugar,1/2 tsp,f
+140,Galliano,2 1/2 shots,f
+140,Ginger ale,,f
+140,Ice,,f
+141,Gin,2 1/2 oz,f
+141,Lime Juice,1/2 oz,f
+141,Sugar Syrup,1/2 oz,f
+141,Lime,1,f
+142,Vodka,1 oz,f
+142,Amaretto,1 oz,f
+142,Heavy cream,1 oz,f
+143,Gin,2 oz,f
+143,Lemon,Juice of 1/2,f
+143,Powdered sugar,1 tsp,f
+143,Carbonated water,,f
+144,Gin,2 oz,f
+144,Lemon juice,1 oz,f
+144,Sugar,1/2 tsp superfine,f
+144,Orange,1,f
+144,Maraschino cherry,1,f
+145,Peach Vodka,5 parts,f
+145,Lemon juice,3 parts,f
+145,Galliano,1 part,f
+145,Sirup of roses,1 part,f
+146,Vodka,1 1/2 oz,f
+146,Amaretto,3/4 oz,f
+147,Scotch,1 1/2 oz,f
+147,Amaretto,3/4 oz,f
+148,Red wine,1 L,f
+148,Water,125 ml,f
+148,Sugar,60 gr,f
+148,Cinnamon,1,f
+148,Cloves,3,f
+148,Lemon peel,1 tblsp,f
+149,Gin,4 cl,f
+149,Tonic Water,10 cl,f
+149,Lemon Peel,1 Slice,f
+149,Ice,cubes,f
+150,Gin,2 oz,f
+150,Water,2 tsp,f
+150,Powdered sugar,1/2 tsp,f
+150,Lemon peel,1 twist of,f
+151,Gin,2 oz,f
+151,Carbonated water,1 oz,f
+151,Sugar,1 cube,f
+151,Mint,4,f
+151,Orange,1 slice,f
+151,Cherry,1,f
+152,Gin,2 oz,f
+152,Lemon juice,1 oz,f
+152,Sugar,1/2 tsp superfine,f
+152,Grenadine,1/2 tsp,f
+152,Maraschino cherry,1,f
+152,Orange,1,f
+153,Gin,6 cl,f
+153,Lemon Juice,8 cl,f
+153,Lemon Peel,1 Slice,f
+153,Ice,cubes,f
+154,Gin,2 oz,f
+154,Lemon,Juice of 1/2,f
+154,Powdered sugar,1 tsp,f
+154,Water,1 tsp,f
+154,Orange peel,Twist of,f
+155,Vodka,1 1/2 oz,f
+155,Grapefruit Juice,3 oz,f
+156,Gin,2 oz,f
+156,Grenadine,1 tsp,f
+156,lemon,Juice of 1/2,f
+156,Soda Water,Top up with,f
+156,Lime,Garnish,f
+157,Gin,1 1/2 oz,f
+157,Grenadine,1 tsp,f
+157,Powdered sugar,1 tblsp,f
+157,Pineapple,3 chunks,f
+157,Strawberries,2,f
+157,Carbonated water,,f
+158,Malibu rum,1 1/2 cl,f
+158,Peach schnapps,1 1/2 cl,f
+158,Blue Curacao,1 1/2 cl,f
+158,Sweet and sour,3 cl,f
+159,Gin,2 oz,f
+159,Carbonated water,,f
+159,Powdered sugar,,f
+159,Orange spiral,,f
+159,Lemon peel,,f
+160,Lime juice,1 1/2 oz,f
+160,Sugar,1 tsp superfine,f
+160,Gin,2 oz,f
+160,Bitters,1 dash,f
+160,Club soda,3 oz,f
+161,Gin,1 1/2 oz,f
+161,Triple sec,1 oz,f
+161,Pineapple juice,1 oz,f
+161,Grenadine,1/2 tsp,f
+161,Pineapple,1,f
+162,Green Creme de Menthe,3/4 oz,f
+162,Creme de Cacao,3/4 oz white,f
+162,Light cream,3/4 oz,f
+163,Kahlua,1 oz,f
+163,151 proof rum,1 oz Bacardi,f
+163,Grenadine,1 dash,f
+164,Gin,2 oz,f
+164,Soda Water,5 oz,f
+164,Lime,1/4,f
+165,Whisky,4 cl,f
+165,Baileys irish cream,8 cl,f
+165,Coffee,,f
+166,White Rum,6 cl,f
+166,Honey,2 cl,f
+166,Lemon Juice,2 cl,f
+167,Whiskey,50 ml,f
+167,Honey,15 ml,f
+167,Cinnamon,1,f
+167,lemon,1,f
+167,Cloves,2,f
+168,Hot Damn,5 shots,f
+168,Tea,very sweet,f
+169,Lemon peel,1 long strip,f
+169,Brandy,2 oz,f
+169,Ginger ale,5 oz,f
+169,Bitters,2 dashes,f
+170,Spiced rum,1 1/2 cl,f
+170,Ginger ale,,f
+170,Lime,,f
+170,Ice,,f
+171,Vermouth,25 ml,f
+171,Maraschino Cherry,15 ml,f
+171,Sugar Syrup,10 ml,f
+171,Lemonade,100 ml,f
+171,Blackberries,2,f
+172,Cherry Juice,1 bottle,f
+172,Orange Peel,3,f
+172,Red Chili Flakes,1,f
+172,Cloves,10,f
+172,Ginger,6,f
+172,Vodka,20 cl,f
+173,Light rum,1 oz,f
+173,Pineapple juice,1 oz,f
+173,Lemon juice,1 tsp,f
+174,Grape juice,,f
+174,Carbonated soft drink,", orange",f
+174,Sherbet,,f
+175,Sugar,2 1/2 cups,f
+175,Corn syrup,1 cup,f
+175,Coffee,1 1/2 oz instant,f
+175,Vanilla extract,2 oz,f
+175,Water,3 cups boiling,f
+175,Vodka,1 fifth,f
+176,Irish whiskey,1 shot,f
+176,Baileys irish cream,3/4 shot,f
+176,Coffee,6 oz hot,f
+177,Vodka,1 oz,f
+177,Galliano,1/2 oz,f
+177,Orange juice,4 oz,f
+178,Gin,2 oz,f
+178,Triple sec,1/2 oz,f
+178,Pineapple juice,1 tblsp,f
+179,Rum,12 parts,f
+179,Grapefruit Juice,8 parts,f
+179,Maraschino Liqueur,3 parts,f
+179,Lime Juice,3 parts,f
+180,Scotch,1 1/2 oz,f
+180,Sweet Vermouth,3/4 oz,f
+180,Orange bitters,2 dashes,f
+180,Olive,1,f
+181,Chocolate,12 oz fine,f
+181,Butter,1 tsp,f
+181,Vanilla extract,1/2 tsp,f
+181,Half-and-half,1 cup,f
+181,Marshmallows,mini,f
+182,Lime,½,f
+182,Brown sugar,2 tsp,f
+182,Passion fruit juice,4 cl,f
+182,Ginger ale,top up with,f
+182,Ice,fill,f
+183,Vodka,1 1/2 oz,f
+183,Iced tea,6 oz,f
+183,Lemon juice,to taste,f
+184,Coffee,1/4 cup instant,f
+184,Sugar,1/4 cup,f
+184,Water,1/4 cup hot,f
+184,Milk,4 cups cold,f
+185,Scotch,1 cup,f
+185,Half-and-half,1 1/4 cup,f
+185,Condensed milk,1 can sweetened,f
+185,Coconut syrup,3 drops,f
+185,Chocolate syrup,1 tblsp,f
+186,Irish whiskey,1 1/2 oz,f
+186,Coffee,8 oz,f
+186,Sugar,1 tsp,f
+186,Whipped cream,1 tblsp,f
+187,Irish whiskey,1 oz,f
+187,Peach brandy,1/2 oz,f
+187,Orange juice,1 oz,f
+187,Sweet and sour,1 oz,f
+187,Orange,1 slice,f
+187,Cherry,1,f
+188,Light rum,1/2 oz,f
+188,Blended whiskey,1 1/2 oz,f
+188,Lemon,Juice of 1/2,f
+188,Powdered sugar,1 tsp,f
+188,Carbonated water,,f
+189,Vodka,1 shot,f
+189,Kahlua,1 shot,f
+189,Coca-Cola,1 dash,f
+189,Guinness stout,Fill with,f
+190,Lime juice,4 cl,f
+190,Gin,2 cl,f
+190,Aperol,4 cl,f
+191,Kahlua,2 tsp,f
+191,Coffee,Strong cold,f
+192,Baileys irish cream,3/4 oz,f
+192,Bourbon,3/4 oz,f
+192,Vodka,3/4 oz,f
+192,Orange juice,2-3 oz,f
+193,Baileys irish cream,2/3 oz,f
+193,Chambord raspberry liqueur,1/3 oz,f
+193,Sugar syrup,1 tsp,f
+193,Sugar,2 pinches,f
+194,Gin,2 jiggers,f
+194,Vodka,1 jigger,f
+194,Grenadine,3 dashes,f
+194,Lime juice,1 shot,f
+194,Sugar,Around rim put 1 pinch,f
+194,Sugar syrup,3 dashes,f
+194,Soda water,Fill to top with,f
+195,Jack Daniels,1 oz,f
+195,Amaretto,1 oz,f
+196,Blackberry brandy,1 oz,f
+196,Anis,1 oz,f
+197,Vodka,2 cups,f
+197,Jello,3 packages,f
+197,Water,3 cups,f
+198,Coffee liqueur,1 shot,f
+198,Light rum,1 shot Jamaican,f
+198,Ice,cubes,f
+198,Milk,,f
+199,Bourbon,2 oz,f
+199,Lemon juice,1 oz,f
+199,Sugar,1 tsp superfine,f
+199,Club soda,3 oz,f
+199,Maraschino cherry,1,f
+199,Orange,1,f
+200,Blended whiskey,1 1/2 oz,f
+200,Lemon,Juice of 1/2,f
+200,Powdered sugar,1 tsp,f
+200,Port,1 tblsp,f
+200,Egg white,1,f
+200,Carbonated water,,f
+201,Rum,1/6 glass,f
+201,Coffee,1/6 glass strong black,f
+201,Water,1/2 glass cold,f
+201,Whipped cream,,f
+202,Milk,2 cups,f
+202,Chocolate syrup,,f
+202,Mint syrup,,f
+203,Gin,1 1/2 oz,f
+203,Green Chartreuse,1/2 oz,f
+203,Yellow Chartreuse,1/2 oz,f
+204,Apple brandy,1 1/2 oz,f
+204,Grenadine,1 tsp,f
+204,Lime,Juice of 1/2,f
+205,Ice,4-5,f
+205,Tennessee whiskey,2 oz,f
+205,Vanilla extract,1 tsp,f
+205,Coca-Cola,10-12 oz,f
+206,Creme de Cassis,1 part,f
+206,Champagne,5 parts,f
+207,Coffee,1 part,f
+207,Grain alcohol,2 parts,f
+208,Vodka,1 oz,f
+208,Triple sec,1 oz,f
+208,Lime juice,1 oz,f
+209,Creme de Cassis,1 part,f
+209,Champagne,5 parts,f
+210,Kiwi liqueur,1 part,f
+210,Bitter lemon,2 parts,f
+210,Ice,cubes,f
+211,Absolut Kurant,4 cl,f
+211,Tea,Turkish apple,f
+211,Sugar,(if needed),f
+212,Kahlua,1 oz,f
+212,Brandy,1/2 oz,f
+212,Coffee,,f
+213,Kiwi,1/2,f
+213,Sugar Syrup,1 tsp,f
+213,Vodka,1 1/2 oz,f
+214,Cranberry vodka,4 cl,f
+214,Apfelkorn,2 cl,f
+214,Schweppes Russchian,7 cl,f
+214,Apple juice,8 cl,f
+214,Ice,cubes,f
+215,Vodka,1 shot,f
+215,Amaretto,1 shot,f
+215,Sloe gin,1 shot,f
+215,Triple sec,1 shot,f
+215,Cranberry juice,,f
+216,151 proof rum,2 oz light,f
+216,Kool-Aid,1/2 tsp Tropical,f
+217,Bourbon,2 oz,f
+217,Benedictine,1/2 oz,f
+218,Bourbon,3 oz,f
+218,Benedictine,1/2 oz,f
+218,Lemon peel,1 twist of,f
+219,Kool-Aid,1/2 oz Grape,f
+219,Vodka,1/2 oz,f
+220,Kiwi,3,f
+220,Papaya,1/2,f
+221,Ginger,1 inch,f
+221,Lemon,1/4,f
+221,Water,1 cup hot,f
+222,Lime,Juice of 1,f
+222,Sugar,1 tblsp,f
+222,Soda water,(seltzer water),f
+222,Lime peel,,f
+223,Beer,3/4 bottle,f
+223,Amaretto,1 shot,f
+223,Orange juice,1 oz,f
+224,Vodka,1 1/2 shot,f
+224,Cointreau,1 1/2 shot,f
+224,Lemon,Juice of 1 wedge,f
+225,Galliano,1/2 oz,f
+225,Absolut Citron,1/2 oz,f
+225,Lemon,wedge,f
+225,Sugar,Bacardi,f
+225,151 proof rum,,f
+226,Vodka,5 cl,f
+226,Lime,1/2,f
+226,Angostura bitters,4 dashes,f
+226,Tonic water,1 dl Schweppes,f
+226,Ice,4,f
+227,Yoghurt,1 cup,f
+227,Water,2 cups cold,f
+227,Salt,1 tsp,f
+227,Asafoetida,1 pinch,f
+228,Yoghurt,2 cups,f
+228,Ice,4-6,f
+228,Sugar,,f
+228,Lime,,f
+228,Salt,,f
+229,Ginger,2 pieces,f
+229,Water,1 gal,f
+229,Lemon,1 lb,f
+229,Sugar,1 cup,f
+229,Cayenne pepper,ground,f
+230,Scotch,2 oz,f
+230,Drambuie,1/2 oz,f
+230,Dry Vermouth,1/2 oz,f
+230,Lemon peel,1 twist of,f
+231,Gin,1 1/2 oz,f
+231,Maraschino liqueur,1/2 oz,f
+231,Orange bitters,2 dashes,f
+232,Mango,2,f
+232,Yoghurt,2 cups,f
+232,Sugar,1/2 cup,f
+232,Water,1 cup iced,f
+233,Yoghurt,1 cup,f
+233,Water,2 cups cold,f
+233,Sugar,4 tblsp,f
+233,Salt,pinch,f
+233,Lemon juice,2 tblsp,f
+234,Corona,1 bottle,f
+234,Bacardi Limon,1 oz,f
+235,Dark rum,1 1/2 oz,f
+235,Tia maria,1/2 oz,f
+236,Gin,2 oz,f
+236,Light cream,2 tsp,f
+236,Powdered sugar,1 tsp,f
+236,Lemon,Juice of 1/2,f
+236,Egg white,1,f
+236,Carbonated water,,f
+237,Vodka,1/2 oz,f
+237,Light rum,1/2 oz,f
+237,Gin,1/2 oz,f
+237,Tequila,1/2 oz,f
+237,Lemon,Juice of 1/2,f
+237,Coca-Cola,1 splash,f
+238,Carbonated water,,f
+238,Gin,,f
+238,Dry Vermouth,,f
+238,Powdered sugar,,f
+238,Orange spiral,,f
+238,Lemon peel,,f
+239,Sweet Vermouth,3/4 oz,f
+239,Gin,1 1/2 oz,f
+240,Coconut Liqueur,30 ml,f
+240,Grapefruit Juice,75 ml,f
+240,Soda Water,Top,f
+241,Vodka,1/2 oz,f
+241,Tequila,1/2 oz,f
+241,Light rum,1/2 oz,f
+241,Gin,1/2 oz,f
+241,Coca-Cola,1 dash,f
+241,Lemon peel,Twist of,f
+242,Elderflower cordial,2 tsp,f
+242,Vodka,1 shot,f
+242,Soda Water,1/3 cup,f
+242,Fresh Lemon Juice,Top,f
+243,Yoghurt,1/2 cup plain,f
+243,Water,1 1/4 cup cold,f
+243,Cumin seed,1/2 tsp ground roasted,f
+243,Salt,1/4 tsp,f
+243,Mint,1/4 tsp dried,f
+244,Espresso,,f
+244,Honey,Unsweetened,f
+244,Cocoa powder,,f
+245,Light rum,2-3 oz,f
+245,Lime,Juice of 1,f
+245,Sugar,2 tsp,f
+245,Mint,2-4,f
+245,Soda water,,f
+246,Champagne,Chilled,f
+246,Orange juice,2 oz,f
+247,Light rum,1 oz,f
+247,Orgeat syrup,1/2 oz,f
+247,Triple sec,1/2 oz,f
+247,Sweet and sour,1 1/2 oz,f
+247,Cherry,1,f
+248,Gin,1 2/3 oz,f
+248,Dry Vermouth,1/3 oz,f
+248,Olive,1,f
+249,Beer,4 oz,f
+249,Tomato Juice,4 oz,f
+249,Lime Juice,1 tblsp,f
+249,Hot Sauce,Dash,f
+249,Worcestershire Sauce,Dash,f
+249,Soy Sauce,Dash,f
+250,Sweet Vermouth,3/4 oz,f
+250,Bourbon,2 1/2 oz Blended,f
+250,Angostura bitters,dash,f
+250,Ice,2 or 3,f
+250,Maraschino cherry,1,f
+250,Orange peel,1 twist of,f
+251,Tequila,1 1/2 oz,f
+251,Triple sec,1/2 oz,f
+251,Lime juice,1 oz,f
+251,Salt,,f
+252,Ricard,3 cl,f
+252,Orgeat Syrup,1 cl,f
+252,Water,Full Glass,f
+253,Mint,4 fresh,f
+253,Bourbon,2 1/2 oz,f
+253,Powdered sugar,1 tsp,f
+253,Water,2 tsp,f
+254,Southern Comfort,750 ml,f
+254,Orange juice,1 L,f
+254,Pepsi Cola,750 ml,f
+255,Gin,1 1/2 oz,f
+255,Sweet Vermouth,1 1/2 oz,f
+255,Maraschino Liqueur,1 tsp,f
+255,Angostura Bitters,2 dashes,f
+256,Absinthe,2/5,f
+256,Tequila,2/5,f
+256,Grenadine,1/5,f
+257,151 proof rum,5 oz Bacardi,f
+257,Pina colada mix,frozen,f
+257,Daiquiri mix,frozen,f
+258,Vodka,2 oz,f
+258,Lime juice,2 oz,f
+258,Ginger ale,8 oz,f
+259,Water,3 cups,f
+259,Sugar,1 cup,f
+259,Cloves,12,f
+259,Cinnamon,2,f
+259,Lemon peel,1,f
+259,Red wine,750 ml,f
+259,Brandy,1/4 cup,f
+260,Water,2 cups,f
+260,Tea,3-4 tsp,f
+260,Ginger,1 chunk dried,f
+260,Cardamom,3-4 crushed,f
+260,Cloves,3,f
+260,Cinnamon,1 piece,f
+260,Black pepper,1-2 whole,f
+260,Sugar,to taste,f
+260,Milk,to taste,f
+261,Gin,5 cl,f
+261,Lime Juice,2 cl,f
+261,Ginger Beer,10 cl,f
+261,Cucumber,Chopped,f
+261,lemon,Chopped,f
+262,Coffee,6 oz,f
+262,Chambord raspberry liqueur,2 oz,f
+262,Cocoa powder,2 tblsp,f
+262,Whipped cream,,f
+263,Lime,3,f
+263,Mango,1 Fresh,f
+263,Mint,Sprig,f
+263,White Rum,200 ml,f
+263,Ice,cubes,f
+263,Soda Water,Top,f
+264,Mint,1/2 handful,f
+264,Lemon juice,3 cl,f
+264,Dark rum,1/8 L Jamaican,f
+264,Club soda,1/8 L,f
+264,Angostura bitters,8 drops,f
+265,Gin,2 oz,f
+265,Benedictine,1 tsp,f
+265,Orange juice,1/2 oz,f
+265,Grenadine,1 tsp,f
+266,Baileys irish cream,1 oz,f
+266,White Creme de Menthe,3/4 oz,f
+266,Cream,3/4 oz double,f
+267,Light rum,1 1/2 oz,f
+267,Pineapple juice,1 oz,f
+267,Maraschino liqueur,1/2 tsp,f
+267,Grenadine,1/2 tsp,f
+267,Maraschino cherry,1,f
+268,Light rum,1 1/2 oz,f
+268,Grapefruit juice,3 oz,f
+268,Bitters,1 dash,f
+269,Gin,1 oz,f
+269,Campari,1 oz,f
+269,Sweet Vermouth,1 oz,f
+270,Blended whiskey,2 oz,f
+270,Lemon,Juice of 1/2,f
+270,Sugar,1 tsp,f
+270,Red wine,(Claret),f
+270,Cherry,,f
+271,Baileys irish cream,1 part,f
+271,Frangelico,1 part,f
+271,Milk,1 part,f
+272,Rum,1/2 oz,f
+272,Vodka,1/2 oz,f
+272,Gin,1/2 oz,f
+272,Blue Curacao,1/2 oz,f
+272,Sour mix,2 oz,f
+272,Lemon-lime soda,1 splash,f
+273,Absolut Citron,2 oz,f
+273,Grand Marnier,1 oz,f
+273,Lemon juice,2 oz sweetened,f
+273,Club soda,1 oz,f
+274,Cocoa powder,2 tsp,f
+274,Sugar,1 tsp,f
+274,Vanilla extract,1/2 tsp,f
+274,Milk,12 oz,f
+275,Creme de Cacao,1/2 oz white,f
+275,Amaretto,1/2 oz,f
+275,Triple sec,1/2 oz,f
+275,Vodka,1/2 oz,f
+275,Light cream,1 oz,f
+276,Rye whiskey,2 oz,f
+276,Campari,1 oz,f
+276,Dry Vermouth,1 oz,f
+277,White Rum,2 oz,f
+277,Sugar Syrup,1 oz,f
+277,Lime Juice,1 oz,f
+277,Angostura Bitters,2 dashes,f
+277,Prosecco,2 oz,f
+278,Lemon juice,5 cl,f
+278,Orange juice,15 cl,f
+278,Sugar syrup,2-3 cl,f
+278,Soda water,,f
+279,Orange juice,4 oz,f
+279,Rum,1 oz,f
+279,Vodka,1 oz,f
+279,Cream,1 package,f
+279,Ice,Over,f
+280,Vodka,1 oz,f
+280,Triple sec,1 oz,f
+280,Orange juice,1 oz,f
+281,Cherry brandy,1/2 oz,f
+281,Gin,1 1/2 oz,f
+281,Orange juice,4 oz,f
+281,Ginger ale,,f
+282,Bourbon,4.5 cL,f
+282,Angostura bitters,2 dashes,f
+282,Sugar,1 cube,f
+282,Water,dash,f
+283,Vodka,1 oz,f
+283,Kahlua,1 oz,f
+283,Baileys irish cream,1 oz,f
+283,Vanilla ice-cream,2 scoops,f
+283,Oreo cookie,1,f
+284,Kahlua,2 parts,f
+284,Baileys irish cream,2 parts,f
+284,Butterscotch schnapps,4 parts,f
+284,Jagermeister,1 part,f
+284,Goldschlager,1/2 part,f
+285,Spiced rum,1.5 oz,f
+285,Grenadine,0.5 oz,f
+285,Orange juice,4 oz,f
+285,Sour mix,1 splash,f
+286,Gin,1 shot,f
+286,Orange Juice,Top,f
+286,Lemon Juice,Top,f
+286,Rosemary Syrup,25 ml,f
+286,Soda Water,Top,f
+286,Rosemary,Garnish with,f
+286,Orange Peel,Garnish with,f
+287,Milk,2 cups,f
+287,Chocolate,4 oz chopped bittersweet or semi-sweet,f
+287,Orange peel,3 2-inch strips,f
+287,Espresso,1/2 tsp instant,f
+287,Nutmeg,1/8 tsp ground,f
+288,Whiskey,12 oz,f
+288,Beer,12 oz,f
+288,Lemonade,12 oz frozen,f
+288,Ice,1 cup crushed,f
+289,Grape Soda,3 oz,f
+289,Tequila,1 1/2 oz,f
+290,Gin,7 parts,f
+290,Apricot Brandy,4 parts,f
+290,Orange Juice,3 parts,f
+291,Bitters,3 dashes,f
+291,Gin,2 oz,f
+292,Gin,1 1/2 oz,f
+292,Orange Curacao,3/4 oz,f
+292,Lime Juice,3/4 oz,f
+292,Angostura Bitters,1 dash,f
+292,Orange Bitters,1 dash,f
+293,Gin,1 1/2 oz,f
+293,Grenadine,1 tsp,f
+293,Light cream,1 tsp,f
+293,Egg white,1,f
+294,Gin,1 shot,f
+294,Coconut Liqueur,1 shot,f
+294,Elderflower cordial,25 ml,f
+294,Lime Juice,30 ml,f
+294,Blackberries,Garnish with,f
+295,Blended Scotch,2 oz,f
+295,Lemon Juice,3/4 oz,f
+295,Honey syrup,2 tsp,f
+295,Ginger Syrup,2 tsp,f
+295,Islay single malt Scotch,1/4 oz,f
+296,Pisco,2 oz,f
+296,Lemon juice,1 oz,f
+296,Sugar,1-2 tblsp,f
+296,Ice,1,f
+296,Egg White,,f
+297,Brandy,3 parts,f
+297,Port,9 parts,f
+297,Egg Yolk,2 parts,f
+298,Light rum,3 oz,f
+298,Coconut milk,3 tblsp,f
+298,Pineapple,3 tblsp,f
+299,Everclear,750 ml,f
+299,Vodka,1750 ml,f
+299,Peach schnapps,1750 ml,f
+299,Orange juice,1 gal,f
+299,Cranberry juice,1 gal,f
+300,Rum,40 ml,f
+300,Passoa,20 ml,f
+300,Lime Juice,30 ml,f
+300,Passion fruit syrup,15 ml,f
+300,Peach Bitters,Dash,f
+300,Mint,Garnish with,f
+301,Vodka,2 oz,f
+301,Cherry liqueur,2 oz,f
+301,Cranberry juice,4 oz,f
+301,Orange juice,4 oz,f
+302,Gin,1 1/2 oz,f
+302,Creme de Cacao,3/4 oz white,f
+303,Port,1 1/2 oz,f
+303,Light cream,2 tsp,f
+303,Powdered sugar,1 tsp,f
+303,Egg,1 whole,f
+303,Nutmeg,,f
+304,Dark rum,1 part,f
+304,Orgeat syrup,1/2 part,f
+304,Orange juice,2 parts,f
+304,Pineapple juice,1 part,f
+305,Tequila,4 oz,f
+305,Grapefruit Juice,4 oz,f
+305,Fresh Lime Juice,1 oz,f
+305,Pineapple Juice,8 oz,f
+305,Lime,Garnish with,f
+305,Pepper,Rimmed,f
+306,Vodka,3 cl,f
+306,Passoa,3 cl,f
+306,Passion fruit juice,1 cl,f
+306,Lime,1 cl,f
+306,Prosecco,1 shot,f
+307,Dark Rum,4.5 cL,f
+307,Orange Juice,3 cl,f
+307,Pineapple Juice,3.5 cl,f
+307,Grenadine,1 cl,f
+307,Sugar Syrup,1 cl,f
+307,Angostura Bitters,4 drops,f
+308,Grenadine,1 tblsp,f
+308,Green Creme de Menthe,1/2 oz,f
+309,Port,2 1/2 oz,f
+309,Brandy,1/2 tsp,f
+310,Orange juice,1 part,f
+310,Apple juice,1 part,f
+310,Pineapple juice,1 part,f
+310,Ice,,f
+311,Sprite,1 L,f
+311,Pink lemonade,2 cups,f
+311,Vodka,2 cups,f
+312,Vodka,1 shot,f
+312,Sugar Syrup,1/2 shot,f
+312,Passion fruit juice,Full Glass,f
+313,Ginger,1/4 inch,f
+313,Pineapple,1/2,f
+314,Dark rum,1 1/2 oz,f
+314,Kahlua,1/2 oz,f
+314,Light cream,1 oz,f
+314,Nutmeg,1/8 tsp grated,f
+315,Coffee brandy,1 oz,f
+315,Lime vodka,1 1/2 oz,f
+315,Sherry,1/2 oz cream,f
+316,Kahlua,1 part,f
+316,Midori melon liqueur,1 part,f
+316,Baileys irish cream,1 part,f
+317,Black Sambuca,25 ml,f
+317,Orange juice,Add 250 ml,f
+318,Red wine,2 oz,f
+318,Grenadine,1 oz,f
+318,Lemon-lime soda,,f
+319,Dry Vermouth,1/2 oz,f
+319,Gin,1 1/2 oz,f
+319,Benedictine,1 1/2 tsp,f
+320,Light rum,3/4 oz,f
+320,Brandy,3/4 oz,f
+320,Lemon,Juice of 1/4,f
+320,Raspberry syrup,2 tsp,f
+321,Light rum,1 1/2,f
+321,Sherry,1/3 oz cream,f
+321,Lime,Juice of 1/2,f
+322,Dry Vermouth,1/2 oz,f
+322,Gin,1 oz,f
+322,Apricot brandy,1/2 oz,f
+322,Lemon juice,1/2 tsp,f
+322,Grenadine,1 tsp,f
+322,Powdered sugar,,f
+323,Beer,12 oz,f
+323,7-Up,12 oz,f
+324,Light rum,2 oz,f
+324,Lemon juice,1 oz,f
+324,Sugar,1/2 tsp superfine,f
+324,Orange,1,f
+324,Maraschino cherry,1,f
+325,Rum,mikey bottle,f
+325,Ginger ale,large bottle,f
+325,Fruit punch,355 ml frozen,f
+325,Orange juice,355 ml frozen,f
+325,Ice,crushed,f
+326,Rum,2 oz light or dark,f
+326,Powdered sugar,2 tsp,f
+326,Lemon peel,1 twist of,f
+326,Water,2 tsp,f
+327,Gin,1 oz,f
+327,Sweet and sour,2 oz,f
+327,Egg,1 whole,f
+327,Coca-Cola,,f
+328,Rum,2 oz light or dark,f
+328,Lemon-lime soda,4 oz,f
+328,Lemon,1,f
+329,Malibu rum,1 1/2 oz,f
+329,Blackberry brandy,1 oz,f
+329,Orange juice,3-4 oz,f
+329,Pineapple juice,3-4 oz,f
+329,Cranberry juice,3-4 oz,f
+330,Scotch,1 1/2 oz,f
+330,Drambuie,1/2 oz,f
+330,Lemon peel,1 twist of,f
+331,Crown Royal,1 shot,f
+331,Amaretto,1 shot,f
+331,Cranberry juice,1 shot,f
+332,Frangelico,1 part,f
+332,Crown Royal,1 part,f
+333,Crown Royal,1 1/2 oz,f
+333,Peach schnapps,1 oz,f
+333,Chambord raspberry liqueur,1/2 oz,f
+333,Cranberry juice,1 oz,f
+334,Sugar,1 tsp superfine,f
+334,Club soda,3 oz,f
+334,Lemon,1,f
+334,Dark rum,2 oz,f
+334,Maraschino cherry,1,f
+334,Orange,1,f
+335,Gin,2 oz,f
+335,Cranberry juice,5 oz,f
+335,Grenadine,2 splashes,f
+336,Sugar syrup,2 tsp,f
+336,Lemon juice,,f
+336,Ginger ale,,f
+337,Gin,50 ml,f
+337,Blue Curacao,15 ml,f
+337,Tonic Water,100 ml,f
+337,Rosemary,Garnish with,f
+338,Gin,4.5 cL,f
+338,Lemon Juice,3 cl,f
+338,Sugar Syrup,3 cl,f
+338,Cream,6 cl,f
+338,Egg White,1,f
+338,Vanilla extract,2 drop,f
+338,Soda Water,2 cl,f
+339,Gin,2 oz,f
+339,Lemon,Juice of 1/2,f
+339,Powdered sugar,1 tsp,f
+339,Egg,1 whole,f
+339,Carbonated water,,f
+340,Light rum,2 oz,f
+340,Milk,1 cup,f
+340,Powdered sugar,1 tsp,f
+340,Nutmeg,,f
+341,Bourbon,2 oz,f
+341,Raspberry syrup,1/2 oz,f
+341,Mint,8,f
+342,Light rum,1 1/2 oz,f
+342,Orange juice,5 oz,f
+343,Raspberry vodka,2 oz,f
+343,Lemon-lime soda,4 oz,f
+343,Ice,,f
+344,Light rum,1 1/2 oz,f
+344,151 proof rum,1 tsp,f
+344,Powdered sugar,1/2 tsp,f
+344,Bitters,1 dash,f
+344,Water,1 tsp,f
+344,Lime peel,Twist of,f
+345,Vodka,2.5 cl,f
+345,Creme de Cassis,1.5 cl,f
+345,Sugar Syrup,1 cl,f
+345,Lemon Juice,2.5 cl,f
+346,Rum,1 oz,f
+346,Vodka,1 oz,f
+346,Tequila,1 oz,f
+346,Gin,1 oz,f
+346,Triple sec,1 oz,f
+346,Chambord raspberry liqueur,1 oz,f
+346,Midori melon liqueur,1 oz,f
+346,Malibu rum,1 oz,f
+347,Red wine,1/3 part,f
+347,Peach schnapps,1 shot,f
+347,Pepsi Cola,1/3 part,f
+347,Orange juice,1/3 part,f
+348,Prosecco,6 cl,f
+348,Campari,4 cl,f
+348,Soda Water,splash,f
+349,Brandy,1 oz,f
+349,Amaretto,1 oz,f
+349,Light cream,1 oz,f
+350,Red wine,1 bottle,f
+350,Sugar,1/2 cup,f
+350,Orange juice,1 cup,f
+350,Lemon juice,1 cup,f
+350,Cloves,,f
+350,Cinnamon,,f
+351,Brandy,1 1/2 oz,f
+351,White Creme de Menthe,1/2 oz,f
+352,Ricard,1 tsp,f
+352,Sugar,1/2 tsp superfine,f
+352,Peychaud bitters,2 dashes,f
+352,Water,1 tsp,f
+352,Bourbon,2 oz,f
+352,Lemon peel,1 twist of,f
+353,Cognac,2 oz,f
+353,Cointreau,1/2 oz,f
+353,Lemon juice,1 oz,f
+354,Vodka,1 oz,f
+354,Amaro Montenegro,1 oz,f
+354,Ruby Port,1 oz,f
+354,Blood Orange,1 tsp,f
+354,Angostura Bitters,Dash,f
+354,Orange Peel,Garnish with,f
+355,Sugar,60 ml,f
+355,Allspice,1 tblsp,f
+355,Rum,20 cl,f
+355,Lime Juice,90 ml,f
+355,Champagne,6 cl,f
+355,Orange spiral,Garnish with,f
+356,Advocaat,1 1/2 oz,f
+356,Lemonade,8-10 oz cold,f
+356,Lemon,1 slice,f
+356,Ice,cubes,f
+357,Jim Beam,1 part,f
+357,Jack Daniels,1 part,f
+357,Wild Turkey,1 oz,f
+358,Grapefruit juice,5 oz,f
+358,Gin,1 1/2 oz,f
+358,Salt,1/4 tsp,f
+359,Apricot brandy,1 oz,f
+359,Orange juice,1 oz,f
+359,Sweet and sour,1 oz,f
+360,Vodka,1 1/2 oz,f
+360,Cranberry juice,4 oz,f
+360,Grapefruit juice,1 oz,f
+361,Scotch,1 1/2 oz,f
+361,Lime,Juice of 1/2,f
+361,Powdered sugar,1/2 tsp,f
+361,Lemon,1/2 slice,f
+361,Cherry,1,f
+362,Godiva liqueur,2 shots,f
+362,Milk,,f
+363,Vodka,2 oz,f
+363,Orange juice,,f
+364,Sherry,1 1/2 oz cream,f
+364,Light cream,2 tsp,f
+364,Powdered sugar,1 tsp,f
+364,Egg,1 whole,f
+364,Nutmeg,,f
+365,Brandy,1 1/2 oz,f
+365,Anisette,1 1/2 oz,f
+366,Lemonade,1 can,f
+366,Water,3 cans,f
+366,Vodka,1 1/2 cup,f
+367,Vodka,2 cl,f
+367,Creme de Banane,2 cl,f
+367,Grenadine,,f
+367,Orange juice,,f
+368,151 proof rum,1 shot Bacardi,f
+368,Malibu rum,1 shot,f
+368,Pineapple juice,1 shot,f
+368,Orange juice,,f
+368,Grenadine,,f
+368,Cherries,,f
+369,Sherry,2 oz cream,f
+369,Powdered sugar,1 tsp,f
+369,Egg,1 whole,f
+369,Milk,,f
+369,Nutmeg,,f
+370,Milk,2 cups,f
+370,Banana,1,f
+370,Honey,1 tblsp,f
+371,Red wine,2 bottles,f
+371,Sugar,1 cup,f
+371,Water,2 cups hot,f
+371,Apple,1 cup,f
+371,Orange,wedges,f
+371,Lime,wedges,f
+371,Lemon,,f
+371,Fresca,,f
+372,Scotch,1 1/2 oz,f
+372,Wine,1 oz Green Ginger,f
+372,Orange juice,1 oz,f
+373,Dark Rum,1 shot,f
+373,Campari,1 shot,f
+373,Creme De Banane,1/2 shot,f
+373,Pineapple Juice,Top,f
+373,Lime Juice,Top,f
+374,Water,1 cup,f
+374,Brown sugar,3/4-1 cup,f
+374,Coffee,4 tsp,f
+374,Rum,1 cup,f
+374,Vanilla extract,4 tsp,f
+375,Irish Whiskey,2 oz,f
+375,Sweet Vermouth,1 oz,f
+375,Green Chartreuse,1/2 oz,f
+376,Wild Turkey,1 oz,f
+376,Amaretto,3/4 oz,f
+376,Pineapple juice,1 splash,f
+377,Kahlua,1/2 oz,f
+377,Irish cream,1/2 oz,f
+377,Amaretto,1/2 oz,f
+377,151 proof rum,1/2 oz Bacardi,f
+377,Cream,1 oz,f
+378,Coffee,6 tblsp ground,f
+378,Coriander,1/4 tsp,f
+378,Cardamom,4-5 whole green,f
+378,Sugar,,f
+378,Whipping cream,,f
+378,Ice,,f
+379,Gin,2 oz,f
+379,Lemon juice,1 oz,f
+379,Sugar,1 tsp superfine,f
+379,Club soda,3 oz,f
+379,Maraschino cherry,1,f
+379,Orange,1,f
+380,Tomato juice,2 cups,f
+380,Lemon juice,1-2 tblsp,f
+380,Celery salt,1 dash,f
+381,Grand Marnier,3 parts,f
+381,Coffee,1 part,f
+382,Coffee,8 oz,f
+382,Jack Daniels,4 oz,f
+382,Amaretto,4 oz,f
+382,Whipped cream,,f
+383,Tequila,2 oz,f
+383,Lemon juice,1 tblsp,f
+383,Grenadine,3/4 oz,f
+383,Egg white,1,f
+383,Ginger ale,,f
+384,Tequila,2 oz,f
+384,Lemon,Juice of 1/2,f
+384,Powdered sugar,1 tsp,f
+384,Cherry,1,f
+385,Tea,1/4 cup Thai,f
+385,Water,1/2 cup boiling,f
+385,Condensed milk,2 tsp sweetened,f
+385,Ice,cubes,f
+385,Mint,garnish,f
+386,Green Chartreuse,1 oz,f
+386,Maraschino Liqueur,1 oz,f
+386,Lime Juice,1 oz,f
+386,Gin,1 oz,f
+387,Dry Vermouth,1 oz,f
+387,Gin,1 oz,f
+387,Anis,1/4 tsp,f
+387,Bitters,2 dashes,f
+387,Orange peel,Twist of,f
+388,Gin,50 ml,f
+388,Elderflower cordial,15 ml,f
+388,Rosso Vermouth,15 ml,f
+388,Tonic Water,75 ml,f
+388,Lime,2 Wedges,f
+388,Ginger,1 Slice,f
+388,Mint,1 Large Sprig,f
+389,Tequila,1 shot,f
+389,7-up,1 part,f
+390,Tequila,2 measures,f
+390,Orange juice,,f
+390,Grenadine,,f
+391,Gin,1 shot,f
+391,Melon Liqueur,1 shot,f
+391,Orange Bitters,1 dash,f
+391,Lemon Juice,1 dash,f
+391,Prosecco,Top,f
+392,Dry Vermouth,1 1/2 oz,f
+392,Gin,1 1/2 oz,f
+392,Maraschino liqueur,1/4 tsp,f
+392,Anis,1/4 tsp,f
+392,Orange bitters,2 dashes,f
+392,Cherry,1,f
+393,Tequila,full glass,f
+393,Tabasco sauce,About 8 drops,f
+394,Coffee,black,f
+394,Sugar,,f
+394,Cream,pods,f
+394,Cardamom,,f
+395,Irish Whiskey,50 ml,f
+395,Amaretto,50 ml,f
+395,Cranberry Juice,4 oz,f
+396,Yukon Jack,1 part,f
+396,Cherry brandy,1/2 part,f
+396,Southern Comfort,1 part,f
+396,Sweet and sour,1 splash,f
+399,Tequila,6 cl,f
+399,Tomato Juice,3 cl,f
+399,Orange Juice,3 cl,f
+399,Lime Juice,1.5 cl,f
+399,Sugar Syrup,1 dash,f
+399,Salt,1 pinch,f
+400,Light rum,1 oz,f
+400,Sweet Vermouth,1/2 oz,f
+400,Lemon,Juice of 1/2,f
+400,Powdered sugar,1 tsp,f
+400,Egg white,1,f
+401,Dark rum,2 oz,f
+401,Cherry brandy,1/2 oz,f
+402,Light rum,3 oz,f
+402,Maple syrup,1 oz,f
+402,Lemon juice,1 oz,f
+403,Vodka,2 oz,f
+403,Half-and-half,2 oz,f
+403,Limeade,2 oz,f
+403,Ice,,f
+403,Nutmeg,,f
+404,Vodka,5 cl,f
+404,Lemon Juice,7 cl,f
+404,Lemon Peel,1 Slice,f
+404,Ice,cubes,f
+405,Sprite,1 cup,f
+405,Lime Juice,1/2 shot,f
+405,Vodka,1 1/2 shot,f
+406,Vodka,4 cl,f
+406,Tonic Water,10 cl,f
+406,Lemon Peel,1 Slice,f
+407,Vodka,1 1/2 oz,f
+407,Dry Vermouth,3/4 oz,f
+407,Olive,1,f
+408,Vodka,2 oz,f
+408,Schweppes Russchian,,f
+409,Dry Vermouth,1 1/2 oz,f
+409,Creme de Cassis,3/4 oz,f
+409,Carbonated water,,f
+410,Vodka,1 1/2 oz,f
+410,Lemon juice,3 oz,f
+410,Grape juice,3 oz unsweetened,f
+410,Powdered sugar,1 tsp,f
+410,Orange,1 slice,f
+411,Vodka,2 oz,f
+411,Tonic water,,f
+412,Apricot brandy,1 1/2 oz,f
+412,Orange juice,1 tblsp,f
+412,Orange bitters,2 dashes,f
+413,Scotch,1 1/2 oz,f
+413,Wine,1 oz Green Ginger,f
+414,Gin,4cl,f
+414,Triple Sec,3cl,f
+414,Lemon Juice,2cl,f
+415,Red wine,1 bottle,f
+415,Lemon,2,f
+415,Orange juice,1 cup,f
+415,Orange,3,f
+415,Pineapple juice,1 cup,f
+416,Red wine,2 oz white or,f
+416,Lemon-lime soda,5 oz,f
+416,Ice,cubes,f
+417,Tequila,1 2/3 oz,f
+417,Campari,1/4 oz,f
+417,Lime Juice,3/4 oz,f
+417,Orange Juice,1/2 oz,f
+417,Rosemary Syrup,1/2 oz,f
+417,Salt,Dash,f
+418,Blended whiskey,2 oz,f
+418,Lemon,Juice of 1/2,f
+418,Powdered sugar,1/2 tsp,f
+418,Cherry,1,f
+419,Vodka,2 oz,f
+419,Coffee liqueur,1 oz,f
+419,Light cream,,f
+420,Tequila,2 shots,f
+420,Grapefruit Juice,Top,f
+420,Lime Juice,Juice of 1,f
+420,Agave Syrup,1 tsp,f
+420,Pepper,Dash,f
+421,Lime,1,f
+421,lemon,1,f
+421,White Wine,750 ml,f
+421,Strawberries,1 cup,f
+421,Apple,1 cup,f
+421,Apple Brandy,3 shots,f
+421,Soda Water,Top,f
+422,Ice,1 cup,f
+422,Tequila,2 oz,f
+422,Cream of coconut,1/4 cup,f
+422,Lime juice,3 tblsp fresh,f
+423,Triple sec,3/4 oz,f
+423,Gin,3/4 oz,f
+423,Pineapple juice,1 tblsp,f
+424,White Rum,3 cl,f
+424,Galliano,1.5 cl,f
+424,Triple Sec,1.5 cl,f
+424,Lime Juice,1.5 cl,f
+425,Yoghurt,1 cup,f
+425,Fruit,1 cup,f
+425,Ice,,f
+426,Sambuca,2 cl,f
+426,Baileys irish cream,2 cl,f
+426,White Creme de Menthe,2 cl,f
+427,Peachtree schnapps,4 shots,f
+427,Surge,4 shots,f
+428,Beer,,f
+428,Root beer,,f
+428,Lemonade,,f
+428,Coca-Cola,slice,f
+428,7-Up,,f
+428,Creme de Cassis,,f
+428,Lemon,,f
+429,Rum,1 1/2 oz,f
+429,Gold rum,1 1/2 oz,f
+429,151 proof rum,1 oz,f
+429,Pernod,1 tsp,f
+429,Grenadine,1 tsp,f
+429,Lime Juice,1 tsp,f
+429,Angostura Bitters,1 drop,f
+430,Sambuca,1 1/2 oz,f
+430,Root beer,Add 10 oz,f
+430,Ice,cubes,f
+431,Vodka,1 1/4 oz Stoli,f
+431,Ouzo,1/4 oz,f
+432,Jägermeister,1/2 oz,f
+432,Root beer,1/2 oz,f
+433,Chambord raspberry liqueur,1 shot,f
+433,Vodka,1 shot,f
+433,Soda water,Fill with,f
+434,Zima,12 oz,f
+434,Chambord raspberry liqueur,3 oz,f
+435,Cointreau,5 cl,f
+435,Lemon juice,2 cl,f
+435,Ice,cubes,f
+435,Lemon,or lime,f
+436,Midori melon liqueur,1.5 oz,f
+436,Zima,12 oz,f
+437,Amaretto,2 oz,f
+437,Rum,2 oz,f
+437,Kool-Aid,4 oz Grape,f
+438,Vermouth,4 cl,f
+438,Apple juice,16 cl,f
+439,Dark rum,1 shot,f
+439,Light rum,2 shots,f
+439,Vodka,1 shot,f
+439,Orange juice,1 shot,f
+440,Lager,16 oz,f
+440,Tequila,1.5 oz,f
+441,Malibu rum,1/2 oz,f
+441,Light rum,1/2 oz,f
+441,151 proof rum,1/2 oz Bacardi,f
+441,Dark Creme de Cacao,1 oz,f
+441,Cointreau,1 oz,f
+441,Milk,3 oz,f
+441,Coconut liqueur,1 oz,f
+441,Vanilla ice-cream,1 cup,f
+442,151 proof rum,1/2 shot Bacardi,f
+442,Wild Turkey,1/2 shot,f
+443,Goldschlager,1/2 oz,f
+443,Jägermeister,1/2 oz,f
+443,Rumple Minze,1/2 oz,f
+443,151 proof rum,1/2 oz Bacardi,f
+444,Jack Daniels,1/3 oz,f
+444,Johnnie Walker,1/3 oz,f
+444,Jim Beam,1/3 oz,f
+445,Gin,1/2 oz,f
+445,Light rum,1/2 oz,f
+445,Tequila,1/2 oz,f
+445,Triple sec,1/2 oz,f
+445,Vodka,1/2 oz,f
+445,Coca-Cola,1/2 oz,f
+445,Sweet and sour,1-2 dash,f
+445,Bitters,1 wedge,f
+445,Lemon,Garnish with,f
+446,Peach Vodka,2-3 oz,f
+446,Coca-Cola,,f
+447,Vanilla vodka,2 1/2 oz,f
+447,Grand Marnier,1 splash,f
+447,Orange juice,Fill with,f
+448,Blue Curacao,,f
+448,Blueberry schnapps,,f
+448,Vodka,,f
+448,Sour mix,,f
+448,7-Up,,f
+449,Creme de Cacao,1 oz white,f
+449,Vodka,1 oz,f
+450,Gin,2 oz dry,f
+450,7-Up,4 oz,f
+450,Lemon juice,0.75 oz,f
+451,Kahlua,1/3 part,f
+451,Baileys irish cream,1/3 part,f
+451,Frangelico,1/3 part,f
+452,Vodka,1 oz,f
+452,Roses sweetened lime juice,1 oz,f
+452,Cranberry Juice,1 oz,f
+452,Sprite,Top,f
+453,Absolut Citron,2 oz,f
+453,Orange Curacao,1/2 oz,f
+453,Strawberry liqueur,1 splash,f
+453,Orange juice,1 oz,f
