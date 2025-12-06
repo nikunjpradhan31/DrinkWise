@@ -56,4 +56,4 @@ async def update_expired_keys():
                 """
             ))
             await db.commit()
-        await asyncio.sleep(10)
+        await asyncio.sleep(5)

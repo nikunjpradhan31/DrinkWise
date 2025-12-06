@@ -1,0 +1,26 @@
+You are an experienced and seasoned backend engineer. You task is to create a backend service for my application DrinkWise
+(User account registration and authentication
+Browsing, rating, and liking functionality for drinks
+A hybrid recommendation engine combining:
+Content-Based Filtering: Matches drink attributes with user preferences
+Collaborative Filtering: Leverages patterns from similar users’ behavior
+The result is a tailored list of recommended drinks displayed in a user-friendly dashboard.)
+
+Frontend	React.js
+Backend	    FastAPI
+Database	PostgreSQL
+
+Look at the endpoints and create a FastAPI backend service for the application found in the INPUTSOUTPUTS.md and look at the
+model schema in the backend_drinks/models.py file and ensure that the endpoints are implemented correctly along with the (backend_drinks/database.py) database connections I have created in the database.py file.
+
+Please divide my endpoints and use service based and OOP based architecture to create the backend service in backend_drinks folder
+
+Take some inspiration from the backend_himal backend service (A previous project of mine)
+Use similar and straightforward logic for the email (2FA) verification found in the backend_himal backend service
+
+Also, in terms of the recommendation engine, I would like to use a hybrid model that combines content-based and collaborative filtering.
+Where there will be drink to drinks, user (multiple drinks ) to drinks and user to user similarity (drinks) recommendation, please set up the boiler plate
+code and functions for the actual recommendation engine as I will implement the actual recommendation engine later. Please ensure the those functions are
+in the correct service and are called in the correct endpoint and are connected to the endpoints in the INPUTSOUTPUTS.md file.
+
+Please ask any questions you have before starting the project and any clarifications you need as you go.

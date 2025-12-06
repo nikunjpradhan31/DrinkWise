@@ -1,226 +1,163 @@
+"""
+Base service class for DrinkWise backend services.
+Provides common functionality and database session management.
+"""
+
 from abc import ABC, abstractmethod
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, update, delete
-from typing import List, Optional, Dict, Any, TypeVar, Generic
+from sqlalchemy.orm import Session
+from typing import Any, Dict, Optional, List
 import logging
 
-# Type variable for model
-ModelType = TypeVar('ModelType')
-CreateSchemaType = TypeVar('CreateSchemaType')
-UpdateSchemaType = TypeVar('UpdateSchemaType')
+logger = logging.getLogger(__name__)
 
-class BaseService(ABC, Generic[ModelType, CreateSchemaType, UpdateSchemaType]):
+class BaseService(ABC):
     """
-    Base service class providing common CRUD operations
-    
-    Attributes:
-        model: SQLAlchemy model class
-        db: Database session
+    Abstract base class for all services in the DrinkWise backend.
+    Provides common functionality for database operations, logging, and error handling.
     """
     
-    def __init__(self, model: type, db: AsyncSession):
-        self.model = model
+    def __init__(self, db: AsyncSession):
+        """
+        Initialize the service with a database session.
+        
+        Args:
+            db: AsyncSession instance for database operations
+        """
         self.db = db
-        self.logger = logging.getLogger(f"{model.__name__}_service")
     
-    async def get_by_id(self, id: int) -> Optional[ModelType]:
+    async def execute_with_rollback(self, operation) -> Any:
         """
-        Get a record by ID
+        Execute a database operation with automatic rollback on error.
         
         Args:
-            id: Record ID
+            operation: Async function to execute
             
         Returns:
-            Model instance or None if not found
-        """
-        try:
-            result = await self.db.execute(select(self.model).where(self.model.__table__.primary_key.columns.values()[0] == id))
-            return result.scalar_one_or_none()
-        except Exception as e:
-            self.logger.error(f"Error getting {self.model.__name__} by ID {id}: {str(e)}")
-            return None
-    
-    async def get_all(self, limit: int = 100, offset: int = 0) -> List[ModelType]:
-        """
-        Get all records with pagination
-        
-        Args:
-            limit: Maximum number of records to return
-            offset: Number of records to skip
+            Result of the operation
             
-        Returns:
-            List of model instances
+        Raises:
+            Exception: If the operation fails
         """
         try:
-            result = await self.db.execute(
-                select(self.model).offset(offset).limit(limit)
-            )
-            return result.scalars().all()
-        except Exception as e:
-            self.logger.error(f"Error getting all {self.model.__name__}: {str(e)}")
-            return []
-    
-    async def create(self, obj_data: CreateSchemaType) -> Optional[ModelType]:
-        """
-        Create a new record
-        
-        Args:
-            obj_data: Data to create the record with
-            
-        Returns:
-            Created model instance or None if failed
-        """
-        try:
-            db_obj = self.model(**obj_data.dict())
-            self.db.add(db_obj)
+            result = await operation()
             await self.db.commit()
-            await self.db.refresh(db_obj)
-            self.logger.info(f"Created {self.model.__name__} with ID {getattr(db_obj, self.model.__table__.primary_key.columns.values()[0].name)}")
-            return db_obj
+            return result
         except Exception as e:
-            self.logger.error(f"Error creating {self.model.__name__}: {str(e)}")
             await self.db.rollback()
-            return None
+            logger.error(f"Database operation failed: {str(e)}")
+            raise
     
-    async def update(self, id: int, obj_data: UpdateSchemaType) -> Optional[ModelType]:
+    async def execute_without_commit(self, operation) -> Any:
         """
-        Update an existing record
+        Execute a database operation without automatic commit.
+        Used for read-only operations or when manual commit control is needed.
         
         Args:
-            id: Record ID to update
-            obj_data: Data to update with
+            operation: Async function to execute
             
         Returns:
-            Updated model instance or None if failed
+            Result of the operation
         """
         try:
-            # Get the current record
-            current_obj = await self.get_by_id(id)
-            if not current_obj:
-                return None
-            
-            # Update fields
-            update_data = obj_data.dict(exclude_unset=True)
-            for field, value in update_data.items():
-                setattr(current_obj, field, value)
-            
-            await self.db.commit()
-            await self.db.refresh(current_obj)
-            self.logger.info(f"Updated {self.model.__name__} with ID {id}")
-            return current_obj
+            result = await operation()
+            return result
         except Exception as e:
-            self.logger.error(f"Error updating {self.model.__name__} with ID {id}: {str(e)}")
-            await self.db.rollback()
-            return None
+            logger.error(f"Database read operation failed: {str(e)}")
+            raise
     
-    async def delete(self, id: int) -> bool:
+    def handle_not_found(self, resource: str, resource_id: Any) -> None:
         """
-        Delete a record
+        Handle not found errors consistently.
         
         Args:
-            id: Record ID to delete
+            resource: Type of resource (e.g., "User", "Drink")
+            resource_id: ID of the resource that was not found
             
-        Returns:
-            True if deleted successfully, False otherwise
+        Raises:
+            HTTPException: 404 Not Found
         """
-        try:
-            obj = await self.get_by_id(id)
-            if not obj:
-                return False
-            
-            await self.db.delete(obj)
-            await self.db.commit()
-            self.logger.info(f"Deleted {self.model.__name__} with ID {id}")
-            return True
-        except Exception as e:
-            self.logger.error(f"Error deleting {self.model.__name__} with ID {id}: {str(e)}")
-            await self.db.rollback()
-            return False
+        from fastapi import HTTPException
+        raise HTTPException(
+            status_code=404,
+            detail=f"{resource} with id {resource_id} not found"
+        )
     
-    async def count(self) -> int:
+    def handle_validation_error(self, field: str, value: Any) -> None:
         """
-        Get total count of records
-        
-        Returns:
-            Total count
-        """
-        try:
-            result = await self.db.execute(select(self.model))
-            return len(result.scalars().all())
-        except Exception as e:
-            self.logger.error(f"Error counting {self.model.__name__}: {str(e)}")
-            return 0
-    
-    async def bulk_create(self, obj_data_list: List[CreateSchemaType]) -> List[ModelType]:
-        """
-        Create multiple records in bulk
+        Handle validation errors consistently.
         
         Args:
-            obj_data_list: List of data to create records with
+            field: Field name that failed validation
+            value: Invalid value
             
+        Raises:
+            HTTPException: 400 Bad Request
+        """
+        from fastapi import HTTPException
+        raise HTTPException(
+            status_code=400,
+            detail=f"Invalid value '{value}' for field '{field}'"
+        )
+    
+    def handle_conflict_error(self, resource: str, conflict_field: str, value: Any) -> None:
+        """
+        Handle conflict errors (duplicate resources) consistently.
+        
+        Args:
+            resource: Type of resource (e.g., "User", "Drink")
+            conflict_field: Field that caused the conflict
+            value: Conflicting value
+            
+        Raises:
+            HTTPException: 409 Conflict
+        """
+        from fastapi import HTTPException
+        raise HTTPException(
+            status_code=409,
+            detail=f"{resource} with {conflict_field} '{value}' already exists"
+        )
+    
+    def log_operation(self, operation: str, details: Dict[str, Any]) -> None:
+        """
+        Log service operations for debugging and monitoring.
+        
+        Args:
+            operation: Name of the operation
+            details: Additional details to log
+        """
+        logger.info(f"Service operation '{operation}' executed with details: {details}")
+    
+    def log_error(self, operation: str, error: Exception, details: Dict[str, Any] = None) -> None:
+        """
+        Log service errors for debugging and monitoring.
+        
+        Args:
+            operation: Name of the operation that failed
+            error: The exception that occurred
+            details: Additional details about the error
+        """
+        logger.error(f"Service operation '{operation}' failed: {str(error)}", extra={"details": details})
+    
+    async def health_check(self) -> Dict[str, Any]:
+        """
+        Basic health check for the service.
+        
         Returns:
-            List of created model instances
+            Dict containing service health status
         """
         try:
-            db_objects = []
-            for obj_data in obj_data_list:
-                db_obj = self.model(**obj_data.dict())
-                db_objects.append(db_obj)
-            
-            self.db.add_all(db_objects)
-            await self.db.commit()
-            
-            for obj in db_objects:
-                await self.db.refresh(obj)
-            
-            self.logger.info(f"Created {len(db_objects)} {self.model.__name__} records")
-            return db_objects
+            # Simple database connectivity check
+            await self.db.execute("SELECT 1")
+            return {
+                "status": "healthy",
+                "service": self.__class__.__name__,
+                "database": "connected"
+            }
         except Exception as e:
-            self.logger.error(f"Error bulk creating {self.model.__name__}: {str(e)}")
-            await self.db.rollback()
-            return []
-
-class ServiceError(Exception):
-    """Custom exception for service layer errors"""
-    pass
-
-class ValidationError(ServiceError):
-    """Custom exception for validation errors"""
-    pass
-
-class NotFoundError(ServiceError):
-    """Custom exception for not found errors"""
-    pass
-
-class AuthenticationError(ServiceError):
-    """Custom exception for authentication errors"""
-    pass
-
-# Utility functions for service layer
-def validate_age(age: Optional[int]) -> bool:
-    """Validate age is reasonable"""
-    return age is None or (0 <= age <= 150)
-
-def validate_email(email: str) -> bool:
-    """Basic email validation"""
-    return "@" in email and "." in email
-
-def validate_price_tier(price_tier: str) -> bool:
-    """Validate price tier format"""
-    return price_tier in ["$", "$$", "$$$"]
-
-def validate_sweetness_level(level: int) -> bool:
-    """Validate sweetness level range"""
-    return 1 <= level <= 10
-
-def validate_caffeine_content(content: int) -> bool:
-    """Validate caffeine content is non-negative"""
-    return content >= 0
-
-def validate_rating(rating: float) -> bool:
-    """Validate rating is within valid range"""
-    return 0.0 <= rating <= 5.0
-
-# Logging configuration
-logging.basicConfig(level=logging.INFO)
-service_logger = logging.getLogger("services")
+            return {
+                "status": "unhealthy",
+                "service": self.__class__.__name__,
+                "database": "disconnected",
+                "error": str(e)
+            }

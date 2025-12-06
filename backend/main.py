@@ -15,14 +15,17 @@ from middleware import get_current_user, get_current_verified_user
 
 # Service imports
 from services import (
-    AuthService, PreferenceService, FilterService, CatalogService,
-    HybridModelService, TasteQuizService, ExplainabilityService, EmailService
+    AuthService, PreferenceService, CatalogService,
+    TasteQuizService, EmailService
 )
 
 # Pydantic models
 from pydantic_models import (
     HealthCheckResponse, ErrorResponse
 )
+
+from api import auth_router, user_drinks_router, catalog_router
+
 
 # Configure logging
 logging.basicConfig(
@@ -45,11 +48,8 @@ async def lifespan(app: FastAPI):
         # Initialize services
         app.state.auth_service = AuthService
         app.state.preference_service = PreferenceService
-        app.state.filter_service = FilterService
         app.state.catalog_service = CatalogService
-        app.state.hybrid_model_service = HybridModelService
         app.state.taste_quiz_service = TasteQuizService
-        app.state.explainability_service = ExplainabilityService
         app.state.email_service = EmailService
         print("✅ Services initialized successfully")
         
@@ -114,25 +114,13 @@ def get_preference_service(db: AsyncSession = Depends(get_db_async)) -> Preferen
     """Dependency to get PreferenceService instance"""
     return PreferenceService(db)
 
-def get_filter_service(db: AsyncSession = Depends(get_db_async)) -> FilterService:
-    """Dependency to get FilterService instance"""
-    return FilterService(db)
-
 def get_catalog_service(db: AsyncSession = Depends(get_db_async)) -> CatalogService:
     """Dependency to get CatalogService instance"""
     return CatalogService(db)
 
-def get_hybrid_model_service(db: AsyncSession = Depends(get_db_async)) -> HybridModelService:
-    """Dependency to get HybridModelService instance"""
-    return HybridModelService(db)
-
 def get_taste_quiz_service(db: AsyncSession = Depends(get_db_async)) -> TasteQuizService:
     """Dependency to get TasteQuizService instance"""
     return TasteQuizService(db)
-
-def get_explainability_service(db: AsyncSession = Depends(get_db_async)) -> ExplainabilityService:
-    """Dependency to get ExplainabilityService instance"""
-    return ExplainabilityService(db)
 
 def get_email_service(db: AsyncSession = Depends(get_db_async)) -> EmailService:
     """Dependency to get EmailService instance"""
@@ -174,15 +162,20 @@ async def api_info():
             "Personalized drink recommendations",
             "Drink catalog management", 
             "User preferences & filters",
-            "Feedback & analytics",
-            "Age verification for alcohol content"
         ],
         "services": [
-            "AuthService", "PreferenceService", "FilterService", 
-            "CatalogService", "HybridModelService", "TasteQuizService",
-            "ExplainabilityService", "EmailService"
+            "AuthService", "PreferenceService",
+            "CatalogService", "TasteQuizService",
+            "EmailService"
         ]
     }
+
+
+
+app.include_router(auth_router, prefix="/api/v0", tags=["authentication"])
+app.include_router(user_drinks_router, prefix="/api/v0", tags=["user_drinks"])
+app.include_router(catalog_router, prefix="/api/v0", tags=["catalog"])
+
 
 # Global exception handler
 @app.exception_handler(Exception)

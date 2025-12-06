@@ -1,242 +1,461 @@
-from fastapi import APIRouter, Depends, HTTPException, status
-from fastapi.security import HTTPBearer
-from sqlalchemy.ext.asyncio import AsyncSession
-from datetime import datetime
+"""
+Authentication API endpoints for DrinkWise backend.
+Handles user registration, login, logout, and password reset.
+"""
 
-from middleware import get_current_user
-from services import AuthService, EmailService
+from fastapi import APIRouter, Depends, HTTPException, status
+from sqlalchemy.ext.asyncio import AsyncSession
+from typing import Optional
+from email_validator import EmailNotValidError, validate_email
+from database import get_db_async
+from middleware.auth_middleware import get_current_user
+from middleware.rate_limit import rate_limit_middleware
+from models import Users
+from services.auth_service import AuthService
+from services.email_service import EmailService
 from pydantic_models import (
-    UserCreate, UserLogin, LoginResponse, UserResponse,
-    EmailVerificationRequest, EmailVerificationResponse,
-    VerifyEmailRequest, VerifyEmailResponse, UserUpdate
+    UserRegistration, UserLogin, UserResponse, UserUpdate,
+    ForgotPassword, ForgotPasswordResponse, LogoutResponse,
+    ErrorResponse
 )
 
-router = APIRouter(prefix="/auth", tags=["Authentication"])
-security = HTTPBearer()
+router = APIRouter(prefix="/auth", tags=["authentication"])
 
-@router.post("/register", response_model=UserResponse)
+async def get_auth_service(
+    db: AsyncSession = Depends(get_db_async)
+) -> AuthService:
+    """Get AuthService instance."""
+    # Create EmailService instance for AuthService
+    email_service = EmailService(db)
+    return AuthService(db, email_service)
+
+# Registration endpoint
+@router.post(
+    "/register",
+    response_model=UserResponse,
+    responses={400: {"model": ErrorResponse}, 409: {"model": ErrorResponse}}
+)
 async def register_user(
-    user_data: UserCreate,
-    auth_service: AuthService = Depends(),
-    email_service: EmailService = Depends()
+    registration_data: UserRegistration,
+    auth_service: AuthService = Depends(get_auth_service)
 ):
-    """Register a new user"""
-    try:
-        # Create user
-        user = await auth_service.create_user(user_data)
-        if not user:
+    """
+    Register a new user with email verification.
+    
+    - **username**: Unique username (3-50 characters)
+    - **email**: Valid email address
+    - **password**: Strong password (8+ chars, uppercase, lowercase, digit)
+    - **confirmpassword**: Password confirmation
+    - **date_of_birth**: Optional date of birth for age verification
+    """
+    success, error_message, user_response = await auth_service.register_user(registration_data)
+    
+    if not success:
+        if "already exists" in error_message:
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail=error_message
+            )
+        else:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
-                detail="Failed to create user"
+                detail=error_message
             )
-        
-        # Send verification email
-        verification_result = await email_service.send_verification_email(
-            user.user_id, user.email
-        )
-        
-        if not verification_result:
-            # Log warning but don't fail registration
-            pass
-        
-        return user
-        
-    except Exception as e:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=str(e)
-        )
+    
+    return user_response
 
-@router.post("/login", response_model=LoginResponse)
+# Login endpoint
+@router.post(
+    "/login", 
+    response_model=UserResponse,
+    responses={400: {"model": ErrorResponse}, 401: {"model": ErrorResponse}}
+)
 async def login_user(
     login_data: UserLogin,
-    auth_service: AuthService = Depends()
+    auth_service: AuthService = Depends(get_auth_service)
 ):
-    """Authenticate user and return access token"""
-    try:
-        user_session = await auth_service.authenticate_user(login_data)
-        if not user_session:
-            raise HTTPException(
-                status_code=status.HTTP_401_UNAUTHORIZED,
-                detail="Invalid username or password"
-            )
-        
-        return user_session
-        
-    except Exception as e:
+    """
+    Authenticate user and return JWT tokens.
+    
+    - **username**: User's username
+    - **password**: User's password
+    """
+    success, error_message, user_response = await auth_service.login_user(login_data)
+    
+    if not success:
         raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=str(e)
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail=error_message
         )
+    
+    return user_response
 
-@router.post("/logout")
+# Logout endpoint
+@router.post(
+    "/logout",
+    response_model=LogoutResponse,
+    responses={401: {"model": ErrorResponse}}
+)
 async def logout_user(
-    current_user: dict = Depends(get_current_user),
-    auth_service: AuthService = Depends()
+    current_user: Users = Depends(get_current_user),
+    auth_service: AuthService = Depends(get_auth_service)
 ):
-    """Logout user by clearing access token"""
-    try:
-        success = await auth_service.logout_user(current_user["user_id"])
-        if not success:
-            raise HTTPException(
-                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                detail="Failed to logout user"
-            )
-        
-        return {"message": "Logged out successfully"}
-        
-    except Exception as e:
+    """
+    Logout user by invalidating their session.
+    
+    Requires valid JWT token in Authorization header.
+    """
+    success = await auth_service.logout_user(current_user.user_id)
+    
+    if not success:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            detail=str(e)
+            detail="Logout failed"
         )
+    
+    return LogoutResponse()
 
-@router.post("/verify-email", response_model=VerifyEmailResponse)
-async def verify_email(
-    verify_request: VerifyEmailRequest,
-    email_service: EmailService = Depends(),
-    auth_service: AuthService = Depends()
-):
-    """Verify email using verification token"""
-    try:
-        verification_result = await email_service.verify_email_token(verify_request)
-        if not verification_result:
-            raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail="Invalid or expired verification token"
-            )
-        
-        # Mark verification as completed
-        await auth_service.mark_verification_completed(verification_result.user_id)
-        
-        return verification_result
-        
-    except Exception as e:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=str(e)
-        )
-
-@router.post("/send-verification", response_model=EmailVerificationResponse)
-async def send_verification_email(
-    email_request: EmailVerificationRequest,
-    current_user: dict = Depends(get_current_user),
-    email_service: EmailService = Depends()
-):
-    """Send verification email to current user"""
-    try:
-        verification_result = await email_service.send_verification_email(
-            current_user["user_id"], email_request.email
-        )
-        
-        if not verification_result:
-            raise HTTPException(
-                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                detail="Failed to send verification email"
-            )
-        
-        return verification_result
-        
-    except Exception as e:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=str(e)
-        )
-
-@router.post("/verify-age")
-async def verify_age(
-    age: int,
-    current_user: dict = Depends(get_current_user),
-    auth_service: AuthService = Depends()
-):
-    """Verify user age for alcohol content access"""
-    try:
-        if age < 0 or age > 150:
-            raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail="Invalid age provided"
-            )
-        
-        success = await auth_service.verify_age(current_user["user_id"], age)
-        if not success:
-            raise HTTPException(
-                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                detail="Failed to verify age"
-            )
-        
-        is_age_verified = age >= 21
-        
-        return {
-            "age_verified": is_age_verified,
-            "message": "Age verified successfully" if is_age_verified else "Age verification pending for alcohol content"
-        }
-        
-    except Exception as e:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=str(e)
-        )
-
-@router.get("/me", response_model=UserResponse)
+# Get current user profile
+@router.get(
+    "/me",
+    response_model=UserResponse,
+    responses={401: {"model": ErrorResponse}}
+)
 async def get_current_user_profile(
-    current_user: dict = Depends(get_current_user),
-    auth_service: AuthService = Depends()
+    current_user: Users = Depends(get_current_user),
+    auth_service: AuthService = Depends(get_auth_service)
 ):
-    """Get current user profile"""
-    try:
-        # Get full user details from database
-        user = await auth_service.get_user_by_id(current_user["user_id"])
-        if not user:
+    """
+    Get current user's profile information.
+    
+    Requires valid JWT token in Authorization header.
+    """
+    user_response = await auth_service.get_user_profile(current_user.user_id)
+    
+    if not user_response:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="User profile not found"
+        )
+    
+    return user_response
+
+# Update user profile
+@router.put(
+    "/me",
+    response_model=UserResponse,
+    responses={400: {"model": ErrorResponse}, 401: {"model": ErrorResponse}, 404: {"model": ErrorResponse}}
+)
+async def update_user_profile(
+    update_data: UserUpdate,
+    current_user: Users = Depends(get_current_user),
+    auth_service: AuthService = Depends(get_auth_service)
+):
+    """
+    Update current user's profile information.
+    
+    - **username**: Optional new username
+    - **date_of_birth**: Optional new date of birth
+    
+    Requires valid JWT token in Authorization header.
+    """
+    success, error_message, user_response = await auth_service.update_user_profile(
+        current_user.user_id, update_data
+    )
+    
+    if not success:
+        if "not found" in error_message:
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
-                detail="User not found"
+                detail=error_message
             )
-        
-        return UserResponse.from_orm(user)
-        
-    except Exception as e:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=str(e)
-        )
-
-@router.put("/me", response_model=UserResponse)
-async def update_current_user_profile(
-    profile_data: UserUpdate,
-    current_user: dict = Depends(get_current_user),
-    auth_service: AuthService = Depends()
-):
-    """Update current user profile"""
-    try:
-        updated_user = await auth_service.update_user_profile(
-            current_user["user_id"], profile_data
-        )
-        
-        if not updated_user:
+        else:
             raise HTTPException(
-                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                detail="Failed to update user profile"
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=error_message
             )
-        
-        return updated_user
-        
-    except Exception as e:
+    
+    return user_response
+
+# Forgot password endpoint
+@router.post(
+    "/forgot-password",
+    response_model=ForgotPasswordResponse,
+    responses={400: {"model": ErrorResponse}}
+)
+async def forgot_password(
+    request_data: ForgotPassword,
+    auth_service: AuthService = Depends(get_auth_service)
+):
+    """
+    Reset user password using verification code.
+    
+    - **email**: User's email address
+    - **verification_code**: Code from email
+    - **new_password**: New password
+    - **confirm_password**: Password confirmation
+    """
+    success, error_message = await auth_service.reset_password(
+        request_data.email,
+        request_data.verification_code,
+        request_data.new_password
+    )
+    
+    if not success:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            detail=str(e)
+            detail=error_message
         )
+    
+    # Get user ID for response
+    from sqlalchemy import select
+    from models import Users
+    
+    # This should ideally be part of the auth_service method
+    # For now, we'll return a generic response
+    return ForgotPasswordResponse(user_id=0)
 
-# Helper methods for AuthService (need to add to the service)
-# These would be additional methods in the AuthService class
-async def get_user_by_id(self, user_id: int):
-    """Get user by ID"""
+# Resend verification email
+@router.post(
+    "/resend-verification",
+    responses={400: {"model": ErrorResponse}}
+)
+async def resend_verification_email(
+    email: str,
+    auth_service: AuthService = Depends(get_auth_service)
+):
+    """
+    Resend email verification code.
+    
+    - **email**: User's email address
+    """
+    
     try:
-        result = await self.db.execute(
-            select(Users).where(Users.user_id == user_id)
-        )
-        return result.scalar_one_or_none()
-    except Exception as e:
-        self.logger.error(f"Error getting user by ID: {str(e)}")
-        return None
+        email_obj = validate_email(email, check_deliverability=False)
+        email_obj = email_obj.email
 
-# Add this method to AuthService class
+    except:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid email format"
+        )
+    
+    success = await auth_service.email_service.resend_verification(
+        email_obj, "email_verification"
+    )
+    
+    if not success:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Failed to resend verification email"
+        )
+    
+    return {"message": "Verification email sent"}
+
+# Verify email endpoint
+@router.post(
+    "/verify-email",
+    responses={400: {"model": ErrorResponse}}
+)
+async def verify_email(
+    email: str,
+    verification_code: str,
+    auth_service: AuthService = Depends(get_auth_service)
+):
+    """
+    Verify email address using verification code.
+    
+    - **email**: User's email address
+    - **verification_code**: Code from email
+    """
+    
+    try:
+        email_obj = validate_email(email, check_deliverability=False)
+        email_obj = email_obj.email
+    except:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid email format"
+        )
+    
+    success, error_message = await auth_service.verify_user_email(email_obj, verification_code)
+    
+    if not success:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=error_message
+        )
+    
+    return {"message": "Email verified successfully"}
+
+# Check username availability
+@router.get(
+    "/check-username/{username}",
+    responses={400: {"model": ErrorResponse}}
+)
+async def check_username_availability(
+    username: str,
+    auth_service: AuthService = Depends(get_auth_service)
+):
+    """
+    Check if username is available for registration.
+    
+    - **username**: Username to check
+    """
+    if not auth_service.validate_username(username):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid username format"
+        )
+    
+    is_available = await auth_service.check_username_availability(username)
+    
+    return {
+        "username": username,
+        "available": is_available,
+        "message": "Username is available" if is_available else "Username is already taken"
+    }
+
+# Check email availability
+@router.get(
+    "/check-email/{email}",
+    responses={400: {"model": ErrorResponse}}
+)
+async def check_email_availability(
+    email: str,
+    auth_service: AuthService = Depends(get_auth_service)
+):
+    """
+    Check if email is available for registration.
+    
+    - **email**: Email to check
+    """
+    
+    try:
+        email_obj = validate_email(email, check_deliverability=False)
+        email_obj = email_obj.email
+    except:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid email format"
+        )
+    
+    is_available = await auth_service.check_email_availability(email_obj)
+    
+    return {
+        "email": email,
+        "available": is_available,
+        "message": "Email is available" if is_available else "Email is already registered"
+    }
+
+# Request password reset
+@router.post(
+    "/request-password-reset",
+    responses={400: {"model": ErrorResponse}}
+)
+async def request_password_reset(
+    email: str,
+    auth_service: AuthService = Depends(get_auth_service)
+):
+    """
+    Request password reset email.
+    
+    - **email**: User's email address
+    """
+    
+    try:
+        email_obj = validate_email(email, check_deliverability=False)
+        email_obj = email_obj.email
+    except:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid email format"
+        )
+    
+    success, error_message = await auth_service.request_password_reset(email_obj)
+    
+    # Always return success to prevent email enumeration
+    if not success:
+        logger.warning(f"Password reset request failed for {email_obj}: {error_message}")
+    
+    return {"message": "If the email exists, a password reset link has been sent"}
+
+# Get user statistics
+@router.get(
+    "/statistics",
+    responses={401: {"model": ErrorResponse}}
+)
+async def get_user_statistics(
+    current_user: Users = Depends(get_current_user),
+    auth_service: AuthService = Depends(get_auth_service)
+):
+    """
+    Get current user's statistics and account information.
+    
+    Requires valid JWT token in Authorization header.
+    """
+    stats = await auth_service.get_user_statistics(current_user.user_id)
+    
+    if not stats:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="User statistics not found"
+        )
+    
+    return stats
+
+# Delete user account
+@router.delete(
+    "/delete-account",
+    responses={401: {"model": ErrorResponse}, 400: {"model": ErrorResponse}}
+)
+async def delete_user_account(
+    current_user: Users = Depends(get_current_user),
+    auth_service: AuthService = Depends(get_auth_service)
+):
+    """
+    Delete user account and all associated data.
+    
+    Requires valid JWT token in Authorization header.
+    
+    ⚠️ **Warning**: This action is irreversible and will delete all user data.
+    """
+    # This would need to be implemented in the auth_service
+    # For now, we'll return a placeholder response
+    raise HTTPException(
+        status_code=status.HTTP_501_NOT_IMPLEMENTED,
+        detail="Account deletion not yet implemented"
+    )
+
+# Token refresh endpoint
+@router.post(
+    "/refresh-token",
+    responses={401: {"model": ErrorResponse}}
+)
+async def refresh_token(
+    current_user: Users = Depends(get_current_user),
+    auth_service: AuthService = Depends(get_auth_service)
+):
+    """
+    Refresh JWT token.
+    
+    Requires valid JWT token in Authorization header.
+    """
+    from ..middleware.auth_middleware import create_access_token
+    
+    # Create new access token
+    new_access_token = create_access_token({
+        "sub": str(current_user.user_id),
+        "username": current_user.username,
+        "email": current_user.email,
+        "is_verified": current_user.is_verified
+    })
+    
+    return {
+        "access_token": new_access_token,
+        "token_type": "bearer",
+        "expires_in": 1800  # 30 minutes
+    }
+
+# Export router
+__all__ = ["router"]

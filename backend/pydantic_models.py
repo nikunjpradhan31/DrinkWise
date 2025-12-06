@@ -1,353 +1,455 @@
-from pydantic import BaseModel, Field, EmailStr
+"""
+Pydantic models for DrinkWise API requests and responses.
+Based on the INPUTSOUTPUTS.md specification.
+"""
+
+from pydantic import BaseModel, EmailStr, Field, validator
+from typing import Optional, List, Dict, Any, Union
 from datetime import datetime
-from typing import Optional, List, Dict, Any
 from enum import Enum
 
 # =========================
-# USER & AUTHENTICATION
+# AUTHENTICATION MODELS
 # =========================
 
-class UserBase(BaseModel):
+class UserRegistration(BaseModel):
+    """User registration request model."""
     username: str = Field(..., min_length=3, max_length=50)
     email: EmailStr
-
-class UserCreate(UserBase):
     password: str = Field(..., min_length=8, max_length=128)
     confirmpassword: str = Field(..., min_length=8, max_length=128)
-    age: Optional[int] = None
     date_of_birth: Optional[datetime] = None
+    
+    @validator('confirmpassword')
+    def passwords_match(cls, v, values):
+        if 'password' in values and v != values['password']:
+            raise ValueError('Passwords do not match')
+        return v
 
 class UserLogin(BaseModel):
+    """User login request model."""
     username: str = Field(..., min_length=3, max_length=50)
     password: str = Field(..., min_length=8, max_length=128)
 
 class UserResponse(BaseModel):
+    """User response model."""
     user_id: int
     username: str
-    email: str
+    email: EmailStr
     joindate: datetime
     is_verified: bool
-    age: Optional[int] = None
-    verification_completed: bool
-    profile_picture: str = ""
-    description: str = ""
-    
-    class Config:
-        from_attributes = True
-
-class LoginResponse(BaseModel):
-    user_id: int
-    username: str
-    email: str
-    joindate: datetime
-    access_token: str
-    token_type: str = "bearer"
-    profile_picture: str
-    description: str
-    is_verified: bool
-    verification_completed: bool
-    
-    class Config:
-        from_attributes = True
+    date_of_birth: Optional[datetime]
+    questionnaire_finished: bool
+    verification_completed: bool = False
+    access_token: Optional[str] = None
+    token_type: Optional[str] = "bearer"
 
 class UserUpdate(BaseModel):
+    """User profile update request model."""
     username: Optional[str] = Field(None, min_length=3, max_length=50)
-    profile_picture: Optional[str] = None
-    description: Optional[str] = None
-    age: Optional[int] = None
     date_of_birth: Optional[datetime] = None
 
-# =========================
-# EMAIL VERIFICATION
-# =========================
-
-class EmailVerificationRequest(BaseModel):
+class ForgotPassword(BaseModel):
+    """Forgot password request model."""
     email: EmailStr
-
-class EmailVerificationResponse(BaseModel):
-    verification_id: int
-    user_id: int
-    email: str
-    message: str
+    verification_code: str
+    new_password: str = Field(..., min_length=8, max_length=128)
+    confirm_password: str = Field(..., min_length=8, max_length=128)
     
-    class Config:
-        from_attributes = True
+    @validator('confirm_password')
+    def passwords_match(cls, v, values):
+        if 'new_password' in values and v != values['new_password']:
+            raise ValueError('Passwords do not match')
+        return v
 
-class VerifyEmailRequest(BaseModel):
-    verification_token: str
-
-class VerifyEmailResponse(BaseModel):
+class ForgotPasswordResponse(BaseModel):
+    """Forgot password response model."""
+    message: str = "Password reset successfully"
     user_id: int
-    email: str
-    is_verified: bool
-    message: str
-    
-    class Config:
-        from_attributes = True
+
+class LogoutResponse(BaseModel):
+    """Logout response model."""
+    message: str = "Logged out successfully"
 
 # =========================
-# DRINK CATALOG
+# USER PREFERENCES MODELS
 # =========================
 
-class DrinkBase(BaseModel):
-    name: str = Field(..., max_length=200)
-    description: str
-    category: str = Field(..., max_length=100)  # "coffee", "tea", "smoothie", "alcohol", etc.
-    price_tier: str = Field(..., regex="^\\$|\\$\\$|\\$\\$\\$$")  # "$", "$$", "$$$"
-    sweetness_level: int = Field(..., ge=1, le=10)
-    caffeine_content: int = Field(..., ge=0)  # mg per serving
-    sugar_content: float = Field(..., ge=0.0)  # grams per serving
-    calorie_content: int = Field(..., ge=0)  # calories per serving
-    image_url: Optional[str] = None
-    is_alcoholic: bool = False
-    alcohol_content: float = Field(..., ge=0.0, le=100.0)  # percentage
-    safety_flags: Optional[List[str]] = None
-
-class DrinkCreate(DrinkBase):
-    ingredients: Optional[List[Dict[str, Any]]] = None  # [{"name": "Sugar", "quantity": "2 tbsp", "is_allergen": false}]
-    tags: Optional[List[str]] = None
-
-class DrinkResponse(DrinkBase):
-    drink_id: int
+class UserPreference(BaseModel):
+    """User preference response model."""
+    user_id: int
+    sweetness_preference: int = Field(..., ge=1, le=10)
+    bitterness_preference: int = Field(..., ge=1, le=10)
+    sugar_limit: Optional[float] = Field(None, ge=0.0)
+    caffeine_limit: int = Field(..., ge=0)
+    calorie_limit: int = Field(..., ge=0)
+    preferred_price_tier: str = Field(..., pattern="^(\$|\$\$|\$\$\$)$")
     created_at: datetime
     updated_at: datetime
-    ingredients: List[Dict[str, Any]] = []
-    tags: List[str] = []
-    
-    class Config:
-        from_attributes = True
 
-class DrinkIngredientResponse(BaseModel):
+class UserPreferenceUpdate(BaseModel):
+    """User preference update request model."""
+    sweetness_preference: Optional[int] = Field(None, ge=1, le=10)
+    bitterness_preference: Optional[int] = Field(None, ge=1, le=10)
+    sugar_limit: Optional[float] = Field(None, ge=0.0)
+    caffeine_limit: Optional[int] = Field(None, ge=0)
+    calorie_limit: Optional[int] = Field(None, ge=0)
+    preferred_price_tier: Optional[str] = Field(None, pattern="^(\$|\$\$|\$\$\$)$")
+
+# =========================
+# DRINK CATALOG MODELS
+# =========================
+
+class DrinkIngredient(BaseModel):
+    """Drink ingredient model."""
     ingredient_name: str
     quantity: Optional[str] = None
-    is_allergen: bool
-    
-    class Config:
-        from_attributes = True
+    is_allergen: bool = False
 
-class DrinkSearchParams(BaseModel):
-    category: Optional[str] = None
-    price_tier: Optional[str] = None
-    max_sweetness: Optional[int] = Field(None, ge=1, le=10)
-    min_caffeine: Optional[int] = Field(None, ge=0)
-    max_caffeine: Optional[int] = Field(None, ge=0)
-    is_alcoholic: Optional[bool] = None
-    excluded_ingredients: Optional[List[str]] = None
-    search_text: Optional[str] = None
-    page: int = 1
-    limit: int = 20
+# class DrinkTag(BaseModel):
+#     """Drink tag model."""
+#     tag: str
 
-class PaginatedDrinkResponse(BaseModel):
-    drinks: List[DrinkResponse]
+class Drink(BaseModel):
+    """Drink model."""
+    drink_id: int
+    name: str = Field(..., max_length=200)
+    description: str
+    category: str = Field(..., max_length=100)
+    price_tier: str = Field(..., pattern="^(\$|\$\$|\$\$\$)$")
+    sweetness_level: int = Field(..., ge=1, le=10)
+    caffeine_content: int = Field(..., ge=0)
+    sugar_content: float = Field(..., ge=0.0)
+    calorie_content: int = Field(..., ge=0)
+    image_url: Optional[str] = None
+    is_alcoholic: bool
+    alcohol_content: float = Field(..., ge=0.0, le=100.0)
+    safety_flags: Optional[List[str]] = None
+    created_at: datetime
+    updated_at: datetime
+    ingredients: List[DrinkIngredient]
+    tags: List[str]
+
+class DrinkSearchResponse(BaseModel):
+    """Drink search response model."""
+    drinks: List[Drink]
     total: int
     page: int
     limit: int
     total_pages: int
 
-# =========================
-# USER PREFERENCES
-# =========================
+class CategoriesResponse(BaseModel):
+    """Categories response model."""
+    categories: List[str]
 
-class UserPreferenceBase(BaseModel):
-    sweetness_preference: int = Field(..., ge=1, le=10)
-    bitterness_preference: int = Field(..., ge=1, le=10)
-    preferred_categories: Optional[List[str]] = None
-    sugar_limit: float = Field(..., ge=0.0)
-    caffeine_limit: int = Field(..., ge=0)
-    calorie_limit: int = Field(..., ge=0)
-    preferred_price_tier: str = Field(..., regex="^\\$|\\$\\$|\\$\\$\\$$")
-    time_sensitivity: Optional[Dict[str, Any]] = None
-    mode_preferences: Optional[Dict[str, Any]] = None
-
-class UserPreferenceCreate(UserPreferenceBase):
-    pass
-
-class UserPreferenceUpdate(BaseModel):
-    sweetness_preference: Optional[int] = Field(None, ge=1, le=10)
-    bitterness_preference: Optional[int] = Field(None, ge=1, le=10)
-    preferred_categories: Optional[List[str]] = None
-    sugar_limit: Optional[float] = Field(None, ge=0.0)
-    caffeine_limit: Optional[int] = Field(None, ge=0)
-    calorie_limit: Optional[int] = Field(None, ge=0)
-    preferred_price_tier: Optional[str] = Field(None, regex="^\\$|\\$\\$|\\$\\$\\$$")
-    time_sensitivity: Optional[Dict[str, Any]] = None
-    mode_preferences: Optional[Dict[str, Any]] = None
-
-class UserPreferenceResponse(UserPreferenceBase):
-    user_id: int
-    created_at: datetime
-    updated_at: datetime
-    
-    class Config:
-        from_attributes = True
+class PopularDrinksResponse(BaseModel):
+    """Popular drinks response model."""
+    drinks: List[Drink]
 
 # =========================
-# USER FILTERS
+# TASTE QUIZ MODELS
 # =========================
 
-class UserFilterBase(BaseModel):
-    budget_tier: Optional[str] = Field(None, regex="^\\$|\\$\\$|\\$\\$\\$$")
-    sweetness_filter: Optional[int] = Field(None, ge=1, le=10)
-    caffeine_min: Optional[int] = Field(None, ge=0)
-    caffeine_max: Optional[int] = Field(None, ge=0)
-    excluded_ingredients: Optional[List[str]] = None
-    excluded_categories: Optional[List[str]] = None
+class QuizOption(BaseModel):
+    """Quiz option model."""
+    option_id: int
+    option_text: str
 
-class UserFilterCreate(UserFilterBase):
-    pass
-
-class UserFilterUpdate(BaseModel):
-    budget_tier: Optional[str] = Field(None, regex="^\\$|\\$\\$|\\$\\$\\$$")
-    sweetness_filter: Optional[int] = Field(None, ge=1, le=10)
-    caffeine_min: Optional[int] = Field(None, ge=0)
-    caffeine_max: Optional[int] = Field(None, ge=0)
-    excluded_ingredients: Optional[List[str]] = None
-    excluded_categories: Optional[List[str]] = None
-    is_active: Optional[bool] = None
-
-class UserFilterResponse(UserFilterBase):
-    user_id: int
-    is_active: bool
-    created_at: datetime
-    updated_at: datetime
-    
-    class Config:
-        from_attributes = True
-
-# =========================
-# TASTE QUIZ SYSTEM
-# =========================
-
-class TasteQuizQuestionBase(BaseModel):
+class QuizQuestion(BaseModel):
+    """Quiz question model."""
+    question_id: int
     question_text: str
-    question_type: str = Field(..., regex="^(multiple_choice|scale|boolean)$")
-    options: Optional[List[str]] = None
-    category: str
-
-class TasteQuizQuestionCreate(TasteQuizQuestionBase):
-    pass
-
-class TasteQuizQuestionResponse(TasteQuizQuestionBase):
-    question_id: int
     is_active: bool
     created_at: datetime
-    
-    class Config:
-        from_attributes = True
+    options: List[QuizOption]
 
-class QuizAnswer(BaseModel):
-    question_id: int
-    answer: str
-
-class TasteQuizSubmission(BaseModel):
-    answers: List[QuizAnswer]
-
-class TasteQuizResponse(BaseModel):
-    questions: List[TasteQuizQuestionResponse]
+class QuizQuestionsResponse(BaseModel):
+    """Quiz questions response model."""
+    questions: List[QuizQuestion]
     total_questions: int
 
+class QuizAnswer(BaseModel):
+    """Quiz answer model."""
+    question_id: int
+    option_id: int
+
+class QuizSubmission(BaseModel):
+    """Quiz submission model."""
+    answers: List[QuizAnswer]
+
+class QuizSubmissionResponse(BaseModel):
+    """Quiz submission response model."""
+    message: str
+    answers_submitted: int
+    quiz_completed: bool
+
 # =========================
-# USER DRINK INTERACTIONS
+# USER-DRINK INTERACTIONS
 # =========================
 
-class UserDrinkInteractionBase(BaseModel):
+class UserDrinkInteraction(BaseModel):
+    """User-drink interaction model."""
+    user_id: int
     drink_id: int
-    times_consumed: int = 0
-    is_favorite: bool = False
-    rating: float = Field(0.0, ge=0.0, le=5.0)
-    is_not_for_me: bool = False
+    times_consumed: int = Field(..., ge=0)
+    is_favorite: bool
+    rating: float = Field(..., ge=0.0, le=5.0)
+    is_not_for_me: bool
+    viewed_at: datetime
+    last_consumed: Optional[datetime] = None
 
 class UserDrinkInteractionUpdate(BaseModel):
-    times_consumed: Optional[int] = None
+    """User-drink interaction update model."""
+    times_consumed: Optional[int] = Field(None, ge=0)
     is_favorite: Optional[bool] = None
     rating: Optional[float] = Field(None, ge=0.0, le=5.0)
     is_not_for_me: Optional[bool] = None
 
-class UserDrinkInteractionResponse(BaseModel):
-    user_id: int
+class FavoriteDrink(BaseModel):
+    """Favorite drink model (simplified drink info)."""
     drink_id: int
-    times_consumed: int
-    is_favorite: bool
-    rating: float
-    is_not_for_me: bool
-    viewed_at: datetime
-    last_consumed: Optional[datetime] = None
-    
-    class Config:
-        from_attributes = True
+    name: str
+    description: str
+    category: str
+    price_tier: str
+    sweetness_level: int
+    caffeine_content: int
+    sugar_content: float
+    calorie_content: int
+    image_url: Optional[str]
+    is_alcoholic: bool
+    alcohol_content: float
+    safety_flags: List[str]
+    created_at: datetime
+    updated_at: datetime
+    ingredients: List[DrinkIngredient]
+    tags: List[str]
 
 class UserFavoritesResponse(BaseModel):
-    favorites: List[DrinkResponse]
-    total_count: int
-
-class UserRecentlyViewedResponse(BaseModel):
-    recently_viewed: List[DrinkResponse]
+    """User favorites response model."""
+    favorites: List[FavoriteDrink]
     total_count: int
 
 # =========================
-# RECOMMENDATION SYSTEM
+# RECOMMENDATION MODELS
 # =========================
 
-# class RecommendationRequest(BaseModel):
-#     limit: int = Field(10, ge=1, le=50)
-#     recommendation_type: Optional[str] = Field(None, regex="^(hybrid|collaborative|content)$")
-
-# class RecommendationItem(BaseModel):
-#     drink: DrinkResponse
-#     score: float
-#     explanation: List[str]
-
-# class RecommendationResponse(BaseModel):
-#     recommendations: List[RecommendationItem]
-#     total_count: int
-#     recommendation_type: str
-
-class UserFeedbackBase(BaseModel):
+class SimilarDrink(BaseModel):
+    """Similar drink model for recommendations."""
     drink_id: int
-    feedback_type: str = Field(..., regex="^(not_for_me|love_it|too_sweet|too_bitter|too_expensive|perfect)$")
-    feedback_text: Optional[str] = None
-
-class UserFeedbackCreate(UserFeedbackBase):
-    pass
-
-class UserFeedbackResponse(UserFeedbackBase):
-    user_id: int
+    name: str
+    description: str
+    category: str
+    price_tier: str
+    sweetness_level: int
+    caffeine_content: int
+    sugar_content: float
+    calorie_content: int
+    image_url: Optional[str]
+    is_alcoholic: bool
+    alcohol_content: float
+    safety_flags: List[str]
     created_at: datetime
-    
-    class Config:
-        from_attributes = True
+    updated_at: datetime
+    similarity_score: float = Field(..., ge=0.0, le=1.0)
+
+class DrinkRecommendationsResponse(BaseModel):
+    """Drink-to-drink recommendations response model."""
+    drink_id: int
+    similar_drinks: List[SimilarDrink]
+    count: int
+    recommendation_type: str = Field(..., pattern="^(similar|collaborative|content)$")
+
+class RecommendedDrink(BaseModel):
+    """Recommended drink model."""
+    drink_id: int
+    name: str
+    description: str
+    category: str
+    price_tier: str
+    sweetness_level: int
+    caffeine_content: int
+    sugar_content: float
+    calorie_content: int
+    image_url: Optional[str]
+    is_alcoholic: bool
+    alcohol_content: float
+    safety_flags: List[str]
+    created_at: datetime
+    updated_at: datetime
+
+class UserRecommendation(BaseModel):
+    """User recommendation model."""
+    drink: RecommendedDrink
+    score: float = Field(..., ge=0.0, le=1.0)
+    explanation: List[str]
+
+class UserRecommendationsResponse(BaseModel):
+    """User recommendations response model."""
+    recommendations: List[UserRecommendation]
+    total_count: int
+    recommendation_type: str = Field(..., pattern="^(hybrid|collaborative|content)$")
 
 # =========================
-# ERROR RESPONSES
+# UTILITY MODELS
 # =========================
 
 class ErrorResponse(BaseModel):
+    """Error response model."""
     error: str
     message: str
     details: Optional[Dict[str, Any]] = None
 
-class ValidationErrorResponse(BaseModel):
-    error: str = "Validation Error"
-    message: str
-    field_errors: Dict[str, List[str]]
-
-# =========================
-# HEALTH CHECK
-# =========================
-
 class HealthCheckResponse(BaseModel):
-    status: str
+    """Health check response model."""
+    status: str = "healthy"
     timestamp: datetime
     version: str = "1.0.0"
 
+class ApiInfoResponse(BaseModel):
+    """API information response model."""
+    name: str
+    version: str
+    description: str
+    features: List[str]
+    services: List[str]
+
+class RateLimitInfo(BaseModel):
+    """Rate limit information model."""
+    limit: int
+    remaining: int
+    reset: int
+
 # =========================
-# ANALYTICS
+# ENUMS
 # =========================
 
-class UserAnalyticsResponse(BaseModel):
-    total_favorites: int
-    total_recently_viewed: int
-    total_recommendations_received: int
-    quiz_completed: bool
-    preferences_set: bool
-    age_verified: bool
+class PriceTier(str, Enum):
+    """Price tier enumeration."""
+    BUDGET = "$"
+    STANDARD = "$$"
+    PREMIUM = "$$$"
+
+class RecommendationType(str, Enum):
+    """Recommendation type enumeration."""
+    CONTENT_BASED = "content"
+    COLLABORATIVE = "collaborative"
+    HYBRID = "hybrid"
+
+class VerificationType(str, Enum):
+    """Verification type enumeration."""
+    EMAIL_VERIFICATION = "email_verification"
+    PASSWORD_RESET = "password_reset"
+    LOGIN_VERIFICATION = "login_verification"
+
+class FeedbackType(str, Enum):
+    """Feedback type enumeration."""
+    NOT_FOR_ME = "not_for_me"
+    LOVE_IT = "love_it"
+    TOO_SWEET = "too_sweet"
+    TOO_BITTER = "too_bitter"
+    TOO_EXPENSIVE = "too_expensive"
+    PERFECT = "perfect"
+
+# =========================
+# PAGINATION MODELS
+# =========================
+
+class PaginationParams(BaseModel):
+    """Pagination parameters."""
+    page: int = Field(1, ge=1)
+    limit: int = Field(20, ge=1, le=100)
+
+class PaginatedResponse(BaseModel):
+    """Generic paginated response."""
+    page: int
+    limit: int
+    total: int
+    total_pages: int
+
+# =========================
+# SEARCH AND FILTER MODELS
+# =========================
+
+class DrinkSearchParams(BaseModel):
+    """Drink search parameters."""
+    category: Optional[str] = None
+    price_tier: Optional[PriceTier] = None
+    max_sweetness: Optional[int] = Field(None, ge=1, le=10)
+    min_caffeine: Optional[int] = Field(None, ge=0)
+    max_caffeine: Optional[int] = Field(None, ge=0)
+    is_alcoholic: Optional[bool] = None
+    excluded_ingredients: Optional[str] = None  # comma-separated
+    search_text: Optional[str] = None
+    page: int = Field(1, ge=1)
+    limit: int = Field(20, ge=1, le=100)
+
+class RecommendationParams(BaseModel):
+    """Recommendation parameters."""
+    drink_id: Optional[int] = None
+    limit: int = Field(10, ge=1, le=50)
+    recommendation_type: Optional[RecommendationType] = None
+
+# =========================
+# VALIDATION HELPERS
+# =========================
+
+def validate_email_format(email: str) -> bool:
+    """Validate email format."""
+    try:
+        EmailStr(email)
+        return True
+    except:
+        return False
+
+def validate_password_strength(password: str) -> Dict[str, bool]:
+    """Validate password strength."""
+    return {
+        "has_min_length": len(password) >= 8,
+        "has_uppercase": any(c.isupper() for c in password),
+        "has_lowercase": any(c.islower() for c in password),
+        "has_digit": any(c.isdigit() for c in password),
+        "has_special": any(c in "!@#$%^&*()_+-=[]{}|;:,.<>?" for c in password)
+    }
+
+def is_strong_password(password: str) -> bool:
+    """Check if password meets strength requirements."""
+    checks = validate_password_strength(password)
+    return all(checks.values())
+
+# Export all models
+__all__ = [
+    # Authentication
+    "UserRegistration", "UserLogin", "UserResponse", "UserUpdate",
+    "ForgotPassword", "ForgotPasswordResponse", "LogoutResponse",
+    
+    # Preferences
+    "UserPreference", "UserPreferenceUpdate",
+    
+    # Catalog
+    "DrinkIngredient", "Drink", "DrinkSearchResponse",
+    "CategoriesResponse", "PopularDrinksResponse", "DrinkSearchParams",
+    
+    # Quiz
+    "QuizOption", "QuizQuestion", "QuizQuestionsResponse",
+    "QuizAnswer", "QuizSubmission", "QuizSubmissionResponse",
+    
+    # Interactions
+    "UserDrinkInteraction", "UserDrinkInteractionUpdate",
+    "FavoriteDrink", "UserFavoritesResponse",
+    
+    # Recommendations
+    "SimilarDrink", "DrinkRecommendationsResponse",
+    "RecommendedDrink", "UserRecommendation", "UserRecommendationsResponse",
+    "RecommendationParams",
+    
+    # Utilities
+    "ErrorResponse", "HealthCheckResponse", "ApiInfoResponse",
+    "RateLimitInfo", "PaginationParams", "PaginatedResponse",
+    
+    # Enums
+    "PriceTier", "RecommendationType", "VerificationType", "FeedbackType",
+    
+    # Validation
+    "validate_email_format", "validate_password_strength", "is_strong_password"
+]
