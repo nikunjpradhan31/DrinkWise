@@ -218,7 +218,6 @@ export const handlers = [
       user_id: sampleUser.user_id,
       sweetness_preference: 6,
       bitterness_preference: 4,
-      sugar_limit: 24,
       caffeine_limit: 200,
       calorie_limit: 400,
       preferred_price_tier: "$$",

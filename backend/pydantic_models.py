@@ -81,7 +81,6 @@ class UserPreference(BaseModel):
     user_id: int
     sweetness_preference: int = Field(..., ge=1, le=10)
     bitterness_preference: int = Field(..., ge=1, le=10)
-    sugar_limit: Optional[float] = Field(None, ge=0.0)
     caffeine_limit: int = Field(..., ge=0)
     calorie_limit: int = Field(..., ge=0)
     preferred_price_tier: str = Field(..., pattern="^(\$|\$\$|\$\$\$)$")
@@ -92,7 +91,6 @@ class UserPreferenceUpdate(BaseModel):
     """User preference update request model."""
     sweetness_preference: Optional[int] = Field(None, ge=1, le=10)
     bitterness_preference: Optional[int] = Field(None, ge=1, le=10)
-    sugar_limit: Optional[float] = Field(None, ge=0.0)
     caffeine_limit: Optional[int] = Field(None, ge=0)
     calorie_limit: Optional[int] = Field(None, ge=0)
     preferred_price_tier: Optional[str] = Field(None, pattern="^(\$|\$\$|\$\$\$)$")

@@ -57,7 +57,6 @@ class PreferenceService(BaseService):
                 user_id=preferences.user_id,
                 sweetness_preference=preferences.sweetness_preference,
                 bitterness_preference=preferences.bitterness_preference,
-                sugar_limit=preferences.sugar_limit,
                 caffeine_limit=preferences.caffeine_limit,
                 calorie_limit=preferences.calorie_limit,
                 preferred_price_tier=preferences.preferred_price_tier,
@@ -94,8 +93,6 @@ class PreferenceService(BaseService):
                 preference_data["sweetness_preference"] = preferences_data.sweetness_preference
             if preferences_data.bitterness_preference is not None:
                 preference_data["bitterness_preference"] = preferences_data.bitterness_preference
-            if preferences_data.sugar_limit is not None:
-                preference_data["sugar_limit"] = preferences_data.sugar_limit
             if preferences_data.caffeine_limit is not None:
                 preference_data["caffeine_limit"] = preferences_data.caffeine_limit
             if preferences_data.calorie_limit is not None:
@@ -108,7 +105,6 @@ class PreferenceService(BaseService):
                 user_id=user_id,
                 sweetness_preference=preference_data["sweetness_preference"],
                 bitterness_preference=preference_data["bitterness_preference"],
-                sugar_limit=preference_data["sugar_limit"],
                 caffeine_limit=preference_data["caffeine_limit"],
                 calorie_limit=preference_data["calorie_limit"],
                 preferred_price_tier=preference_data["preferred_price_tier"]
@@ -123,7 +119,6 @@ class PreferenceService(BaseService):
                 user_id=new_preferences.user_id,
                 sweetness_preference=new_preferences.sweetness_preference,
                 bitterness_preference=new_preferences.bitterness_preference,
-                sugar_limit=new_preferences.sugar_limit,
                 caffeine_limit=new_preferences.caffeine_limit,
                 calorie_limit=new_preferences.calorie_limit,
                 preferred_price_tier=new_preferences.preferred_price_tier,
@@ -160,8 +155,6 @@ class PreferenceService(BaseService):
                 update_values["sweetness_preference"] = update_data.sweetness_preference
             if update_data.bitterness_preference is not None:
                 update_values["bitterness_preference"] = update_data.bitterness_preference
-            if update_data.sugar_limit is not None:
-                update_values["sugar_limit"] = update_data.sugar_limit
             if update_data.caffeine_limit is not None:
                 update_values["caffeine_limit"] = update_data.caffeine_limit
             if update_data.calorie_limit is not None:
@@ -264,7 +257,6 @@ class PreferenceService(BaseService):
             "max_caffeine": preferences.caffeine_limit,
             "max_calories": preferences.calorie_limit,
             "preferred_price_tier": preferences.preferred_price_tier,
-            "sugar_limit": preferences.sugar_limit
         }
     
     async def get_preference_statistics(self, user_id: int) -> Dict[str, Any]:
@@ -459,11 +451,6 @@ class PreferenceService(BaseService):
                     score += 0.5
                     reasons.append(f"Price tier '{drink.get('price_tier')}' is within your acceptable range")
                 
-                # Sugar limit compatibility
-                if preferences.sugar_limit and drink.get("sugar_content", 0) <= preferences.sugar_limit:
-                    score += 1
-                    reasons.append(f"Sugar content {drink.get('sugar_content')}g is within your limit of {preferences.sugar_limit}g")
-                
                 # Add drink with compatibility score
                 drink["compatibility_score"] = max(0, score)  # Ensure non-negative
                 drink["compatibility_reasons"] = reasons
@@ -507,7 +494,6 @@ class PreferenceService(BaseService):
                     "caffeine_limit": preferences.caffeine_limit,
                     "calorie_limit": preferences.calorie_limit,
                     "preferred_price_tier": preferences.preferred_price_tier,
-                    "sugar_limit": preferences.sugar_limit
                 },
                 "analysis": await self.get_preference_statistics(user_id)
             }
@@ -541,7 +527,6 @@ class PreferenceService(BaseService):
                 caffeine_limit=prefs.get("caffeine_limit"),
                 calorie_limit=prefs.get("calorie_limit"),
                 preferred_price_tier=prefs.get("preferred_price_tier"),
-                sugar_limit=prefs.get("sugar_limit")
             )
             
             return await self.update_user_preferences(user_id, update_data)

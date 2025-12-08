@@ -96,7 +96,6 @@ const AccountPage = () => {
               <ul className="text-xs text-slate-300 space-y-1">
                 <li>Sweetness: {prefs.sweetness_preference}/10</li>
                 <li>Bitterness: {prefs.bitterness_preference}/10</li>
-                <li>Sugar limit: {prefs.sugar_limit} g</li>
                 <li>Caffeine limit: {prefs.caffeine_limit} mg</li>
                 <li>Calorie limit: {prefs.calorie_limit}</li>
                 <li>Price tier: {prefs.preferred_price_tier}</li>

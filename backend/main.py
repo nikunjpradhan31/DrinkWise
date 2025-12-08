@@ -24,7 +24,7 @@ from pydantic_models import (
     HealthCheckResponse, ErrorResponse
 )
 
-from api import auth_router, user_drinks_router, catalog_router
+from api import auth_router, user_drinks_router, catalog_router, preferences_router
 
 
 # Configure logging
@@ -164,7 +164,7 @@ async def api_info():
         ],
         "services": [
             "AuthService", "PreferenceService",
-            "CatalogService", "TasteQuizService",
+            "CatalogService",
             "EmailService"
         ]
     }
@@ -174,6 +174,7 @@ async def api_info():
 app.include_router(auth_router, prefix="/api/v0", tags=["authentication"])
 app.include_router(user_drinks_router, prefix="/api/v0", tags=["user_drinks"])
 app.include_router(catalog_router, prefix="/api/v0", tags=["catalog"])
+app.include_router(preferences_router, prefix="/api/v0", tags=["preferences"])
 
 
 # # Global exception handler
