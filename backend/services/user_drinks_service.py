@@ -192,7 +192,6 @@ class UserDrinksService(BaseService):
                     temperature=drink.temperature,
                     serving_size=drink.serving_size,
                     serving_unit=drink.serving_unit,
-                    safety_flags=drink.safety_flags or [],
                     created_at=drink.created_at,
                     updated_at=drink.updated_at,
                     ingredients=[
@@ -202,7 +201,6 @@ class UserDrinksService(BaseService):
                             "is_allergen": ing.is_allergen
                         } for ing in drink.ingredients
                     ],
-                    tags=[tag.tag for tag in drink.tags] if hasattr(drink, 'tags') and drink.tags else []
                 )
                 
                 favorites.append(favorite_drink)

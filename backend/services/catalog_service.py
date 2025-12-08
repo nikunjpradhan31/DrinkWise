@@ -39,9 +39,7 @@ class CatalogService(BaseService):
         try:
             # Build base query
             query = select(Drink).options(
-                selectinload(Drink.ingredients),
-                selectinload(Drink.tags)
-            )
+                selectinload(Drink.ingredients),            )
             
             # Apply filters
             filters = []
@@ -148,7 +146,6 @@ class CatalogService(BaseService):
             result = await self.db.execute(
                 select(Drink).options(
                     selectinload(Drink.ingredients),
-                    selectinload(Drink.tags)
                 ).where(Drink.drink_id == drink_id)
             )
             
@@ -195,7 +192,6 @@ class CatalogService(BaseService):
             # Get drinks with highest interaction scores (favorites + ratings + consumption)
             query = select(Drink).options(
                 selectinload(Drink.ingredients),
-                selectinload(Drink.tags)
             ).join(
                 UserDrinkInteraction, 
                 isouter=True
@@ -238,7 +234,6 @@ class CatalogService(BaseService):
         try:
             query = select(Drink).options(
                 selectinload(Drink.ingredients),
-                selectinload(Drink.tags)
             ).where(
                 Drink.is_alcoholic == True
             ).order_by(
@@ -293,7 +288,6 @@ class CatalogService(BaseService):
             alcohol_stats_result = await self.db.execute(
                 select(
                     func.sum(func.cast(Drink.is_alcoholic, Integer)).label('alcoholic'),
-                    func.count(Drink.drink_id) - func.sum(func.cast(Drink.is_alcoholic, Integer)).label('non_alcoholic')
                 )
             )
             alcohol_stats = alcohol_stats_result.first()
@@ -314,7 +308,6 @@ class CatalogService(BaseService):
                 "categories": category_stats,
                 "price_tiers": price_tier_stats,
                 "alcoholic_count": alcohol_stats.alcoholic or 0,
-                "non_alcoholic_count": alcohol_stats.non_alcoholic or 0,
                 "average_sweetness": round(nutrition_stats[0] or 0, 2),
                 "average_caffeine": round(nutrition_stats[1] or 0, 2),
                 "average_sugar": round(nutrition_stats[2] or 2, 2),
@@ -339,7 +332,6 @@ class CatalogService(BaseService):
         try:
             # Extract ingredients and tags
             ingredients_data = drink_data.pop("ingredients", [])
-            tags_data = drink_data.pop("tags", [])
             
             # Create drink
             new_drink = Drink(**drink_data)
@@ -386,7 +378,6 @@ class CatalogService(BaseService):
         try:
             # Extract ingredients and tags
             ingredients_data = update_data.pop("ingredients", None)
-            tags_data = update_data.pop("tags", None)
             
             # Add updated timestamp
             update_data["updated_at"] = datetime.now()
@@ -466,7 +457,7 @@ class CatalogService(BaseService):
         Returns:
             Pydantic drink model
         """
-        from backend.pydantic_models import DrinkIngredient as DrinkIngredientModel
+        from pydantic_models import DrinkIngredient as DrinkIngredientModel
         
         return DrinkModel(
             drink_id=drink.drink_id,
@@ -484,7 +475,6 @@ class CatalogService(BaseService):
             temperature=drink.temperature,
             serving_size=drink.serving_size,
             serving_unit=drink.serving_unit,
-            safety_flags=drink.safety_flags or [],
             created_at=drink.created_at,
             updated_at=drink.updated_at,
             ingredients=[
@@ -494,7 +484,6 @@ class CatalogService(BaseService):
                     is_allergen=ing.is_allergen
                 ) for ing in drink.ingredients
             ],
-            tags=[tag.tag for tag in drink.tags] if hasattr(drink, 'tags') and drink.tags else []
         )
     
     async def get_drinks_by_ingredients(self, ingredients: List[str], exclude_allergens: bool = True) -> List[DrinkModel]:
@@ -511,7 +500,6 @@ class CatalogService(BaseService):
         try:
             query = select(Drink).options(
                 selectinload(Drink.ingredients),
-                selectinload(Drink.tags)
             ).join(DrinkIngredient).where(
                 DrinkIngredient.ingredient_name.in_(ingredients)
             )
@@ -557,7 +545,6 @@ class CatalogService(BaseService):
             # Find drinks with similar attributes (content-based similarity)
             query = select(Drink).options(
                 selectinload(Drink.ingredients),
-                selectinload(Drink.tags)
             ).where(
                 and_(
                     Drink.drink_id != drink_id,

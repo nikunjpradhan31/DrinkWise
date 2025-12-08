@@ -126,11 +126,9 @@ class Drink(BaseModel):
     temperature: str = Field(..., max_length=10)
     serving_size: float = Field(..., ge=0.0)
     serving_unit: str = Field(..., max_length=10)
-    safety_flags: Optional[List[str]] = None
     created_at: datetime
     updated_at: datetime
     ingredients: List[DrinkIngredient]
-    tags: List[str]
 
 class DrinkSearchResponse(BaseModel):
     """Drink search response model."""
@@ -224,11 +222,9 @@ class FavoriteDrink(BaseModel):
     temperature: str
     serving_size: float
     serving_unit: str
-    safety_flags: List[str]
     created_at: datetime
     updated_at: datetime
     ingredients: List[DrinkIngredient]
-    tags: List[str]
 
 class UserFavoritesResponse(BaseModel):
     """User favorites response model."""
@@ -256,7 +252,6 @@ class SimilarDrink(BaseModel):
     temperature: str
     serving_size: float
     serving_unit: str
-    safety_flags: List[str]
     created_at: datetime
     updated_at: datetime
     similarity_score: float = Field(..., ge=0.0, le=1.0)
@@ -285,7 +280,6 @@ class RecommendedDrink(BaseModel):
     temperature: str
     serving_size: float
     serving_unit: str
-    safety_flags: List[str]
     created_at: datetime
     updated_at: datetime
 

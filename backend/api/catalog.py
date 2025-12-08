@@ -5,6 +5,8 @@ Handles drink browsing, filtering, and categorization.
 
 from fastapi import APIRouter, Depends, HTTPException, status, Query
 from sqlalchemy.ext.asyncio import AsyncSession
+from datetime import date
+
 from typing import Optional
 
 from database import get_db_async
@@ -17,6 +19,15 @@ from pydantic_models import (
 )
 
 router = APIRouter(prefix="/catalog", tags=["catalog"])
+
+
+def calculate_age(date_of_birth: date) -> int:
+    today = date.today()
+    age = today.year - date_of_birth.year
+    # subtract 1 if birthday hasn't occurred yet this year
+    if (today.month, today.day) < (date_of_birth.month, date_of_birth.day):
+        age -= 1
+    return age
 
 async def get_catalog_service(
     db: AsyncSession = Depends(get_db_async)
@@ -155,10 +166,9 @@ async def get_alcoholic_drinks(
     """
     # Check age verification
     if current_user and current_user.date_of_birth:
-        from middleware.auth_verification import age_verification_manager
-        age = age_verification_manager.calculate_age(current_user.date_of_birth)
-        
-        if age < age_verification_manager.LEGAL_DRINKING_AGE:
+        age = calculate_age(current_user.date_of_birth)
+        LEGAL_DRINKING_AGE = 21
+        if age < LEGAL_DRINKING_AGE:
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
                 detail="You must be of legal drinking age to access alcoholic beverages",

@@ -33,7 +33,6 @@ class Drink(Base):
     image_url = Column(Text)
     is_alcoholic = Column(Boolean, nullable=False, default=False)
     alcohol_content = Column(Float, nullable=False, default=0.0)
-    safety_flags = Column(JSON)
     created_at = Column(DateTime, nullable=False, default=datetime.now)
     updated_at = Column(
         DateTime, nullable=False, default=datetime.now, onupdate=datetime.now
