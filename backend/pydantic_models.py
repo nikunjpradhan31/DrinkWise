@@ -40,7 +40,7 @@ class UserResponse(BaseModel):
     joindate: datetime
     is_verified: bool
     date_of_birth: Optional[datetime]
-    questionnaire_finished: bool
+    preference_finished: bool
     verification_completed: bool = False
     access_token: Optional[str] = None
     token_type: Optional[str] = "bearer"
@@ -125,6 +125,9 @@ class Drink(BaseModel):
     image_url: Optional[str] = None
     is_alcoholic: bool
     alcohol_content: float = Field(..., ge=0.0, le=100.0)
+    temperature: str = Field(..., max_length=10)
+    serving_size: float = Field(..., ge=0.0)
+    serving_unit: str = Field(..., max_length=10)
     safety_flags: Optional[List[str]] = None
     created_at: datetime
     updated_at: datetime
@@ -151,38 +154,38 @@ class PopularDrinksResponse(BaseModel):
 # TASTE QUIZ MODELS
 # =========================
 
-class QuizOption(BaseModel):
-    """Quiz option model."""
-    option_id: int
-    option_text: str
+# class QuizOption(BaseModel):
+#     """Quiz option model."""
+#     option_id: int
+#     option_text: str
 
-class QuizQuestion(BaseModel):
-    """Quiz question model."""
-    question_id: int
-    question_text: str
-    is_active: bool
-    created_at: datetime
-    options: List[QuizOption]
+# class QuizQuestion(BaseModel):
+#     """Quiz question model."""
+#     question_id: int
+#     question_text: str
+#     is_active: bool
+#     created_at: datetime
+#     options: List[QuizOption]
 
-class QuizQuestionsResponse(BaseModel):
-    """Quiz questions response model."""
-    questions: List[QuizQuestion]
-    total_questions: int
+# class QuizQuestionsResponse(BaseModel):
+#     """Quiz questions response model."""
+#     questions: List[QuizQuestion]
+#     total_questions: int
 
-class QuizAnswer(BaseModel):
-    """Quiz answer model."""
-    question_id: int
-    option_id: int
+# class QuizAnswer(BaseModel):
+#     """Quiz answer model."""
+#     question_id: int
+#     option_id: int
 
-class QuizSubmission(BaseModel):
-    """Quiz submission model."""
-    answers: List[QuizAnswer]
+# class QuizSubmission(BaseModel):
+#     """Quiz submission model."""
+#     answers: List[QuizAnswer]
 
-class QuizSubmissionResponse(BaseModel):
-    """Quiz submission response model."""
-    message: str
-    answers_submitted: int
-    quiz_completed: bool
+# class QuizSubmissionResponse(BaseModel):
+#     """Quiz submission response model."""
+#     message: str
+#     answers_submitted: int
+#     quiz_completed: bool
 
 # =========================
 # USER-DRINK INTERACTIONS
@@ -220,6 +223,9 @@ class FavoriteDrink(BaseModel):
     image_url: Optional[str]
     is_alcoholic: bool
     alcohol_content: float
+    temperature: str
+    serving_size: float
+    serving_unit: str
     safety_flags: List[str]
     created_at: datetime
     updated_at: datetime
@@ -249,6 +255,9 @@ class SimilarDrink(BaseModel):
     image_url: Optional[str]
     is_alcoholic: bool
     alcohol_content: float
+    temperature: str
+    serving_size: float
+    serving_unit: str
     safety_flags: List[str]
     created_at: datetime
     updated_at: datetime
@@ -275,6 +284,9 @@ class RecommendedDrink(BaseModel):
     image_url: Optional[str]
     is_alcoholic: bool
     alcohol_content: float
+    temperature: str
+    serving_size: float
+    serving_unit: str
     safety_flags: List[str]
     created_at: datetime
     updated_at: datetime
@@ -432,9 +444,9 @@ __all__ = [
     "DrinkIngredient", "Drink", "DrinkSearchResponse",
     "CategoriesResponse", "PopularDrinksResponse", "DrinkSearchParams",
     
-    # Quiz
-    "QuizOption", "QuizQuestion", "QuizQuestionsResponse",
-    "QuizAnswer", "QuizSubmission", "QuizSubmissionResponse",
+    # # Quiz
+    # "QuizOption", "QuizQuestion", "QuizQuestionsResponse",
+    # "QuizAnswer", "QuizSubmission", "QuizSubmissionResponse",
     
     # Interactions
     "UserDrinkInteraction", "UserDrinkInteractionUpdate",

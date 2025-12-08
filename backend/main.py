@@ -16,7 +16,7 @@ from middleware import get_current_user, get_current_verified_user
 # Service imports
 from services import (
     AuthService, PreferenceService, CatalogService,
-    TasteQuizService, EmailService
+     EmailService
 )
 
 # Pydantic models
@@ -49,7 +49,6 @@ async def lifespan(app: FastAPI):
         app.state.auth_service = AuthService
         app.state.preference_service = PreferenceService
         app.state.catalog_service = CatalogService
-        app.state.taste_quiz_service = TasteQuizService
         app.state.email_service = EmailService
         print("✅ Services initialized successfully")
         
@@ -118,9 +117,9 @@ def get_catalog_service(db: AsyncSession = Depends(get_db_async)) -> CatalogServ
     """Dependency to get CatalogService instance"""
     return CatalogService(db)
 
-def get_taste_quiz_service(db: AsyncSession = Depends(get_db_async)) -> TasteQuizService:
-    """Dependency to get TasteQuizService instance"""
-    return TasteQuizService(db)
+# def get_taste_quiz_service(db: AsyncSession = Depends(get_db_async)) -> TasteQuizService:
+#     """Dependency to get TasteQuizService instance"""
+#     return TasteQuizService(db)
 
 def get_email_service(db: AsyncSession = Depends(get_db_async)) -> EmailService:
     """Dependency to get EmailService instance"""

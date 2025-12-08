@@ -18,7 +18,7 @@ class Users(Base):
     access_key = Column(String(400), nullable=True)
     is_verified = Column(Boolean, nullable=False, default=False)
     date_of_birth = Column(DateTime, nullable=True)
-    questionnaire_finished = Column(Boolean, nullable=False, default=False)
+    preference_finished = Column(Boolean, nullable=False, default=False)
 
 class Verification(Base):
     __tablename__ = "verification"
@@ -55,7 +55,10 @@ class Drink(Base):
     image_url = Column(Text, nullable=True)
     is_alcoholic = Column(Boolean, nullable=False, default=False)
     alcohol_content = Column(Float, nullable=False, default=0.0)  # percentage
-    safety_flags = Column(JSON, nullable=True)  # array of safety warnings
+    temperature = Column(String(10), nullable=False, default="cold")  # e.g., "hot", "cold", "iced"
+    serving_size = Column(Float, nullable=False, default=250.0)  # numeric quantity
+    serving_unit = Column(String(10), nullable=False, default="ml")  # e.g., "ml", "oz"
+
     created_at = Column(DateTime, nullable=False, default=datetime.now)
     updated_at = Column(DateTime, nullable=False, default=datetime.now, onupdate=datetime.now)
 
@@ -68,6 +71,7 @@ class Drink(Base):
         Index('idx_drink_category', 'category'),
         Index('idx_drink_price_tier', 'price_tier'),
         Index('idx_drink_alcoholic', 'is_alcoholic'),
+        Index('idx_drink_temperature', 'temperature')
     )
     
     ingredients = relationship("DrinkIngredient", back_populates="drink", cascade="all, delete-orphan")
@@ -108,36 +112,36 @@ class UserPreference(Base):
 # TASTE QUIZ SYSTEM
 # =========================
 
-class TasteQuizQuestion(Base):
-    __tablename__ = "taste_quiz_question"
+# class TasteQuizQuestion(Base):
+#     __tablename__ = "taste_quiz_question"
 
-    question_id = Column(Integer, primary_key=True, autoincrement=True)
-    question_text = Column(Text, nullable=False)
-    is_active = Column(Boolean, nullable=False, default=True)
-    created_at = Column(DateTime, nullable=False, default=datetime.utcnow)
+#     question_id = Column(Integer, primary_key=True, autoincrement=True)
+#     question_text = Column(Text, nullable=False)
+#     is_active = Column(Boolean, nullable=False, default=True)
+#     created_at = Column(DateTime, nullable=False, default=datetime.utcnow)
 
-class TasteQuizOption(Base):
-    __tablename__ = "taste_quiz_option"
+# class TasteQuizOption(Base):
+#     __tablename__ = "taste_quiz_option"
 
-    option_id = Column(Integer, primary_key=True, autoincrement=True)
-    question_id = Column(Integer, ForeignKey("taste_quiz_question.question_id", ondelete="CASCADE"), nullable=False)
-    option_text = Column(String(200), nullable=False)
-    question = relationship("TasteQuizQuestion", backref="options", cascade="all, delete")
+#     option_id = Column(Integer, primary_key=True, autoincrement=True)
+#     question_id = Column(Integer, ForeignKey("taste_quiz_question.question_id", ondelete="CASCADE"), nullable=False)
+#     option_text = Column(String(200), nullable=False)
+#     question = relationship("TasteQuizQuestion", backref="options", cascade="all, delete")
 
-class TasteQuizResult(Base):
-    __tablename__ = "taste_quiz_result"
+# class TasteQuizResult(Base):
+#     __tablename__ = "taste_quiz_result"
 
-    user_id = Column(Integer, ForeignKey("users.user_id", ondelete="CASCADE"), primary_key=True)
-    question_id = Column(Integer, ForeignKey("taste_quiz_question.question_id", ondelete="CASCADE"), primary_key=True)
-    option_id = Column(Integer, ForeignKey("taste_quiz_option.option_id", ondelete="CASCADE"), nullable=False)
-    answered_at = Column(DateTime, nullable=False, default=datetime.utcnow)
+#     user_id = Column(Integer, ForeignKey("users.user_id", ondelete="CASCADE"), primary_key=True)
+#     question_id = Column(Integer, ForeignKey("taste_quiz_question.question_id", ondelete="CASCADE"), primary_key=True)
+#     option_id = Column(Integer, ForeignKey("taste_quiz_option.option_id", ondelete="CASCADE"), nullable=False)
+#     answered_at = Column(DateTime, nullable=False, default=datetime.utcnow)
 
-    question = relationship("TasteQuizQuestion")
-    option = relationship("TasteQuizOption")
+#     question = relationship("TasteQuizQuestion")
+#     option = relationship("TasteQuizOption")
 
-    __table_args__ = (
-        Index('ix_quiz_result_user', 'user_id'),
-    )
+#     __table_args__ = (
+#         Index('ix_quiz_result_user', 'user_id'),
+#     )
 
 # =========================
 # USER-DRINK INTERACTIONS

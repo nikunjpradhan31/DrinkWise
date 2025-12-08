@@ -86,7 +86,7 @@ const AccountPage = () => {
             )}
             <p className="text-xs text-slate-400">
               Questionnaire finished:{" "}
-              {user.questionnaire_finished ? "Yes" : "No"}
+              {user.preference_finished ? "Yes" : "No"}
             </p>
           </div>
 

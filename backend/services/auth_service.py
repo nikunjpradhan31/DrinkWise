@@ -177,7 +177,7 @@ class AuthService(BaseService):
                 password=hashed_password,
                 date_of_birth=date_of_birth_naive,
                 is_verified=False,
-                questionnaire_finished=False
+                preference_finished=False
             )
             
             self.db.add(new_user)
@@ -210,7 +210,7 @@ class AuthService(BaseService):
                 joindate=new_user.joindate,
                 is_verified=new_user.is_verified,
                 date_of_birth=new_user.date_of_birth,
-                questionnaire_finished=new_user.questionnaire_finished,
+                preference_finished=new_user.preference_finished,
                 verification_completed=False,
                 access_token=access_token,
                 token_type="bearer"
@@ -277,7 +277,7 @@ class AuthService(BaseService):
                 joindate=user.joindate,
                 is_verified=user.is_verified,
                 date_of_birth=user.date_of_birth,
-                questionnaire_finished=user.questionnaire_finished,
+                preference_finished=user.preference_finished,
                 verification_completed=user.is_verified,
                 access_token=access_token,
                 token_type="bearer"
@@ -341,7 +341,7 @@ class AuthService(BaseService):
                 joindate=user.joindate,
                 is_verified=user.is_verified,
                 date_of_birth=user.date_of_birth,
-                questionnaire_finished=user.questionnaire_finished,
+                preference_finished=user.preference_finished,
                 verification_completed=user.is_verified,
                 access_token=None,  # Don't return token in profile
                 token_type=None
@@ -564,7 +564,7 @@ class AuthService(BaseService):
                 "joindate": user.joindate,
                 "is_verified": user.is_verified,
                 "date_of_birth": user.date_of_birth,
-                "questionnaire_finished": user.questionnaire_finished,
+                "preference_finished": user.preference_finished,
                 "last_session": user.session_at,
                 "account_age_days": (datetime.now() - user.joindate).days
             }

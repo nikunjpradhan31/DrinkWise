@@ -14,7 +14,7 @@ const sampleUser = {
   is_verified: true,
   verification_completed: true,
   age: 28,
-  questionnaire_finished: true,
+  preference_finished: true,
 };
 
 const sampleDrinks = [
