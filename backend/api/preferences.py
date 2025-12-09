@@ -58,7 +58,8 @@ async def get_user_preferences(
     limits for sugar/caffeine/calories, and preferred price tier.
     Creates default preferences if none exist.
     """
-    preferences = await preference_service.ensure_user_preferences(current_user.user_id)
+    #preferences = await preference_service.ensure_user_preferences(current_user.user_id)
+    preferences = await preference_service.get_user_preferences(current_user.user_id)
 
     return UserPreferenceResponse(
         user_id=preferences.user_id,

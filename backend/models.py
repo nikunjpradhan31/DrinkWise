@@ -73,7 +73,7 @@ class Drink(Base):
         Index('idx_drink_alcoholic', 'is_alcoholic'),
         Index('idx_drink_temperature', 'temperature')
     )
-    
+    interactions = relationship("UserDrinkInteraction", back_populates="drink")
     ingredients = relationship("DrinkIngredient", back_populates="drink", cascade="all, delete-orphan")
 
 class DrinkIngredient(Base):
@@ -164,3 +164,4 @@ class UserDrinkInteraction(Base):
         Index('ix_user_drink_favorite', 'is_favorite'),
         Index('ix_user_drink_not_for_me', 'is_not_for_me'),
     )
+    drink = relationship("Drink", back_populates="interactions")

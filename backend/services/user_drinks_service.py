@@ -31,11 +31,11 @@ class UserDrinksService(BaseService):
     async def get_user_drink_interaction(self, user_id: int, drink_id: int) -> Optional[UserDrinkInteractionModel]:
         """
         Get user's interaction with a specific drink.
-        
+
         Args:
             user_id: ID of user
             drink_id: ID of drink
-            
+
         Returns:
             User drink interaction model or None
         """
@@ -46,12 +46,12 @@ class UserDrinksService(BaseService):
                     UserDrinkInteraction.drink_id == drink_id
                 )
             )
-            
+
             interaction = result.scalar_one_or_none()
-            
+
             if not interaction:
                 return None
-            
+
             return UserDrinkInteractionModel(
                 user_id=interaction.user_id,
                 drink_id=interaction.drink_id,
@@ -62,9 +62,67 @@ class UserDrinksService(BaseService):
                 viewed_at=interaction.viewed_at,
                 last_consumed=interaction.last_consumed_at
             )
-            
+
         except Exception as e:
             self.log_error("get_user_drink_interaction", e, {"user_id": user_id, "drink_id": drink_id})
+            return None
+
+    async def ensure_user_drink_interaction(self, user_id: int, drink_id: int) -> Optional[UserDrinkInteractionModel]:
+        """
+        Ensure user has an interaction with a specific drink (create default if none exist).
+
+        Args:
+            user_id: ID of user
+            drink_id: ID of drink
+
+        Returns:
+            User drink interaction model
+        """
+        try:
+            # Check if drink exists
+            drink_result = await self.db.execute(
+                select(Drink).where(Drink.drink_id == drink_id)
+            )
+            drink = drink_result.scalar_one_or_none()
+
+            if not drink:
+                return None
+
+            # Get existing interaction
+            interaction = await self.get_user_drink_interaction(user_id, drink_id)
+            if interaction:
+                return interaction
+
+            # Create default interaction
+            new_interaction = UserDrinkInteraction(
+                user_id=user_id,
+                drink_id=drink_id,
+                times_consumed=0,
+                is_favorite=False,
+                rating=0.0,
+                is_not_for_me=False,
+                viewed_at=datetime.now(),
+                last_consumed_at=None
+            )
+
+            self.db.add(new_interaction)
+            await self.db.commit()
+            await self.db.refresh(new_interaction)
+
+            return UserDrinkInteractionModel(
+                user_id=new_interaction.user_id,
+                drink_id=new_interaction.drink_id,
+                times_consumed=new_interaction.times_consumed,
+                is_favorite=new_interaction.is_favorite,
+                rating=new_interaction.rating,
+                is_not_for_me=new_interaction.is_not_for_me,
+                viewed_at=new_interaction.viewed_at,
+                last_consumed=new_interaction.last_consumed_at
+            )
+
+        except Exception as e:
+            await self.db.rollback()
+            self.log_error("ensure_user_drink_interaction", e, {"user_id": user_id, "drink_id": drink_id})
             return None
     
     async def update_user_drink_interaction(self, user_id: int, drink_id: int, update_data: UserDrinkInteractionUpdate) -> Optional[UserDrinkInteractionModel]:
@@ -160,11 +218,16 @@ class UserDrinksService(BaseService):
         try:
             result = await self.db.execute(
                 select(UserDrinkInteraction)
-                .options(selectinload(UserDrinkInteraction).selectinload('drink'))
+                    .options(
+                        selectinload(UserDrinkInteraction.drink)
+                            .selectinload(Drink.ingredients)
+                    )
                 .join(Drink)
                 .where(
                     UserDrinkInteraction.user_id == user_id,
-                    UserDrinkInteraction.is_favorite == True
+                    UserDrinkInteraction.is_favorite == True,
+                    UserDrinkInteraction.drink_id == Drink.drink_id
+                    
                 )
                 .order_by(Drink.name)
             )
@@ -173,8 +236,8 @@ class UserDrinksService(BaseService):
             
             favorites = []
             for interaction in interactions:
+                print(interaction)
                 drink = interaction.drink
-                
                 # Convert drink to favorite format
                 favorite_drink = FavoriteDrink(
                     drink_id=drink.drink_id,
