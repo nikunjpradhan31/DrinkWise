@@ -6,10 +6,17 @@ import asyncio
 import os
 from dotenv import load_dotenv
 load_dotenv()
-DATABASE_URL = os.getenv("DATABASE_URL")
-SYNC_DATABASE_URL = os.getenv("SYNC_DATABASE_URL")
-async_engine = create_async_engine(DATABASE_URL, echo=False)
-sync_engine = create_engine(SYNC_DATABASE_URL, echo=False)
+TYPE = os.getenv("TYPE")
+if TYPE =="PROD":
+    DATABASE_URL = os.getenv("DATABASE_URL")
+    SYNC_DATABASE_URL = os.getenv("SYNC_DATABASE_URL")
+    async_engine = create_async_engine(DATABASE_URL, echo=False)
+    sync_engine = create_engine(SYNC_DATABASE_URL, echo=False)
+else:
+    DATABASE_URL = os.getenv("DATABASE_URL_DEV")
+    SYNC_DATABASE_URL = os.getenv("SYNC_DATABASE_URL_DEV")
+    async_engine = create_async_engine(DATABASE_URL, echo=False)
+    sync_engine = create_engine(SYNC_DATABASE_URL, echo=False)
 
 AsyncSessionLocal = sessionmaker(
     async_engine, class_=AsyncSession, expire_on_commit=False

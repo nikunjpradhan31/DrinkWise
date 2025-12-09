@@ -236,7 +236,6 @@ class UserDrinksService(BaseService):
             
             favorites = []
             for interaction in interactions:
-                print(interaction)
                 drink = interaction.drink
                 # Convert drink to favorite format
                 favorite_drink = FavoriteDrink(
