@@ -548,14 +548,12 @@ class CatalogService(BaseService):
             ).where(
                 and_(
                     Drink.drink_id != drink_id,
-                    Drink.category == reference_drink.category,
-                    abs(Drink.sweetness_level - reference_drink.sweetness_level) <= 2,
-                    abs(Drink.caffeine_content - reference_drink.caffeine_content) <= 50,
-                    Drink.is_alcoholic == reference_drink.is_alcoholic
+                    func.abs(Drink.sweetness_level - reference_drink.sweetness_level) <= 2,
+                    func.abs(Drink.caffeine_content - reference_drink.caffeine_content) <= 50,
                 )
             ).order_by(
-                abs(Drink.sweetness_level - reference_drink.sweetness_level) +
-                abs(Drink.caffeine_content - reference_drink.caffeine_content) * 0.01
+                func.abs(Drink.sweetness_level - reference_drink.sweetness_level) +
+                func.abs(Drink.caffeine_content - reference_drink.caffeine_content) * 0.01
             ).limit(limit)
             
             result = await self.db.execute(query)
@@ -581,6 +579,62 @@ class CatalogService(BaseService):
             
         except Exception as e:
             self.log_error("search_similar_drinks", e, {"drink_id": drink_id, "limit": limit})
+            return []
+    
+
+    async def user_favorite_to_similar_drinks(self, reference_drinks: List[Dict],drink_ids: List[int], limit: int = 10) -> List[Dict[str, Any]]:
+        """
+        Search for drinks similar to a given drink.
+        
+        Args:
+            drink_ids: array ID of the reference drink
+            limit: Maximum number of similar drinks to return
+            
+        Returns:
+            List of similar drinks with similarity scores
+        """
+        try:
+            
+            avg_sweetness = sum(d.sweetness_level for d in reference_drinks) / len(reference_drinks)
+            avg_caffeine = sum(d.caffeine_content for d in reference_drinks) / len(reference_drinks)
+
+            # Similar drink search
+            query = (
+                select(Drink)
+                .options(selectinload(Drink.ingredients))
+                .where(
+                    and_(
+                        ~Drink.drink_id.in_(drink_ids),  # exclude favorites
+                        func.abs(Drink.sweetness_level - avg_sweetness) <= 2,
+                        func.abs(Drink.caffeine_content - avg_caffeine) <= 50,
+                    )
+                )
+                .order_by(
+                    func.abs(Drink.sweetness_level - avg_sweetness)
+                    + func.abs(Drink.caffeine_content - avg_caffeine) * 0.01
+                )
+                .limit(limit)
+            )
+
+            result = await self.db.execute(query)
+            drinks = result.scalars().all()
+            
+            similar_drinks = []
+            for drink in drinks:
+                drink_model = await self._convert_drink_to_model(drink)
+                
+                # Calculate similarity score (simple implementation)
+                
+                similar_drinks.append({
+                    "drink": drink_model,
+                })
+            
+            # Sort by similarity score
+            
+            return similar_drinks
+            
+        except Exception as e:
+            self.log_error("user_favorite_to_similar_drinks", e, {"drink_ids": drink_ids, "limit": limit})
             return []
     
     def _calculate_similarity_score(self, drink1: DrinkModel, drink2: DrinkModel) -> float:

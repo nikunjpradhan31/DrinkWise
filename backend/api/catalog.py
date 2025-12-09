@@ -13,6 +13,8 @@ from database import get_db_async
 from middleware.auth_middleware import get_current_user_optional
 from models import Users
 from services.catalog_service import CatalogService
+from services.user_drinks_service import UserDrinksService
+from middleware.auth_middleware import get_current_user
 from pydantic_models import (
     DrinkSearchParams, DrinkSearchResponse, CategoriesResponse,
     PopularDrinksResponse, Drink as DrinkModel, ErrorResponse
@@ -34,6 +36,12 @@ async def get_catalog_service(
 ) -> CatalogService:
     """Get CatalogService instance."""
     return CatalogService(db)
+
+async def get_user_drinks_service(
+    db: AsyncSession = Depends(get_db_async)
+) -> UserDrinksService:
+    """Get UserDrinksService instance."""
+    return UserDrinksService(db)
 
 # GET /catalog/drinks - Search and filter drinks
 @router.get(
@@ -230,6 +238,45 @@ async def get_drinks_by_ingredient(
     
     return PopularDrinksResponse(drinks=drinks)
 
+
+
+@router.get(
+    "/user/similar",
+    responses={401: {"model": dict}}
+)
+async def get_user_similar_drinks(
+    limit: int = Query(10, ge=1, le=50, description="Number of similar drinks to return"),
+    current_user: Users = Depends(get_current_user),
+    catalog_service: CatalogService = Depends(get_catalog_service),
+    user_drinks_service: UserDrinksService = Depends(get_user_drinks_service),
+
+):
+    
+    user_favorites = await user_drinks_service.get_user_favorites(current_user.user_id)
+    user_favorites = user_favorites["favorites"]
+    drink_ids = [drink.drink_id for drink in user_favorites ]
+    similar_drinks = await catalog_service.user_favorite_to_similar_drinks(user_favorites,drink_ids, limit)
+    if not similar_drinks:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Drink with ids {drink_ids} not found"
+        )
+    
+    return {
+        "drink_ids": drink_ids,
+        "similar_drinks": [
+            {
+                "drink": item["drink"].dict(),
+            }
+            for item in similar_drinks
+        ],
+        "count": len(similar_drinks),
+        "recommendation_type": "user-content"
+    }
+
+
+
+
 # GET /catalog/{drink_id}/similar - Get similar drinks
 @router.get(
     "/{drink_id}/similar",
@@ -270,6 +317,7 @@ async def get_similar_drinks(
         "count": len(similar_drinks),
         "recommendation_type": "content"
     }
+
 
 # Export router
 __all__ = ["router"]

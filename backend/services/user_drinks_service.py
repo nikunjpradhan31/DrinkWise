@@ -277,6 +277,34 @@ class UserDrinksService(BaseService):
             self.log_error("get_user_favorites", e, {"user_id": user_id})
             return {"favorites": [], "total_count": 0}
     
+    async def get_user_favorites_ids(self, user_id: int) -> List[int]:
+        """
+        Get all drinks marked as favorites by a user.
+        
+        Args:
+            user_id: ID of user
+            
+        Returns:
+            Dictionary with favorites list and count
+        """
+        try:
+            result = await self.db.execute(
+                select(UserDrinkInteraction.drink_id)
+                .where(
+                    UserDrinkInteraction.user_id == user_id,
+                    UserDrinkInteraction.is_favorite == True,                    
+                )
+            )
+            
+            interactions = result.scalars().all()
+            
+
+            return interactions
+            
+        except Exception as e:
+            self.log_error("get_user_favorites_id", e, {"user_id": user_id})
+            return []
+    
     async def set_favorite_status(self, user_id: int, drink_id: int, is_favorite: bool) -> bool:
         """
         Set favorite status for a drink.
