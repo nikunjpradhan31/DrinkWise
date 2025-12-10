@@ -34,7 +34,7 @@ DEFAULT_CATEGORIES = [
 def slugify(text: str) -> str:
     text = text.strip().lower()
     text = re.sub(r"[^\w\s-]", "", text)
-    return re.sub(r"[\s-]+", "_", text)
+    return re.sub(r"[\s-]+", "_", text) 
 
 
 def guess_extension(url: str, content_type: Optional[str]) -> str:
@@ -71,6 +71,7 @@ async def maybe_accept_consent(page: Page) -> None:
 
 
 async def collect_image_urls(page: Page, query: str, target: int) -> List[str]:
+    query= query+ "Drink Image"
     await page.goto("https://www.google.com/imghp?hl=en", wait_until="load")
     await maybe_accept_consent(page)
     await page.wait_for_selector('input[name="q"], textarea[name="q"]', timeout=45000)
@@ -90,7 +91,12 @@ async def collect_image_urls(page: Page, query: str, target: int) -> List[str]:
         from urllib.parse import quote_plus
 
         images_url = f"https://www.google.com/search?tbm=isch&q={quote_plus(query)}&hl=en&safe=off"
-        await page.goto(images_url, wait_until="load")
+        try:
+            await page.goto(images_url, wait_until="domcontentloaded")
+        except Exception:
+            # Retry once on navigation aborts
+            await page.wait_for_timeout(1500)
+            await page.goto(images_url, wait_until="domcontentloaded")
         await maybe_accept_consent(page)
     image_urls: Set[str] = set()
 
@@ -188,6 +194,7 @@ async def scrape_categories(
     categories: List[str],
     target_per_category: int,
     output_root: Path,
+    url_file: Path,
     headless: bool = True,
 ) -> None:
     async with async_playwright() as p:
@@ -201,7 +208,7 @@ async def scrape_categories(
             ),
         )
         output_root.mkdir(parents=True, exist_ok=True)
-        url_file = output_root / "image_urls.txt"
+        url_file.parent.mkdir(parents=True, exist_ok=True)
         url_file.write_text("")
         for category in categories:
             print(f"Scraping '{category}'...")
@@ -220,6 +227,11 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         description="Scrape Google Images results for drink categories."
     )
     parser.add_argument(
+        "--names-file",
+        type=Path,
+        help="Optional file with one search query per line; overrides default categories.",
+    )
+    parser.add_argument(
         "--target-per-category",
         type=int,
         default=40,
@@ -230,6 +242,11 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         type=Path,
         default=Path(__file__).parent / "data",
         help="Directory to store downloaded images (default: web_scraper_images/data).",
+    )
+    parser.add_argument(
+        "--url-file",
+        type=Path,
+        help="Optional path for the URL output file (default: <out>/image_urls.txt).",
     )
     parser.add_argument(
         "--headful",
@@ -247,13 +264,21 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 def main(argv: Optional[list[str]] = None) -> None:
     args = parse_args(argv or sys.argv[1:])
+    if args.names_file:
+        text = args.names_file.read_text(encoding="utf-8")
+        categories = [line.strip() for line in text.splitlines() if line.strip()]
+    else:
+        categories = args.categories
+
     output_root: Path = args.out
     output_root.mkdir(parents=True, exist_ok=True)
+    url_file = args.url_file or (output_root / "image_urls.txt")
     asyncio.run(
         scrape_categories(
-            categories=args.categories,
+            categories=categories,
             target_per_category=args.target_per_category,
             output_root=output_root,
+            url_file=url_file,
             headless=not args.headful,
         )
     )

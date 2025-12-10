@@ -29,3 +29,18 @@ python scrape_images.py \
 
 - Google Images can change markup or throttle aggressively; re-run if some categories return fewer images.
 - The script filters for `http*` image sources and only writes responses with an image content-type.
+
+## Name-based scraping (all drinks)
+
+A consolidated list of all 500 drink names from `data/generated` is at `data_drink_names/drink_names.txt`. To scrape image URLs per drink name into a separate folder:
+
+```bash
+python scrape_images.py \
+  --names-file data_drink_names/drink_names.txt \
+  --target-per-category 5 \
+  --out data_drink_names \
+  --url-file data_drink_names/image_urls.txt \
+  --headful
+```
+
+Adjust `--target-per-category` as needed. URLs append to `data_drink_names/image_urls.txt` (tab-separated `name<TAB>url`). The script does not download images.
