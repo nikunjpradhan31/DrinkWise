@@ -1,0 +1,3842 @@
+[
+  {
+    "drink": {
+      "name": "Caramel Pistachio Latte Twist",
+      "description": "Creamy latte with caramel drizzle and pistachio aroma.",
+      "category": "coffee",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 115,
+      "sugar_content": 15.0,
+      "calorie_content": 200,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Espresso",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed whole milk",
+        "quantity": "8 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Caramel sauce",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Pistachio crumble",
+        "quantity": "1 tsp",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Gingerbread Cappuccino Twist",
+      "description": "Foamy cappuccino spiced with gingerbread syrup.",
+      "category": "coffee",
+      "price_tier": "$",
+      "sweetness_level": 5,
+      "caffeine_content": 105,
+      "sugar_content": 12.0,
+      "calorie_content": 150,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 240.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Espresso",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed 2% milk",
+        "quantity": "5 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Gingerbread syrup",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ground nutmeg",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Almond Toffee Cold Brew Twist",
+      "description": "Chilled cold brew sweetened with almond toffee.",
+      "category": "coffee",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 150,
+      "sugar_content": 11.0,
+      "calorie_content": 120,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 320.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Cold brew coffee",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Almond toffee syrup",
+        "quantity": "0.75 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Ice",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Almond milk",
+        "quantity": "2 oz",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Spiced Honey Flat White Twist",
+      "description": "Silky flat white sweetened with spiced honey.",
+      "category": "coffee",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 110,
+      "sugar_content": 10.0,
+      "calorie_content": 170,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 260.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Ristretto espresso",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed whole milk",
+        "quantity": "6 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Spiced honey",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Vanilla Mocha Draft Twist",
+      "description": "Nitro-style mocha on draft with vanilla finish.",
+      "category": "coffee",
+      "price_tier": "$$$",
+      "sweetness_level": 5,
+      "caffeine_content": 140,
+      "sugar_content": 9.0,
+      "calorie_content": 110,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Nitro cold brew",
+        "quantity": "9 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Chocolate syrup",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Vanilla bean syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Coconut Cardamom Latte Twist",
+      "description": "Latte with coconut milk and a hint of cardamom.",
+      "category": "coffee",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 105,
+      "sugar_content": 8.5,
+      "calorie_content": 150,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 280.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Espresso",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed coconut milk",
+        "quantity": "8 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Cardamom syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Brown Sugar Espresso Tonic Twist",
+      "description": "Bright espresso over tonic with brown sugar.",
+      "category": "coffee",
+      "price_tier": "$",
+      "sweetness_level": 3,
+      "caffeine_content": 120,
+      "sugar_content": 7.0,
+      "calorie_content": 80,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 260.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Double espresso",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Tonic water",
+        "quantity": "6 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Brown sugar syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Orange peel",
+        "quantity": "1 strip",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Iced Maple Cream Latte Twist",
+      "description": "Iced latte topped with maple cold foam.",
+      "category": "coffee",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 115,
+      "sugar_content": 13.0,
+      "calorie_content": 190,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 340.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Espresso",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Chilled whole milk",
+        "quantity": "8 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Maple syrup",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Vanilla sweet cream foam",
+        "quantity": "1.5 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Ice",
+        "quantity": "1 cup",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Salted Cocoa Cortado Twist",
+      "description": "Short cortado with cocoa powder and sea salt.",
+      "category": "coffee",
+      "price_tier": "$",
+      "sweetness_level": 3,
+      "caffeine_content": 95,
+      "sugar_content": 6.0,
+      "calorie_content": 110,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 150.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Espresso",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed whole milk",
+        "quantity": "3 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Cocoa powder",
+        "quantity": "0.5 tsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Sea salt",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Toasted Marshmallow Mocha Twist",
+      "description": "Mocha with toasted marshmallow syrup and foam.",
+      "category": "coffee",
+      "price_tier": "$$",
+      "sweetness_level": 7,
+      "caffeine_content": 120,
+      "sugar_content": 18.0,
+      "calorie_content": 230,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 320.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Espresso",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed 2% milk",
+        "quantity": "8 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Chocolate sauce",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Toasted marshmallow syrup",
+        "quantity": "0.75 oz",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Caramelized Fig Latte",
+      "description": "Latte sweetened with caramelized fig syrup and cinnamon.",
+      "category": "coffee",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 115,
+      "sugar_content": 14.0,
+      "calorie_content": 190,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Espresso",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed whole milk",
+        "quantity": "8 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Fig syrup",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cinnamon",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Lemon Thyme Green Tea Twist",
+      "description": "Green tea steeped with lemon and fresh thyme.",
+      "category": "tea",
+      "price_tier": "$",
+      "sweetness_level": 3,
+      "caffeine_content": 30,
+      "sugar_content": 4.0,
+      "calorie_content": 20,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Green tea",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon slice",
+        "quantity": "1",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Fresh thyme",
+        "quantity": "1 sprig",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Honey",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Roasted Coconut Black Tea Twist",
+      "description": "Black tea with toasted coconut and a splash of milk.",
+      "category": "tea",
+      "price_tier": "$",
+      "sweetness_level": 4,
+      "caffeine_content": 45,
+      "sugar_content": 8.0,
+      "calorie_content": 90,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 320.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Assam black tea",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Toasted coconut flakes",
+        "quantity": "1 tbsp",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Whole milk",
+        "quantity": "2 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Brown sugar",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Cranberry Hibiscus Spritz Twist",
+      "description": "Tart hibiscus tea topped with cranberry soda.",
+      "category": "tea",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 0,
+      "sugar_content": 10.0,
+      "calorie_content": 60,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 320.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Hibiscus tea",
+        "quantity": "8 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cranberry juice",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Soda water",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Simple syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Jasmine Peach Iced Tea Twist",
+      "description": "Chilled jasmine tea infused with peach slices.",
+      "category": "tea",
+      "price_tier": "$",
+      "sweetness_level": 4,
+      "caffeine_content": 25,
+      "sugar_content": 9.0,
+      "calorie_content": 45,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 380.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Jasmine tea",
+        "quantity": "12 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Peach slices",
+        "quantity": "4 slices",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Agave syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ice",
+        "quantity": "1 cup",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Lavender Oat London Fog Twist",
+      "description": "Earl Grey with lavender syrup and oat milk foam.",
+      "category": "tea",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 55,
+      "sugar_content": 12.0,
+      "calorie_content": 170,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 320.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Earl Grey tea",
+        "quantity": "8 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed oat milk",
+        "quantity": "4 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lavender syrup",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Ginger Lemongrass Mate Twist",
+      "description": "Iced yerba mate with ginger and lemongrass.",
+      "category": "tea",
+      "price_tier": "$",
+      "sweetness_level": 3,
+      "caffeine_content": 70,
+      "sugar_content": 7.0,
+      "calorie_content": 40,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 360.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Yerba mate",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemongrass stalk",
+        "quantity": "1",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ginger slices",
+        "quantity": "4",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cane syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Spiced Rose Chai Twist",
+      "description": "Masala chai brewed with rose petals and spices.",
+      "category": "tea",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 65,
+      "sugar_content": 16.0,
+      "calorie_content": 210,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 330.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Chai concentrate",
+        "quantity": "6 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed whole milk",
+        "quantity": "7 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Rose petals",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cardamom",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Yuzu Sencha Cooler Twist",
+      "description": "Iced sencha green tea brightened with yuzu.",
+      "category": "tea",
+      "price_tier": "$$",
+      "sweetness_level": 3,
+      "caffeine_content": 35,
+      "sugar_content": 6.0,
+      "calorie_content": 35,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 320.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Sencha tea",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Yuzu juice",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Simple syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ice",
+        "quantity": "1 cup",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Tropical Green Revive Twist",
+      "description": "Spinach and mango smoothie with coconut water.",
+      "category": "smoothie",
+      "price_tier": "$",
+      "sweetness_level": 5,
+      "caffeine_content": 0,
+      "sugar_content": 17.0,
+      "calorie_content": 180,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 360.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Mango",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Spinach",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Coconut water",
+        "quantity": "6 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ice",
+        "quantity": "0.5 cup",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Blueberry Almond Fuel Twist",
+      "description": "Blueberry smoothie with almond butter and oats.",
+      "category": "smoothie",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 0,
+      "sugar_content": 19.0,
+      "calorie_content": 260,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 350.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Blueberries",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Almond butter",
+        "quantity": "1 tbsp",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Rolled oats",
+        "quantity": "3 tbsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Almond milk",
+        "quantity": "7 oz",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Pineapple Matcha Blend Twist",
+      "description": "Matcha blended with pineapple and yogurt.",
+      "category": "smoothie",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 55,
+      "sugar_content": 15.0,
+      "calorie_content": 200,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 340.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Pineapple chunks",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Greek yogurt",
+        "quantity": "0.5 cup",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Matcha powder",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ice",
+        "quantity": "0.5 cup",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Raspberry Chia Glow Twist",
+      "description": "Raspberry smoothie thickened with chia seeds.",
+      "category": "smoothie",
+      "price_tier": "$",
+      "sweetness_level": 5,
+      "caffeine_content": 0,
+      "sugar_content": 16.0,
+      "calorie_content": 190,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 330.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Raspberries",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Chia seeds",
+        "quantity": "1 tbsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Oat milk",
+        "quantity": "8 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Honey",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Cocoa Date Smoothie Twist",
+      "description": "Naturally sweet cocoa smoothie with dates.",
+      "category": "smoothie",
+      "price_tier": "$",
+      "sweetness_level": 6,
+      "caffeine_content": 5,
+      "sugar_content": 18.0,
+      "calorie_content": 240,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 340.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Medjool dates",
+        "quantity": "3",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cocoa powder",
+        "quantity": "1 tbsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Banana",
+        "quantity": "0.5 medium",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Almond milk",
+        "quantity": "8 oz",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Kiwi Cucumber Cooler Twist",
+      "description": "Hydrating smoothie with kiwi and cucumber.",
+      "category": "smoothie",
+      "price_tier": "$",
+      "sweetness_level": 3,
+      "caffeine_content": 0,
+      "sugar_content": 11.0,
+      "calorie_content": 130,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 320.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Kiwi",
+        "quantity": "2 peeled",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cucumber",
+        "quantity": "0.5 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Coconut water",
+        "quantity": "6 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Strawberry Oat Shake Twist",
+      "description": "Strawberry smoothie with oats and yogurt.",
+      "category": "smoothie",
+      "price_tier": "$",
+      "sweetness_level": 6,
+      "caffeine_content": 0,
+      "sugar_content": 20.0,
+      "calorie_content": 240,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 360.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Strawberries",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Rolled oats",
+        "quantity": "3 tbsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Greek yogurt",
+        "quantity": "0.5 cup",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Almond milk",
+        "quantity": "6 oz",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Peppermint Mocha Smoothie Twist",
+      "description": "Coffee smoothie with cocoa and peppermint.",
+      "category": "smoothie",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 80,
+      "sugar_content": 14.0,
+      "calorie_content": 230,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 340.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Cold brew coffee",
+        "quantity": "4 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cocoa powder",
+        "quantity": "1 tbsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Banana",
+        "quantity": "0.5 medium",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Peppermint syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Oat milk",
+        "quantity": "6 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Pineapple Carrot Citrus Twist",
+      "description": "Cold-pressed pineapple and carrot with orange.",
+      "category": "juice",
+      "price_tier": "$",
+      "sweetness_level": 5,
+      "caffeine_content": 0,
+      "sugar_content": 13.0,
+      "calorie_content": 90,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 320.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Pineapple juice",
+        "quantity": "5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Carrot juice",
+        "quantity": "4 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "quantity": "2 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Spinach Apple Zing Twist",
+      "description": "Green apple juice blended with spinach and lime.",
+      "category": "juice",
+      "price_tier": "$",
+      "sweetness_level": 3,
+      "caffeine_content": 0,
+      "sugar_content": 9.0,
+      "calorie_content": 60,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 320.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Green apple",
+        "quantity": "1 large",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Spinach",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Watermelon Mint Press Twist",
+      "description": "Refreshing watermelon juice with mint.",
+      "category": "juice",
+      "price_tier": "$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 11.0,
+      "calorie_content": 70,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 350.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Watermelon",
+        "quantity": "2 cups",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Mint leaves",
+        "quantity": "5 leaves",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Beet Ginger Boost Twist",
+      "description": "Earthy beet juice with ginger heat.",
+      "category": "juice",
+      "price_tier": "$",
+      "sweetness_level": 3,
+      "caffeine_content": 0,
+      "sugar_content": 8.5,
+      "calorie_content": 65,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Beet juice",
+        "quantity": "4 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Apple juice",
+        "quantity": "4 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ginger juice",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Pear Celery Cooler Twist",
+      "description": "Light juice blend of pear, celery, and lemon.",
+      "category": "juice",
+      "price_tier": "$$",
+      "sweetness_level": 3,
+      "caffeine_content": 0,
+      "sugar_content": 8.0,
+      "calorie_content": 55,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 320.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Pear",
+        "quantity": "1 medium",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Celery",
+        "quantity": "1 stalk",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Sunrise Turmeric Shot Twist",
+      "description": "Small immunity shot with orange, turmeric, and pepper.",
+      "category": "juice",
+      "price_tier": "$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 6.0,
+      "calorie_content": 40,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 120.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Orange juice",
+        "quantity": "3 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Turmeric",
+        "quantity": "0.25 tsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Black pepper",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Grapefruit Basil Juice Twist",
+      "description": "Tart grapefruit juice with basil leaves.",
+      "category": "juice",
+      "price_tier": "$",
+      "sweetness_level": 3,
+      "caffeine_content": 0,
+      "sugar_content": 7.5,
+      "calorie_content": 50,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Grapefruit juice",
+        "quantity": "9 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Basil leaves",
+        "quantity": "2 leaves",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Agave syrup",
+        "quantity": "0.25 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Cucumber Pineapple Hydrator Twist",
+      "description": "Hydrating juice of cucumber, pineapple, and lime.",
+      "category": "juice",
+      "price_tier": "$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 10.0,
+      "calorie_content": 65,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 320.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Cucumber",
+        "quantity": "1 large",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Pineapple",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Blood Orange Vanilla Soda Twist",
+      "description": "Craft soda with blood orange and vanilla.",
+      "category": "soft_drink",
+      "price_tier": "$",
+      "sweetness_level": 7,
+      "caffeine_content": 0,
+      "sugar_content": 24.0,
+      "calorie_content": 150,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 355.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Carbonated water",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Blood orange juice",
+        "quantity": "3 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Vanilla syrup",
+        "quantity": "1 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Ginger Lime Sparkle Twist",
+      "description": "Ginger soda brightened with fresh lime.",
+      "category": "soft_drink",
+      "price_tier": "$",
+      "sweetness_level": 5,
+      "caffeine_content": 0,
+      "sugar_content": 18.0,
+      "calorie_content": 110,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 355.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Carbonated water",
+        "quantity": "11 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ginger syrup",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Strawberry Cream Soda Twist",
+      "description": "Old-fashioned cream soda with strawberries.",
+      "category": "soft_drink",
+      "price_tier": "$$",
+      "sweetness_level": 8,
+      "caffeine_content": 0,
+      "sugar_content": 28.0,
+      "calorie_content": 180,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 355.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Soda water",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Strawberry puree",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Heavy cream",
+        "quantity": "1 oz",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Tamarind Cola Twist",
+      "description": "Cola-style soda with tamarind tang.",
+      "category": "soft_drink",
+      "price_tier": "$",
+      "sweetness_level": 6,
+      "caffeine_content": 24,
+      "sugar_content": 26.0,
+      "calorie_content": 170,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 355.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Cola base",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Tamarind syrup",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Citrus oil",
+        "quantity": "2 drops",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Herbal Lemon Tonic Twist",
+      "description": "Bitter-sweet tonic with lemon and herbs.",
+      "category": "soft_drink",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 14.0,
+      "calorie_content": 70,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Tonic water",
+        "quantity": "8 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Rosemary syrup",
+        "quantity": "0.25 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Pineapple Mint Fizz Twist",
+      "description": "Sparkling soda with pineapple and mint.",
+      "category": "soft_drink",
+      "price_tier": "$",
+      "sweetness_level": 6,
+      "caffeine_content": 0,
+      "sugar_content": 20.0,
+      "calorie_content": 125,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 355.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Carbonated water",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Pineapple syrup",
+        "quantity": "1.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Mint sprig",
+        "quantity": "1",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Cranberry Spice Soda Twist",
+      "description": "Spiced cranberry soda with cinnamon.",
+      "category": "soft_drink",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 0,
+      "sugar_content": 19.0,
+      "calorie_content": 120,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 355.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Carbonated water",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cranberry syrup",
+        "quantity": "1.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cinnamon",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Citrus Guarana Rush Twist",
+      "description": "Guarana energy drink with citrus blend.",
+      "category": "energy_drink",
+      "price_tier": "$",
+      "sweetness_level": 6,
+      "caffeine_content": 140,
+      "sugar_content": 20.0,
+      "calorie_content": 120,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 355.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Carbonated water",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Citrus juice blend",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Guarana extract",
+        "quantity": "120 mg",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cane sugar",
+        "quantity": "1 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Berry L-Theanine Boost Twist",
+      "description": "Berry energy drink with caffeine and L-theanine.",
+      "category": "energy_drink",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 120,
+      "sugar_content": 14.0,
+      "calorie_content": 90,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 330.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Carbonated water",
+        "quantity": "9 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Berry concentrate",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Caffeine",
+        "quantity": "120 mg",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "L-theanine",
+        "quantity": "100 mg",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Organic cane sugar",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Mango Electro Charge Twist",
+      "description": "Electrolyte energy drink with mango.",
+      "category": "energy_drink",
+      "price_tier": "$",
+      "sweetness_level": 6,
+      "caffeine_content": 160,
+      "sugar_content": 21.0,
+      "calorie_content": 125,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 473.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Carbonated water",
+        "quantity": "14 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Mango puree",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Caffeine",
+        "quantity": "160 mg",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Electrolyte blend",
+        "quantity": "200 mg",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cane sugar",
+        "quantity": "1 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Matcha Citrus Spark Twist",
+      "description": "Sparkling matcha energy with lemon and lime.",
+      "category": "energy_drink",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 90,
+      "sugar_content": 9.0,
+      "calorie_content": 50,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 250.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Sparkling water",
+        "quantity": "7 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Matcha extract",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "0.25 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Agave syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Cola Espresso Energy Twist",
+      "description": "Cola energy drink spiked with espresso.",
+      "category": "energy_drink",
+      "price_tier": "$",
+      "sweetness_level": 7,
+      "caffeine_content": 180,
+      "sugar_content": 25.0,
+      "calorie_content": 160,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 355.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Cola base",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Fresh espresso",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cane sugar",
+        "quantity": "1.25 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Yuzu Mate Uplift Twist",
+      "description": "Yerba mate energy with yuzu and vitamin B.",
+      "category": "energy_drink",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 110,
+      "sugar_content": 15.0,
+      "calorie_content": 95,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 330.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Yerba mate infusion",
+        "quantity": "9 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Yuzu juice",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "B-complex blend",
+        "quantity": "50 mg",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cane sugar",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Cucumber Basil Refresher Twist",
+      "description": "Zero-proof refresher with cucumber and basil.",
+      "category": "mocktail",
+      "price_tier": "$",
+      "sweetness_level": 3,
+      "caffeine_content": 0,
+      "sugar_content": 8.0,
+      "calorie_content": 60,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Cucumber juice",
+        "quantity": "3 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Basil leaves",
+        "quantity": "4",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Soda water",
+        "quantity": "5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Pineapple Ginger Mule Twist",
+      "description": "Zero-proof mule with pineapple and ginger beer.",
+      "category": "mocktail",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 0,
+      "sugar_content": 17.0,
+      "calorie_content": 110,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Pineapple juice",
+        "quantity": "3 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Fresh lime juice",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ginger beer",
+        "quantity": "5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Mint sprig",
+        "quantity": "1",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Cranberry Sage Sparkler Twist",
+      "description": "Herbal cranberry mocktail with sage.",
+      "category": "mocktail",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 10.0,
+      "calorie_content": 65,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 260.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Cranberry juice",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Sage syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Sparkling water",
+        "quantity": "6 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon twist",
+        "quantity": "1",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Coconut Lime Cooler Twist",
+      "description": "Non-alcoholic cooler with coconut water and lime.",
+      "category": "mocktail",
+      "price_tier": "$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 11.0,
+      "calorie_content": 70,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 320.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Coconut water",
+        "quantity": "6 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Simple syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Soda water",
+        "quantity": "4 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Rosemary Grapefruit Fizz Twist",
+      "description": "Grapefruit mocktail with rosemary aroma.",
+      "category": "mocktail",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 9.0,
+      "calorie_content": 60,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 280.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Grapefruit juice",
+        "quantity": "2.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Rosemary syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Soda water",
+        "quantity": "5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ice",
+        "quantity": "1 cup",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Fig Honey Nojito Twist",
+      "description": "Fig and honey twist on a classic mojito, zero-proof.",
+      "category": "mocktail",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 0,
+      "sugar_content": 12.0,
+      "calorie_content": 85,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Fig syrup",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Mint leaves",
+        "quantity": "8",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Soda water",
+        "quantity": "5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Apple Spice Fizz Mocktail Twist",
+      "description": "Sparkling apple mocktail with warm spices.",
+      "category": "mocktail",
+      "price_tier": "$",
+      "sweetness_level": 6,
+      "caffeine_content": 0,
+      "sugar_content": 14.0,
+      "calorie_content": 95,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Apple cider",
+        "quantity": "5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Spice syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Sparkling water",
+        "quantity": "3 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cinnamon stick",
+        "quantity": "1",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Caramel Macadamia Shake Twist",
+      "description": "Rich caramel shake with toasted macadamia nuts.",
+      "category": "milkshake",
+      "price_tier": "$$",
+      "sweetness_level": 8,
+      "caffeine_content": 0,
+      "sugar_content": 32.0,
+      "calorie_content": 460,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 420.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Vanilla ice cream",
+        "quantity": "2 cups",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Caramel sauce",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Macadamia nuts",
+        "quantity": "2 tbsp",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Milk",
+        "quantity": "4 oz",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Chocolate Peanut Butter Shake Twist",
+      "description": "Chocolate milkshake swirled with peanut butter.",
+      "category": "milkshake",
+      "price_tier": "$",
+      "sweetness_level": 8,
+      "caffeine_content": 4,
+      "sugar_content": 34.0,
+      "calorie_content": 480,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 430.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Chocolate ice cream",
+        "quantity": "2 cups",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Peanut butter",
+        "quantity": "2 tbsp",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Milk",
+        "quantity": "4 oz",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Strawberry Cheesecake Shake Twist",
+      "description": "Strawberry shake blended with cream cheese.",
+      "category": "milkshake",
+      "price_tier": "$$",
+      "sweetness_level": 7,
+      "caffeine_content": 0,
+      "sugar_content": 30.0,
+      "calorie_content": 440,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 430.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Strawberry ice cream",
+        "quantity": "2 cups",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Cream cheese",
+        "quantity": "2 tbsp",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Milk",
+        "quantity": "4 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Graham crumbs",
+        "quantity": "1 tbsp",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Mint Cookie Crunch Shake Twist",
+      "description": "Mint chocolate shake with cookie crumble.",
+      "category": "milkshake",
+      "price_tier": "$",
+      "sweetness_level": 7,
+      "caffeine_content": 4,
+      "sugar_content": 29.0,
+      "calorie_content": 430,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 420.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Mint chip ice cream",
+        "quantity": "2 cups",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Chocolate cookies",
+        "quantity": "3 pieces",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Milk",
+        "quantity": "4 oz",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Maple Pecan Shake Twist",
+      "description": "Maple milkshake with candied pecans.",
+      "category": "milkshake",
+      "price_tier": "$$",
+      "sweetness_level": 7,
+      "caffeine_content": 0,
+      "sugar_content": 31.0,
+      "calorie_content": 450,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 420.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Vanilla ice cream",
+        "quantity": "2 cups",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Maple syrup",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Candied pecans",
+        "quantity": "2 tbsp",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Milk",
+        "quantity": "3 oz",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Chocolate Banana Malt Twist",
+      "description": "Chocolate malt shake with ripe banana.",
+      "category": "milkshake",
+      "price_tier": "$",
+      "sweetness_level": 7,
+      "caffeine_content": 3,
+      "sugar_content": 30.0,
+      "calorie_content": 440,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 420.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Chocolate ice cream",
+        "quantity": "2 cups",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Banana",
+        "quantity": "1 medium",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Malt powder",
+        "quantity": "1 tbsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Milk",
+        "quantity": "3 oz",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Lime Mint Seltzer Twist",
+      "description": "Unsweetened sparkling water with lime and mint.",
+      "category": "sparkling_water",
+      "price_tier": "$",
+      "sweetness_level": 1,
+      "caffeine_content": 0,
+      "sugar_content": 0.0,
+      "calorie_content": 0,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 330.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Sparkling water",
+        "quantity": "11 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime slice",
+        "quantity": "1",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Mint leaves",
+        "quantity": "3",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Grapefruit Peel Sparkling Twist",
+      "description": "Sparkling water infused with grapefruit peel.",
+      "category": "sparkling_water",
+      "price_tier": "$",
+      "sweetness_level": 1,
+      "caffeine_content": 0,
+      "sugar_content": 0.0,
+      "calorie_content": 0,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 330.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Sparkling water",
+        "quantity": "11 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Grapefruit peel",
+        "quantity": "1 strip",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Rosemary sprig",
+        "quantity": "1",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Berry Essence Fizz Twist",
+      "description": "Lightly flavored berry sparkling water.",
+      "category": "sparkling_water",
+      "price_tier": "$",
+      "sweetness_level": 1,
+      "caffeine_content": 0,
+      "sugar_content": 0.0,
+      "calorie_content": 0,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 330.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Sparkling water",
+        "quantity": "11 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Berry essence",
+        "quantity": "3 ml",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Ginger Lemon Sparkling Twist",
+      "description": "Sparkling water with ginger and lemon slices.",
+      "category": "sparkling_water",
+      "price_tier": "$",
+      "sweetness_level": 1,
+      "caffeine_content": 0,
+      "sugar_content": 0.0,
+      "calorie_content": 0,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 330.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Sparkling water",
+        "quantity": "11 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon slice",
+        "quantity": "1",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ginger slices",
+        "quantity": "2",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Peach Basil Sparkle Twist",
+      "description": "Sparkling water scented with peach and basil.",
+      "category": "sparkling_water",
+      "price_tier": "$$",
+      "sweetness_level": 1,
+      "caffeine_content": 0,
+      "sugar_content": 0.0,
+      "calorie_content": 0,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 330.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Sparkling water",
+        "quantity": "11 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Peach essence",
+        "quantity": "3 ml",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Basil leaf",
+        "quantity": "1",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Cranberry Lime Sparkling Twist",
+      "description": "Unsweetened sparkling water with cranberry and lime oils.",
+      "category": "sparkling_water",
+      "price_tier": "$",
+      "sweetness_level": 1,
+      "caffeine_content": 0,
+      "sugar_content": 0.0,
+      "calorie_content": 0,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 330.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Sparkling water",
+        "quantity": "11 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cranberry essence",
+        "quantity": "3 ml",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime oil",
+        "quantity": "2 drops",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Reishi Mocha Focus Twist",
+      "description": "Oat milk mocha with reishi extract.",
+      "category": "functional_drink",
+      "price_tier": "$$",
+      "sweetness_level": 3,
+      "caffeine_content": 60,
+      "sugar_content": 7.0,
+      "calorie_content": 120,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 280.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Espresso",
+        "quantity": "1.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Oat milk",
+        "quantity": "8 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cocoa powder",
+        "quantity": "1 tbsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Reishi extract",
+        "quantity": "500 mg",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Maple syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Turmeric Collagen Latte Twist",
+      "description": "Warm turmeric latte with collagen peptides.",
+      "category": "functional_drink",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 8.0,
+      "calorie_content": 110,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 250.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Almond milk",
+        "quantity": "8 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Turmeric",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Collagen peptides",
+        "quantity": "10 g",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Honey",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Electro Berry Hydrate Twist",
+      "description": "Hydration drink with electrolytes and berry juice.",
+      "category": "functional_drink",
+      "price_tier": "$",
+      "sweetness_level": 5,
+      "caffeine_content": 0,
+      "sugar_content": 10.0,
+      "calorie_content": 60,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 500.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Filtered water",
+        "quantity": "15 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Berry juice",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Electrolyte mix",
+        "quantity": "1 packet",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Sea salt",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Ginger Probiotic Spritz Twist",
+      "description": "Sparkling probiotic drink with ginger and lemon.",
+      "category": "functional_drink",
+      "price_tier": "$$",
+      "sweetness_level": 3,
+      "caffeine_content": 0,
+      "sugar_content": 6.0,
+      "calorie_content": 40,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 330.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Sparkling water",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ginger kombucha",
+        "quantity": "3 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Minty Chlorophyll Cooler Twist",
+      "description": "Green chlorophyll water with lime and mint.",
+      "category": "functional_drink",
+      "price_tier": "$",
+      "sweetness_level": 2,
+      "caffeine_content": 0,
+      "sugar_content": 2.0,
+      "calorie_content": 10,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 350.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Filtered water",
+        "quantity": "11 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Chlorophyll drops",
+        "quantity": "10 drops",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Mint leaves",
+        "quantity": "4",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Lion's Mane Cocoa Twist",
+      "description": "Cocoa drink with lion's mane and cinnamon.",
+      "category": "functional_drink",
+      "price_tier": "$$",
+      "sweetness_level": 3,
+      "caffeine_content": 5,
+      "sugar_content": 7.0,
+      "calorie_content": 100,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 240.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Oat milk",
+        "quantity": "8 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cocoa powder",
+        "quantity": "1 tbsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lion's mane extract",
+        "quantity": "500 mg",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cinnamon",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Classic Dark Hot Chocolate Twist",
+      "description": "Thick dark hot chocolate with steamed milk.",
+      "category": "hot_chocolate",
+      "price_tier": "$$",
+      "sweetness_level": 7,
+      "caffeine_content": 12,
+      "sugar_content": 22.0,
+      "calorie_content": 320,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 240.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Whole milk",
+        "quantity": "7 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Dark chocolate",
+        "quantity": "2 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Sugar",
+        "quantity": "1 tbsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Peppermint Espresso Cocoa Twist",
+      "description": "Hot chocolate with peppermint and a shot of espresso.",
+      "category": "hot_chocolate",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 40,
+      "sugar_content": 18.0,
+      "calorie_content": 250,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 260.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Espresso",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed milk",
+        "quantity": "7 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Cocoa mix",
+        "quantity": "1.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Peppermint syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Salted Maple Cocoa Twist",
+      "description": "Creamy cocoa sweetened with maple and sea salt.",
+      "category": "hot_chocolate",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 8,
+      "sugar_content": 16.0,
+      "calorie_content": 230,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 250.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Whole milk",
+        "quantity": "7 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Cocoa powder",
+        "quantity": "1.5 tbsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Maple syrup",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Sea salt",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Spiced Chili Cocoa Twist",
+      "description": "Dark hot chocolate with cinnamon and ancho chile.",
+      "category": "hot_chocolate",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 12,
+      "sugar_content": 14.0,
+      "calorie_content": 240,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 240.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Whole milk",
+        "quantity": "7 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Dark cocoa mix",
+        "quantity": "1.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cinnamon",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ancho chile",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Oat Campfire Cocoa Twist",
+      "description": "Oat milk hot chocolate topped with toasted marshmallow.",
+      "category": "hot_chocolate",
+      "price_tier": "$$",
+      "sweetness_level": 7,
+      "caffeine_content": 6,
+      "sugar_content": 19.0,
+      "calorie_content": 210,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 260.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Oat milk",
+        "quantity": "8 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cocoa mix",
+        "quantity": "1.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Toasted marshmallow",
+        "quantity": "1",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Spiced White Chai Cocoa Twist",
+      "description": "White hot chocolate blended with chai spice.",
+      "category": "hot_chocolate",
+      "price_tier": "$$$",
+      "sweetness_level": 8,
+      "caffeine_content": 15,
+      "sugar_content": 23.0,
+      "calorie_content": 300,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 250.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Whole milk",
+        "quantity": "7 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "White chocolate",
+        "quantity": "2 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Chai spice",
+        "quantity": "0.25 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Vanilla Oat Protein Twist",
+      "description": "Vanilla protein shake with oats and almond butter.",
+      "category": "protein_shake",
+      "price_tier": "$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 7.0,
+      "calorie_content": 260,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 350.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Vanilla protein powder",
+        "quantity": "1 scoop",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Rolled oats",
+        "quantity": "3 tbsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Almond butter",
+        "quantity": "1 tbsp",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Water",
+        "quantity": "8 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Chocolate Cherry Protein Twist",
+      "description": "Chocolate whey shake with tart cherry juice.",
+      "category": "protein_shake",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 5,
+      "sugar_content": 9.0,
+      "calorie_content": 270,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 350.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Chocolate whey protein",
+        "quantity": "1 scoop",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Tart cherry juice",
+        "quantity": "3 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Milk",
+        "quantity": "8 oz",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Berry Greens Power Shake Twist",
+      "description": "Plant protein shake with berries, spinach, and water.",
+      "category": "protein_shake",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 8.0,
+      "calorie_content": 240,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 350.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Plant protein powder",
+        "quantity": "1 scoop",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Mixed berries",
+        "quantity": "0.75 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Spinach",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Water",
+        "quantity": "8 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Almond Cold Brew Protein Twist",
+      "description": "Cold brew blended with almond protein and cinnamon.",
+      "category": "protein_shake",
+      "price_tier": "$$",
+      "sweetness_level": 3,
+      "caffeine_content": 70,
+      "sugar_content": 6.0,
+      "calorie_content": 230,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 340.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Cold brew coffee",
+        "quantity": "5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Almond protein powder",
+        "quantity": "1 scoop",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Cinnamon",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Almond milk",
+        "quantity": "6 oz",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Peanut Butter Jam Protein Twist",
+      "description": "Protein shake with peanut butter and strawberries.",
+      "category": "protein_shake",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 0,
+      "sugar_content": 12.0,
+      "calorie_content": 320,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 360.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Whey protein powder",
+        "quantity": "1 scoop",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Peanut butter",
+        "quantity": "1.5 tbsp",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Strawberries",
+        "quantity": "0.75 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Milk",
+        "quantity": "7 oz",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Matcha Coconut Power Shake Twist",
+      "description": "Matcha protein shake with creamy coconut milk.",
+      "category": "protein_shake",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 60,
+      "sugar_content": 7.0,
+      "calorie_content": 260,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 330.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Plant protein powder",
+        "quantity": "1 scoop",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Matcha powder",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Coconut milk",
+        "quantity": "6 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Water",
+        "quantity": "4 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Salted Caramel Protein Blend Twist",
+      "description": "Protein shake flavored with salted caramel and sea salt.",
+      "category": "protein_shake",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 0,
+      "sugar_content": 8.0,
+      "calorie_content": 260,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 340.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Salted caramel protein powder",
+        "quantity": "1 scoop",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Almond milk",
+        "quantity": "10 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Sea salt",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Smoky Maple Old Fashioned Twist",
+      "description": "Bourbon old fashioned with smoked maple syrup.",
+      "category": "alcohol",
+      "price_tier": "$$",
+      "sweetness_level": 3,
+      "caffeine_content": 0,
+      "sugar_content": 5.0,
+      "calorie_content": 190,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 27.0,
+      "temperature": "cold",
+      "serving_size": 180.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Bourbon",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Smoked maple syrup",
+        "quantity": "0.25 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Angostura bitters",
+        "quantity": "3 dashes",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Orange peel",
+        "quantity": "1 strip",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Ginger Pear Highball Twist",
+      "description": "Light whisky highball with pear and ginger.",
+      "category": "alcohol",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 9.0,
+      "calorie_content": 170,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 14.0,
+      "temperature": "cold",
+      "serving_size": 280.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Japanese whisky",
+        "quantity": "1.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Pear puree",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ginger syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Soda water",
+        "quantity": "5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Cranberry Sage Spritz Twist",
+      "description": "Sparkling spritz with dry vermouth and cranberry.",
+      "category": "alcohol",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 0,
+      "sugar_content": 13.0,
+      "calorie_content": 180,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 12.0,
+      "temperature": "cold",
+      "serving_size": 330.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Dry vermouth",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cranberry juice",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Soda water",
+        "quantity": "3 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Sage leaf",
+        "quantity": "1",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Pineapple Coconut Hard Seltzer Twist",
+      "description": "Hard seltzer infused with pineapple and coconut.",
+      "category": "alcohol",
+      "price_tier": "$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 6.0,
+      "calorie_content": 110,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 5.0,
+      "temperature": "cold",
+      "serving_size": 355.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Plain hard seltzer",
+        "quantity": "12 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Pineapple syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Coconut extract",
+        "quantity": "2 drops",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Spiced Apple Cider Toddy Twist",
+      "description": "Warm spiked cider with cinnamon and cloves.",
+      "category": "alcohol",
+      "price_tier": "$",
+      "sweetness_level": 6,
+      "caffeine_content": 0,
+      "sugar_content": 15.0,
+      "calorie_content": 200,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 12.0,
+      "temperature": "hot",
+      "serving_size": 280.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Apple cider",
+        "quantity": "9 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Dark rum",
+        "quantity": "1.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cinnamon stick",
+        "quantity": "1",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cloves",
+        "quantity": "3",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Citrus Wheat Shandy Twist",
+      "description": "Wheat beer topped with citrus soda.",
+      "category": "alcohol",
+      "price_tier": "$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 10.0,
+      "calorie_content": 180,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 4.0,
+      "temperature": "cold",
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Wheat beer",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Citrus soda",
+        "quantity": "4 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Blackberry Sage Gin Smash Twist",
+      "description": "Gin smash with blackberry puree and sage syrup.",
+      "category": "cocktail",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 9.0,
+      "calorie_content": 180,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 20.0,
+      "temperature": "iced",
+      "serving_size": 190.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Gin",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Blackberry puree",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Sage syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Pomegranate Mezcal Foam Sour Twist",
+      "description": "Smoky mezcal sour with pomegranate and airy foam.",
+      "category": "cocktail",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 8.5,
+      "calorie_content": 190,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 21.0,
+      "temperature": "iced",
+      "serving_size": 180.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Mezcal",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Pomegranate juice",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Aquafaba",
+        "quantity": "1 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Toasted Coconut Espresso Martini Twist",
+      "description": "Vodka espresso martini with toasted coconut cream.",
+      "category": "cocktail",
+      "price_tier": "$$$",
+      "sweetness_level": 4,
+      "caffeine_content": 70,
+      "sugar_content": 7.0,
+      "calorie_content": 210,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 22.0,
+      "temperature": "cold",
+      "serving_size": 170.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Vodka",
+        "quantity": "1.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Fresh espresso",
+        "quantity": "1.25 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Coffee liqueur",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Coconut cream",
+        "quantity": "0.5 oz",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Lavender Citrus Vodka Gimlet Twist",
+      "description": "Vodka gimlet scented with lavender and citrus.",
+      "category": "cocktail",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 8.0,
+      "calorie_content": 180,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 23.0,
+      "temperature": "cold",
+      "serving_size": 170.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Vodka",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lavender syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Pineapple Sage Lime Daiquiri Twist",
+      "description": "Rum daiquiri shaken with pineapple, sage, and lime.",
+      "category": "cocktail",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 0,
+      "sugar_content": 10.0,
+      "calorie_content": 180,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 20.0,
+      "temperature": "cold",
+      "serving_size": 180.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "White rum",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Pineapple juice",
+        "quantity": "1.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Sage syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Blackberry Mezcal Nightcap Twist",
+      "description": "Negroni-style nightcap with mezcal and blackberry.",
+      "category": "cocktail",
+      "price_tier": "$$$",
+      "sweetness_level": 3,
+      "caffeine_content": 0,
+      "sugar_content": 7.0,
+      "calorie_content": 200,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 24.0,
+      "temperature": "cold",
+      "serving_size": 170.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Mezcal",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Campari",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Sweet vermouth",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Blackberry syrup",
+        "quantity": "0.25 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Lavender Vodka Lemonade Twist",
+      "description": "Vodka lemonade scented with lavender.",
+      "category": "cocktail",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 0,
+      "sugar_content": 12.0,
+      "calorie_content": 210,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 16.0,
+      "temperature": "iced",
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Vodka",
+        "quantity": "1.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Fresh lemonade",
+        "quantity": "5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lavender syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ice",
+        "quantity": "1 cup",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Mango Basil Collins",
+      "description": "Gin collins with mango puree and fresh basil.",
+      "category": "cocktail",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 0,
+      "sugar_content": 11.0,
+      "calorie_content": 190,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 14.0,
+      "temperature": "iced",
+      "serving_size": 260.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Gin",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Mango puree",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Basil syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Soda water",
+        "quantity": "3 oz",
+        "is_allergen": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,3412 @@
+[
+  {
+    "drink": {
+      "name": "Solar Splash",
+      "description": "Solar fresh juice highlighted by carrot juice and turmeric.",
+      "category": "juice",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 8.9,
+      "calorie_content": 58,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 314.8,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Carrot juice",
+        "quantity": "5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Turmeric",
+        "quantity": "0.25 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Aurora Refresh 1",
+      "description": "Aurora fresh juice highlighted by beet juice and ginger juice.",
+      "category": "juice",
+      "price_tier": "$",
+      "sweetness_level": 3,
+      "caffeine_content": 0,
+      "sugar_content": 8.5,
+      "calorie_content": 53,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 351.7,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Beet juice",
+        "quantity": "4 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ginger juice",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Cedar Fuel",
+      "description": "Cedar protein shake highlighted by chocolate protein and oat milk.",
+      "category": "protein_shake",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 17,
+      "sugar_content": 12.9,
+      "calorie_content": 241,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 364.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Chocolate protein",
+        "quantity": "1 scoop",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Oat milk",
+        "quantity": "8 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Peanut butter",
+        "quantity": "1 tbsp",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Nova Latte",
+      "description": "Nova coffee creation highlighted by cold brew concentrate, steamed coconut milk and hazelnut syrup.",
+      "category": "coffee",
+      "price_tier": "$$$",
+      "sweetness_level": 7,
+      "caffeine_content": 112,
+      "sugar_content": 13.1,
+      "calorie_content": 147,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 347.1,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Cold brew concentrate",
+        "quantity": "5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed coconut milk",
+        "quantity": "6 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Hazelnut syrup",
+        "quantity": "0.75 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Orange zest",
+        "quantity": "1 strip",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Bloom Froth",
+      "description": "Bloom milkshake treat highlighted by vanilla ice cream and half-and-half.",
+      "category": "milkshake",
+      "price_tier": "$",
+      "sweetness_level": 9,
+      "caffeine_content": 5,
+      "sugar_content": 31.9,
+      "calorie_content": 434,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 455.7,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Vanilla ice cream",
+        "quantity": "2 cups",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Half-and-half",
+        "quantity": "4 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Chocolate sauce",
+        "quantity": "1 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Golden Fizz",
+      "description": "Golden house soda highlighted by carbonated water and blood orange syrup.",
+      "category": "soft_drink",
+      "price_tier": "$",
+      "sweetness_level": 6,
+      "caffeine_content": 4,
+      "sugar_content": 25.9,
+      "calorie_content": 180,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 341.6,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Carbonated water",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Blood orange syrup",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Sable Crema",
+      "description": "Sable coffee creation highlighted by dual espresso, steamed almond milk and vanilla bean syrup.",
+      "category": "coffee",
+      "price_tier": "$",
+      "sweetness_level": 6,
+      "caffeine_content": 156,
+      "sugar_content": 12.5,
+      "calorie_content": 183,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 282.5,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Dual espresso",
+        "quantity": "3 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed almond milk",
+        "quantity": "6 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Vanilla bean syrup",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Orange zest",
+        "quantity": "1 strip",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Aurora Bubbles",
+      "description": "Aurora sparkling water highlighted by sparkling water.",
+      "category": "sparkling_water",
+      "price_tier": "$",
+      "sweetness_level": 1,
+      "caffeine_content": 0,
+      "sugar_content": 0.0,
+      "calorie_content": 0,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 355.8,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Sparkling water",
+        "quantity": "11 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime slice",
+        "quantity": "1",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Frost Cascade",
+      "description": "Frost coffee creation highlighted by nitro cold brew, steamed oat milk and cardamom syrup.",
+      "category": "coffee",
+      "price_tier": "$",
+      "sweetness_level": 7,
+      "caffeine_content": 150,
+      "sugar_content": 10.4,
+      "calorie_content": 241,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 340.7,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Nitro cold brew",
+        "quantity": "9 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed oat milk",
+        "quantity": "6 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cardamom syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Crisp Warmth 1",
+      "description": "Crisp hot chocolate highlighted by oat milk and white chocolate.",
+      "category": "hot_chocolate",
+      "price_tier": "$$$",
+      "sweetness_level": 8,
+      "caffeine_content": 5,
+      "sugar_content": 21.4,
+      "calorie_content": 302,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 243.9,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Oat milk",
+        "quantity": "7 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "White chocolate",
+        "quantity": "2 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Cinnamon",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Crisp Elixir",
+      "description": "Crisp functional tonic highlighted by filtered water and ashwagandha.",
+      "category": "functional_drink",
+      "price_tier": "$$",
+      "sweetness_level": 3,
+      "caffeine_content": 5,
+      "sugar_content": 4.7,
+      "calorie_content": 61,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 382.4,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Filtered water",
+        "quantity": "12 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ashwagandha",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Sable Latte 1",
+      "description": "Sable coffee creation highlighted by espresso, steamed whole milk and caramel syrup.",
+      "category": "coffee",
+      "price_tier": "$",
+      "sweetness_level": 4,
+      "caffeine_content": 142,
+      "sugar_content": 12.9,
+      "calorie_content": 174,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 346.5,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Espresso",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed whole milk",
+        "quantity": "6 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Caramel syrup",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Chocolate dust",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Misty Surge",
+      "description": "Misty energy lift highlighted by sparkling water and citrus blend.",
+      "category": "energy_drink",
+      "price_tier": "$",
+      "sweetness_level": 7,
+      "caffeine_content": 136,
+      "sugar_content": 18.2,
+      "calorie_content": 136,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 469.4,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Sparkling water",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Citrus blend",
+        "quantity": "1 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Solar Rush",
+      "description": "Solar energy lift highlighted by carbonated water and berry concentrate.",
+      "category": "energy_drink",
+      "price_tier": "$",
+      "sweetness_level": 4,
+      "caffeine_content": 140,
+      "sugar_content": 14.6,
+      "calorie_content": 127,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 396.8,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Carbonated water",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Berry concentrate",
+        "quantity": "1 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Bloom Tonic",
+      "description": "Bloom functional tonic highlighted by filtered water and chlorophyll drops.",
+      "category": "functional_drink",
+      "price_tier": "$",
+      "sweetness_level": 2,
+      "caffeine_content": 12,
+      "sugar_content": 3.7,
+      "calorie_content": 102,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 294.5,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Filtered water",
+        "quantity": "12 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Chlorophyll drops",
+        "quantity": "10 drops",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ginger",
+        "quantity": "0.5 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Cedar Splash",
+      "description": "Cedar fresh juice highlighted by beet juice and ginger juice.",
+      "category": "juice",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 0,
+      "sugar_content": 9.4,
+      "calorie_content": 75,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 307.9,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Beet juice",
+        "quantity": "4 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ginger juice",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Nova Spark",
+      "description": "Nova house soda highlighted by carbonated water and vanilla syrup.",
+      "category": "soft_drink",
+      "price_tier": "$",
+      "sweetness_level": 5,
+      "caffeine_content": 2,
+      "sugar_content": 24.5,
+      "calorie_content": 174,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 348.6,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Carbonated water",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Vanilla syrup",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cinnamon",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Meadow Fizz",
+      "description": "Meadow cocktail highlighted by tequila and lime juice.",
+      "category": "cocktail",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 4,
+      "sugar_content": 11.9,
+      "calorie_content": 213,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 27.4,
+      "temperature": "iced",
+      "serving_size": 170.4,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Tequila",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Rosemary syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Serene Balance",
+      "description": "Serene functional tonic highlighted by filtered water and chlorophyll drops.",
+      "category": "functional_drink",
+      "price_tier": "$$",
+      "sweetness_level": 3,
+      "caffeine_content": 9,
+      "sugar_content": 6.6,
+      "calorie_content": 73,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 288.5,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Filtered water",
+        "quantity": "12 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Chlorophyll drops",
+        "quantity": "10 drops",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Frost Pour",
+      "description": "Frost alcoholic pour highlighted by spiced rum and coconut water.",
+      "category": "alcohol",
+      "price_tier": "$$",
+      "sweetness_level": 3,
+      "caffeine_content": 2,
+      "sugar_content": 12.2,
+      "calorie_content": 183,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 13.6,
+      "temperature": "cold",
+      "serving_size": 276.2,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Spiced rum",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Coconut water",
+        "quantity": "4 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Crisp Blend",
+      "description": "Crisp smoothie highlighted by papaya, kefir and chia seeds.",
+      "category": "smoothie",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 4,
+      "sugar_content": 16.3,
+      "calorie_content": 170,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 348.5,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Papaya",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Kefir",
+        "quantity": "0.5 cup",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Chia seeds",
+        "quantity": "1 tbsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Solar Iced",
+      "description": "Solar tea blend highlighted by earl grey and honey.",
+      "category": "tea",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 24,
+      "sugar_content": 11.3,
+      "calorie_content": 80,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 349.2,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Earl Grey",
+        "quantity": "8 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Honey",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Rose petals",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Velvet Revive",
+      "description": "Velvet smoothie highlighted by papaya, almond milk and matcha powder.",
+      "category": "smoothie",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 8,
+      "sugar_content": 13.6,
+      "calorie_content": 187,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 353.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Papaya",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Almond milk",
+        "quantity": "8 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Matcha powder",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Meadow Sour",
+      "description": "Meadow cocktail highlighted by rum and lemon juice.",
+      "category": "cocktail",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 1,
+      "sugar_content": 7.1,
+      "calorie_content": 192,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 27.7,
+      "temperature": "iced",
+      "serving_size": 189.9,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Rum",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Frost Velvet",
+      "description": "Frost hot chocolate highlighted by oat milk and cocoa powder.",
+      "category": "hot_chocolate",
+      "price_tier": "$$",
+      "sweetness_level": 7,
+      "caffeine_content": 5,
+      "sugar_content": 16.9,
+      "calorie_content": 253,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 247.1,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Oat milk",
+        "quantity": "7 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cocoa powder",
+        "quantity": "1.5 tbsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Toasted marshmallow",
+        "quantity": "1",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Crisp Breeze",
+      "description": "Crisp house soda highlighted by sparkling water and strawberry puree.",
+      "category": "soft_drink",
+      "price_tier": "$$",
+      "sweetness_level": 8,
+      "caffeine_content": 19,
+      "sugar_content": 29.8,
+      "calorie_content": 124,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 357.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Sparkling water",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Strawberry puree",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Mint leaves",
+        "quantity": "3",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Golden Boost",
+      "description": "Golden protein shake highlighted by vanilla whey protein and whole milk.",
+      "category": "protein_shake",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 13,
+      "sugar_content": 6.6,
+      "calorie_content": 282,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 361.2,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Vanilla whey protein",
+        "quantity": "1 scoop",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Whole milk",
+        "quantity": "8 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Lemon zest",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Bloom Crush",
+      "description": "Bloom smoothie highlighted by papaya, coconut water and cocoa nibs.",
+      "category": "smoothie",
+      "price_tier": "$",
+      "sweetness_level": 7,
+      "caffeine_content": 9,
+      "sugar_content": 17.5,
+      "calorie_content": 209,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 355.2,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Papaya",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Coconut water",
+        "quantity": "8 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cocoa nibs",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Ivy Protein",
+      "description": "Ivy protein shake highlighted by chocolate protein and whole milk.",
+      "category": "protein_shake",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 6,
+      "sugar_content": 9.4,
+      "calorie_content": 314,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 360.3,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Chocolate protein",
+        "quantity": "1 scoop",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Whole milk",
+        "quantity": "8 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Berries",
+        "quantity": "0.75 cup",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Wild Glow",
+      "description": "Wild smoothie highlighted by papaya, kefir and matcha powder.",
+      "category": "smoothie",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 2,
+      "sugar_content": 14.8,
+      "calorie_content": 318,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 350.1,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Papaya",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Kefir",
+        "quantity": "0.5 cup",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Matcha powder",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Meadow Crema",
+      "description": "Meadow coffee creation highlighted by dual espresso, steamed oat milk and caramel syrup.",
+      "category": "coffee",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 99,
+      "sugar_content": 12.6,
+      "calorie_content": 169,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 331.8,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Dual espresso",
+        "quantity": "3 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed oat milk",
+        "quantity": "6 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Caramel syrup",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Misty Fizz 1",
+      "description": "Misty house soda highlighted by carbonated water and blood orange syrup.",
+      "category": "soft_drink",
+      "price_tier": "$",
+      "sweetness_level": 8,
+      "caffeine_content": 7,
+      "sugar_content": 20.1,
+      "calorie_content": 176,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 362.5,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Carbonated water",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Blood orange syrup",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Wild Frost",
+      "description": "Wild mocktail creation highlighted by cranberry juice and sparkling water.",
+      "category": "mocktail",
+      "price_tier": "$$",
+      "sweetness_level": 7,
+      "caffeine_content": 0,
+      "sugar_content": 16.6,
+      "calorie_content": 105,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 295.7,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Cranberry juice",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Sparkling water",
+        "quantity": "5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Rosemary syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Wild Dream",
+      "description": "Wild milkshake treat highlighted by vanilla ice cream and half-and-half.",
+      "category": "milkshake",
+      "price_tier": "$$",
+      "sweetness_level": 9,
+      "caffeine_content": 3,
+      "sugar_content": 30.2,
+      "calorie_content": 429,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 442.8,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Vanilla ice cream",
+        "quantity": "2 cups",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Half-and-half",
+        "quantity": "4 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Cinnamon",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Nova Balance",
+      "description": "Nova functional tonic highlighted by almond milk and chlorophyll drops.",
+      "category": "functional_drink",
+      "price_tier": "$$",
+      "sweetness_level": 2,
+      "caffeine_content": 12,
+      "sugar_content": 7.2,
+      "calorie_content": 120,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 290.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Almond milk",
+        "quantity": "8 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Chlorophyll drops",
+        "quantity": "10 drops",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Nova Refresh",
+      "description": "Nova fresh juice highlighted by grapefruit juice and lemon juice.",
+      "category": "juice",
+      "price_tier": "$$",
+      "sweetness_level": 3,
+      "caffeine_content": 0,
+      "sugar_content": 10.3,
+      "calorie_content": 99,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 335.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Grapefruit juice",
+        "quantity": "6 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Drift Twist",
+      "description": "Drift cocktail highlighted by tequila and lemon juice.",
+      "category": "cocktail",
+      "price_tier": "$$$",
+      "sweetness_level": 4,
+      "caffeine_content": 3,
+      "sugar_content": 8.1,
+      "calorie_content": 207,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 24.7,
+      "temperature": "iced",
+      "serving_size": 194.3,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Tequila",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Agave syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Misty Charge",
+      "description": "Misty energy lift highlighted by sparkling water and berry concentrate.",
+      "category": "energy_drink",
+      "price_tier": "$",
+      "sweetness_level": 4,
+      "caffeine_content": 150,
+      "sugar_content": 19.9,
+      "calorie_content": 132,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 333.8,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Sparkling water",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Berry concentrate",
+        "quantity": "1 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Wild Power",
+      "description": "Wild protein shake highlighted by vanilla whey protein and oat milk.",
+      "category": "protein_shake",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 10,
+      "sugar_content": 8.7,
+      "calorie_content": 288,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 343.9,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Vanilla whey protein",
+        "quantity": "1 scoop",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Oat milk",
+        "quantity": "8 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon zest",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Luminous Cortado",
+      "description": "Luminous coffee creation highlighted by espresso, steamed whole milk and maple syrup.",
+      "category": "coffee",
+      "price_tier": "$$$",
+      "sweetness_level": 3,
+      "caffeine_content": 95,
+      "sugar_content": 15.5,
+      "calorie_content": 183,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 279.9,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Espresso",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed whole milk",
+        "quantity": "6 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Maple syrup",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Serene Warmth",
+      "description": "Serene alcoholic pour highlighted by blanco tequila and coconut water.",
+      "category": "alcohol",
+      "price_tier": "$",
+      "sweetness_level": 6,
+      "caffeine_content": 5,
+      "sugar_content": 8.0,
+      "calorie_content": 197,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 15.8,
+      "temperature": "iced",
+      "serving_size": 276.8,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Blanco tequila",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Coconut water",
+        "quantity": "4 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Grapefruit juice",
+        "quantity": "1 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Amber Bloom",
+      "description": "Amber tea blend highlighted by sencha green tea and honey.",
+      "category": "tea",
+      "price_tier": "$",
+      "sweetness_level": 5,
+      "caffeine_content": 60,
+      "sugar_content": 4.8,
+      "calorie_content": 171,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 335.2,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Sencha green tea",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Honey",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Rose petals",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Harbor Reserve",
+      "description": "Harbor alcoholic pour highlighted by spiced rum and club soda.",
+      "category": "alcohol",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 5,
+      "sugar_content": 9.0,
+      "calorie_content": 214,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 16.2,
+      "temperature": "cold",
+      "serving_size": 324.8,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Spiced rum",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Club soda",
+        "quantity": "4 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Crisp Sip",
+      "description": "Crisp alcoholic pour highlighted by vodka and coconut water.",
+      "category": "alcohol",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 5,
+      "sugar_content": 10.2,
+      "calorie_content": 184,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 12.6,
+      "temperature": "iced",
+      "serving_size": 321.6,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Vodka",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Coconut water",
+        "quantity": "4 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Honey",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Aurora Bloom",
+      "description": "Aurora tea blend highlighted by oolong tea and lavender honey.",
+      "category": "tea",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 43,
+      "sugar_content": 5.2,
+      "calorie_content": 138,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 325.6,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Oolong tea",
+        "quantity": "9 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lavender honey",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon slice",
+        "quantity": "1",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Velvet Swirl",
+      "description": "Velvet milkshake treat highlighted by chocolate ice cream and milk.",
+      "category": "milkshake",
+      "price_tier": "$",
+      "sweetness_level": 8,
+      "caffeine_content": 5,
+      "sugar_content": 30.2,
+      "calorie_content": 496,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 442.1,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Chocolate ice cream",
+        "quantity": "2 cups",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Milk",
+        "quantity": "4 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Peanut butter",
+        "quantity": "1.5 tbsp",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Bloom Frost",
+      "description": "Bloom mocktail creation highlighted by pineapple juice and soda water.",
+      "category": "mocktail",
+      "price_tier": "$",
+      "sweetness_level": 5,
+      "caffeine_content": 0,
+      "sugar_content": 15.2,
+      "calorie_content": 101,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 295.9,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Pineapple juice",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Soda water",
+        "quantity": "5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Harbor Frost",
+      "description": "Harbor mocktail creation highlighted by cranberry juice and sparkling water.",
+      "category": "mocktail",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 0,
+      "sugar_content": 14.4,
+      "calorie_content": 92,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 294.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Cranberry juice",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Sparkling water",
+        "quantity": "5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Wild Twist",
+      "description": "Wild coffee creation highlighted by cold brew concentrate, steamed almond milk and hazelnut syrup.",
+      "category": "coffee",
+      "price_tier": "$",
+      "sweetness_level": 4,
+      "caffeine_content": 130,
+      "sugar_content": 9.2,
+      "calorie_content": 257,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 355.1,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Cold brew concentrate",
+        "quantity": "5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed almond milk",
+        "quantity": "6 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Hazelnut syrup",
+        "quantity": "0.75 oz",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Solar Revive",
+      "description": "Solar smoothie highlighted by papaya, coconut water and cocoa nibs.",
+      "category": "smoothie",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 3,
+      "sugar_content": 20.3,
+      "calorie_content": 235,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 343.6,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Papaya",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Coconut water",
+        "quantity": "8 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cocoa nibs",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Velvet Collins",
+      "description": "Velvet cocktail highlighted by vodka and lemon juice.",
+      "category": "cocktail",
+      "price_tier": "$$",
+      "sweetness_level": 3,
+      "caffeine_content": 4,
+      "sugar_content": 8.5,
+      "calorie_content": 188,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 26.7,
+      "temperature": "iced",
+      "serving_size": 201.9,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Vodka",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Aurora Splash",
+      "description": "Aurora fresh juice highlighted by grapefruit juice and turmeric.",
+      "category": "juice",
+      "price_tier": "$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 9.1,
+      "calorie_content": 53,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 315.1,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Grapefruit juice",
+        "quantity": "6 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Turmeric",
+        "quantity": "0.25 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Luminous Cortado 1",
+      "description": "Luminous coffee creation highlighted by nitro cold brew, steamed whole milk and cardamom syrup.",
+      "category": "coffee",
+      "price_tier": "$",
+      "sweetness_level": 4,
+      "caffeine_content": 109,
+      "sugar_content": 16.1,
+      "calorie_content": 197,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 268.5,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Nitro cold brew",
+        "quantity": "9 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed whole milk",
+        "quantity": "6 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Cardamom syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cinnamon stick",
+        "quantity": "1",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Sable Pop 1",
+      "description": "Sable house soda highlighted by carbonated water and vanilla syrup.",
+      "category": "soft_drink",
+      "price_tier": "$",
+      "sweetness_level": 7,
+      "caffeine_content": 27,
+      "sugar_content": 25.1,
+      "calorie_content": 164,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 351.4,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Carbonated water",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Vanilla syrup",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Mint leaves",
+        "quantity": "3",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Solar Iced 1",
+      "description": "Solar tea blend highlighted by earl grey and agave syrup.",
+      "category": "tea",
+      "price_tier": "$$",
+      "sweetness_level": 3,
+      "caffeine_content": 26,
+      "sugar_content": 8.0,
+      "calorie_content": 60,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 280.2,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Earl Grey",
+        "quantity": "8 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Agave syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Mint leaves",
+        "quantity": "5",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Harbor Pour",
+      "description": "Harbor alcoholic pour highlighted by blanco tequila and citrus soda.",
+      "category": "alcohol",
+      "price_tier": "$",
+      "sweetness_level": 3,
+      "caffeine_content": 5,
+      "sugar_content": 7.9,
+      "calorie_content": 183,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 12.3,
+      "temperature": "iced",
+      "serving_size": 338.8,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Blanco tequila",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Citrus soda",
+        "quantity": "4 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Honey",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Sable Frost",
+      "description": "Sable mocktail creation highlighted by cucumber juice and soda water.",
+      "category": "mocktail",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 0,
+      "sugar_content": 11.3,
+      "calorie_content": 89,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 307.6,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Cucumber juice",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Soda water",
+        "quantity": "5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Basil syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Crisp Sparkler",
+      "description": "Crisp sparkling water highlighted by carbonated water.",
+      "category": "sparkling_water",
+      "price_tier": "$$",
+      "sweetness_level": 1,
+      "caffeine_content": 0,
+      "sugar_content": 0.0,
+      "calorie_content": 0,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 356.7,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Carbonated water",
+        "quantity": "11 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Grapefruit peel",
+        "quantity": "1 strip",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Velvet Infusion",
+      "description": "Velvet tea blend highlighted by earl grey and honey.",
+      "category": "tea",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 17,
+      "sugar_content": 9.9,
+      "calorie_content": 64,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 317.6,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Earl Grey",
+        "quantity": "8 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Honey",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ginger slices",
+        "quantity": "4",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Amber Chiller",
+      "description": "Amber mocktail creation highlighted by cucumber juice and ginger beer.",
+      "category": "mocktail",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 0,
+      "sugar_content": 12.7,
+      "calorie_content": 76,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 328.6,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Cucumber juice",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ginger beer",
+        "quantity": "5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Drift Bloom",
+      "description": "Drift tea blend highlighted by yerba mate and brown sugar.",
+      "category": "tea",
+      "price_tier": "$",
+      "sweetness_level": 5,
+      "caffeine_content": 20,
+      "sugar_content": 5.8,
+      "calorie_content": 102,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 289.3,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Yerba mate",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Brown sugar",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon slice",
+        "quantity": "1",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Sable Cortado",
+      "description": "Sable coffee creation highlighted by nitro cold brew, steamed whole milk and hazelnut syrup.",
+      "category": "coffee",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 96,
+      "sugar_content": 10.0,
+      "calorie_content": 260,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 273.1,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Nitro cold brew",
+        "quantity": "9 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed whole milk",
+        "quantity": "6 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Hazelnut syrup",
+        "quantity": "0.75 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Sea salt",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Drift Latte",
+      "description": "Drift coffee creation highlighted by espresso, steamed oat milk and brown sugar syrup.",
+      "category": "coffee",
+      "price_tier": "$$",
+      "sweetness_level": 7,
+      "caffeine_content": 91,
+      "sugar_content": 13.5,
+      "calorie_content": 143,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 282.5,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Espresso",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed oat milk",
+        "quantity": "6 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Brown sugar syrup",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Crisp Froth 1",
+      "description": "Crisp milkshake treat highlighted by chocolate ice cream and half-and-half.",
+      "category": "milkshake",
+      "price_tier": "$$",
+      "sweetness_level": 8,
+      "caffeine_content": 7,
+      "sugar_content": 35.8,
+      "calorie_content": 451,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 427.4,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Chocolate ice cream",
+        "quantity": "2 cups",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Half-and-half",
+        "quantity": "4 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Peanut butter",
+        "quantity": "1.5 tbsp",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Solar Power",
+      "description": "Solar protein shake highlighted by vanilla whey protein and oat milk.",
+      "category": "protein_shake",
+      "price_tier": "$$",
+      "sweetness_level": 5,
+      "caffeine_content": 16,
+      "sugar_content": 8.1,
+      "calorie_content": 240,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 344.1,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Vanilla whey protein",
+        "quantity": "1 scoop",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Oat milk",
+        "quantity": "8 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Peanut butter",
+        "quantity": "1 tbsp",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Serene Sipper 1",
+      "description": "Serene tea blend highlighted by rooibos and brown sugar.",
+      "category": "tea",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 49,
+      "sugar_content": 6.4,
+      "calorie_content": 102,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 349.6,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Rooibos",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Brown sugar",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Meadow Velvet",
+      "description": "Meadow hot chocolate highlighted by whole milk and white chocolate.",
+      "category": "hot_chocolate",
+      "price_tier": "$$",
+      "sweetness_level": 7,
+      "caffeine_content": 11,
+      "sugar_content": 23.9,
+      "calorie_content": 303,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 279.2,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Whole milk",
+        "quantity": "7 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "White chocolate",
+        "quantity": "2 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Toasted marshmallow",
+        "quantity": "1",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Serene Splash",
+      "description": "Serene fresh juice highlighted by apple juice and turmeric.",
+      "category": "juice",
+      "price_tier": "$",
+      "sweetness_level": 3,
+      "caffeine_content": 0,
+      "sugar_content": 8.1,
+      "calorie_content": 59,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 324.6,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Apple juice",
+        "quantity": "6 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Turmeric",
+        "quantity": "0.25 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Drift Protein",
+      "description": "Drift protein shake highlighted by chocolate protein and whole milk.",
+      "category": "protein_shake",
+      "price_tier": "$",
+      "sweetness_level": 5,
+      "caffeine_content": 17,
+      "sugar_content": 9.0,
+      "calorie_content": 280,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 361.3,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Chocolate protein",
+        "quantity": "1 scoop",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Whole milk",
+        "quantity": "8 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Banana",
+        "quantity": "0.5 medium",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Ivy Infusion",
+      "description": "Ivy tea blend highlighted by earl grey and agave syrup.",
+      "category": "tea",
+      "price_tier": "$",
+      "sweetness_level": 5,
+      "caffeine_content": 21,
+      "sugar_content": 9.8,
+      "calorie_content": 45,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 315.5,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Earl Grey",
+        "quantity": "8 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Agave syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon slice",
+        "quantity": "1",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Golden Twist",
+      "description": "Golden coffee creation highlighted by espresso, steamed almond milk and maple syrup.",
+      "category": "coffee",
+      "price_tier": "$$$",
+      "sweetness_level": 4,
+      "caffeine_content": 157,
+      "sugar_content": 12.1,
+      "calorie_content": 166,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 277.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Espresso",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed almond milk",
+        "quantity": "6 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Maple syrup",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Chocolate dust",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Misty Collins",
+      "description": "Misty cocktail highlighted by vodka and lemon juice.",
+      "category": "cocktail",
+      "price_tier": "$$$",
+      "sweetness_level": 4,
+      "caffeine_content": 3,
+      "sugar_content": 10.2,
+      "calorie_content": 209,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 27.0,
+      "temperature": "cold",
+      "serving_size": 182.8,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Vodka",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Simple syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Sable Frost 1",
+      "description": "Sable mocktail creation highlighted by pineapple juice and ginger beer.",
+      "category": "mocktail",
+      "price_tier": "$$",
+      "sweetness_level": 7,
+      "caffeine_content": 0,
+      "sugar_content": 13.7,
+      "calorie_content": 89,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 275.9,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Pineapple juice",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ginger beer",
+        "quantity": "5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Rosemary syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Crisp Sour",
+      "description": "Crisp cocktail highlighted by rum and grapefruit juice.",
+      "category": "cocktail",
+      "price_tier": "$$$",
+      "sweetness_level": 5,
+      "caffeine_content": 0,
+      "sugar_content": 11.9,
+      "calorie_content": 205,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 26.3,
+      "temperature": "cold",
+      "serving_size": 183.7,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Rum",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Grapefruit juice",
+        "quantity": "1 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Agave syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Harbor Charge",
+      "description": "Harbor energy lift highlighted by sparkling water and berry concentrate.",
+      "category": "energy_drink",
+      "price_tier": "$",
+      "sweetness_level": 5,
+      "caffeine_content": 179,
+      "sugar_content": 16.5,
+      "calorie_content": 138,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 430.9,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Sparkling water",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Berry concentrate",
+        "quantity": "1 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Golden Protein",
+      "description": "Golden protein shake highlighted by chocolate protein and almond milk.",
+      "category": "protein_shake",
+      "price_tier": "$$",
+      "sweetness_level": 3,
+      "caffeine_content": 9,
+      "sugar_content": 8.6,
+      "calorie_content": 293,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 338.8,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Chocolate protein",
+        "quantity": "1 scoop",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Almond milk",
+        "quantity": "8 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Lemon zest",
+        "quantity": "1 pinch",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Bloom Whisper",
+      "description": "Bloom tea blend highlighted by oolong tea and lavender honey.",
+      "category": "tea",
+      "price_tier": "$",
+      "sweetness_level": 5,
+      "caffeine_content": 33,
+      "sugar_content": 9.7,
+      "calorie_content": 106,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 344.3,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Oolong tea",
+        "quantity": "9 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lavender honey",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Serene Seltzer",
+      "description": "Serene sparkling water highlighted by carbonated water.",
+      "category": "sparkling_water",
+      "price_tier": "$$",
+      "sweetness_level": 1,
+      "caffeine_content": 0,
+      "sugar_content": 0.0,
+      "calorie_content": 0,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 343.6,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Carbonated water",
+        "quantity": "11 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Grapefruit peel",
+        "quantity": "1 strip",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Blaze Fuel",
+      "description": "Blaze protein shake highlighted by plant protein and almond milk.",
+      "category": "protein_shake",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 20,
+      "sugar_content": 6.5,
+      "calorie_content": 299,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 375.5,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Plant protein",
+        "quantity": "1 scoop",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Almond milk",
+        "quantity": "8 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Berries",
+        "quantity": "0.75 cup",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Crisp Cocoa",
+      "description": "Crisp hot chocolate highlighted by whole milk and dark cocoa.",
+      "category": "hot_chocolate",
+      "price_tier": "$$$",
+      "sweetness_level": 7,
+      "caffeine_content": 6,
+      "sugar_content": 16.8,
+      "calorie_content": 288,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 245.4,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Whole milk",
+        "quantity": "7 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Dark cocoa",
+        "quantity": "1.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Sable Swirl",
+      "description": "Sable milkshake treat highlighted by strawberry ice cream and milk.",
+      "category": "milkshake",
+      "price_tier": "$",
+      "sweetness_level": 8,
+      "caffeine_content": 9,
+      "sugar_content": 31.3,
+      "calorie_content": 455,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 402.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Strawberry ice cream",
+        "quantity": "2 cups",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Milk",
+        "quantity": "4 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Chocolate sauce",
+        "quantity": "1 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Wild Glow 1",
+      "description": "Wild smoothie highlighted by strawberries, almond milk and chia seeds.",
+      "category": "smoothie",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 11,
+      "sugar_content": 12.6,
+      "calorie_content": 230,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 341.4,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Strawberries",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Almond milk",
+        "quantity": "8 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Chia seeds",
+        "quantity": "1 tbsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Luminous Revive",
+      "description": "Luminous smoothie highlighted by papaya, greek yogurt and chia seeds.",
+      "category": "smoothie",
+      "price_tier": "$",
+      "sweetness_level": 6,
+      "caffeine_content": 7,
+      "sugar_content": 21.9,
+      "calorie_content": 304,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 342.3,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Papaya",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Greek yogurt",
+        "quantity": "0.5 cup",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Chia seeds",
+        "quantity": "1 tbsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Meadow Protein",
+      "description": "Meadow protein shake highlighted by vanilla whey protein and whole milk.",
+      "category": "protein_shake",
+      "price_tier": "$",
+      "sweetness_level": 4,
+      "caffeine_content": 4,
+      "sugar_content": 10.3,
+      "calorie_content": 262,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 335.5,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Vanilla whey protein",
+        "quantity": "1 scoop",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Whole milk",
+        "quantity": "8 oz",
+        "is_allergen": true
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Velvet Fizz 1",
+      "description": "Velvet cocktail highlighted by vodka and grapefruit juice.",
+      "category": "cocktail",
+      "price_tier": "$$$",
+      "sweetness_level": 4,
+      "caffeine_content": 2,
+      "sugar_content": 7.3,
+      "calorie_content": 206,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 22.5,
+      "temperature": "cold",
+      "serving_size": 196.3,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Vodka",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Grapefruit juice",
+        "quantity": "1 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Blaze Shakerato 1",
+      "description": "Blaze coffee creation highlighted by espresso, steamed coconut milk and cardamom syrup.",
+      "category": "coffee",
+      "price_tier": "$",
+      "sweetness_level": 7,
+      "caffeine_content": 95,
+      "sugar_content": 15.3,
+      "calorie_content": 253,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 290.2,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Espresso",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed coconut milk",
+        "quantity": "6 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Cardamom syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Golden Volt",
+      "description": "Golden energy lift highlighted by sparkling water and citrus blend.",
+      "category": "energy_drink",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 162,
+      "sugar_content": 21.1,
+      "calorie_content": 118,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 340.3,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Sparkling water",
+        "quantity": "10 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Citrus blend",
+        "quantity": "1 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Ivy Elixir",
+      "description": "Ivy functional tonic highlighted by filtered water and ashwagandha.",
+      "category": "functional_drink",
+      "price_tier": "$$",
+      "sweetness_level": 4,
+      "caffeine_content": 10,
+      "sugar_content": 5.3,
+      "calorie_content": 106,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 334.3,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Filtered water",
+        "quantity": "12 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Ashwagandha",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Crisp Crema",
+      "description": "Crisp coffee creation highlighted by espresso, steamed oat milk and vanilla bean syrup.",
+      "category": "coffee",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 133,
+      "sugar_content": 16.3,
+      "calorie_content": 222,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 301.6,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Espresso",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed oat milk",
+        "quantity": "6 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Vanilla bean syrup",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Chocolate dust",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Cedar Sparkler",
+      "description": "Cedar sparkling water highlighted by carbonated water.",
+      "category": "sparkling_water",
+      "price_tier": "$$",
+      "sweetness_level": 1,
+      "caffeine_content": 0,
+      "sugar_content": 0.0,
+      "calorie_content": 0,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 332.8,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Carbonated water",
+        "quantity": "11 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Mint leaves",
+        "quantity": "3",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Serene Fuel",
+      "description": "Serene protein shake highlighted by plant protein and whole milk.",
+      "category": "protein_shake",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 11,
+      "sugar_content": 13.0,
+      "calorie_content": 294,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 373.4,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Plant protein",
+        "quantity": "1 scoop",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Whole milk",
+        "quantity": "8 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Banana",
+        "quantity": "0.5 medium",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Ivy Twist 1",
+      "description": "Ivy coffee creation highlighted by cold brew concentrate, steamed whole milk and cardamom syrup.",
+      "category": "coffee",
+      "price_tier": "$",
+      "sweetness_level": 6,
+      "caffeine_content": 118,
+      "sugar_content": 16.5,
+      "calorie_content": 209,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 344.5,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Cold brew concentrate",
+        "quantity": "5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed whole milk",
+        "quantity": "6 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Cardamom syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Chocolate dust",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Frost Whisper",
+      "description": "Frost tea blend highlighted by earl grey and brown sugar.",
+      "category": "tea",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 57,
+      "sugar_content": 10.5,
+      "calorie_content": 88,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "iced",
+      "serving_size": 282.3,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Earl Grey",
+        "quantity": "8 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Brown sugar",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon slice",
+        "quantity": "1",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Nova Crush",
+      "description": "Nova smoothie highlighted by mango, kefir and flaxseed.",
+      "category": "smoothie",
+      "price_tier": "$$",
+      "sweetness_level": 7,
+      "caffeine_content": 2,
+      "sugar_content": 13.4,
+      "calorie_content": 167,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 335.5,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Mango",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Kefir",
+        "quantity": "0.5 cup",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Flaxseed",
+        "quantity": "1 tbsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Cedar Glow",
+      "description": "Cedar smoothie highlighted by blueberries, kefir and cocoa nibs.",
+      "category": "smoothie",
+      "price_tier": "$",
+      "sweetness_level": 6,
+      "caffeine_content": 10,
+      "sugar_content": 19.8,
+      "calorie_content": 305,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 365.8,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Blueberries",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Kefir",
+        "quantity": "0.5 cup",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Cocoa nibs",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Amber Splash",
+      "description": "Amber smoothie highlighted by mango, greek yogurt and cocoa nibs.",
+      "category": "smoothie",
+      "price_tier": "$",
+      "sweetness_level": 7,
+      "caffeine_content": 13,
+      "sugar_content": 16.9,
+      "calorie_content": 273,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 354.9,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Mango",
+        "quantity": "1 cup",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Greek yogurt",
+        "quantity": "0.5 cup",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Cocoa nibs",
+        "quantity": "1 tsp",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Blaze Nightcap",
+      "description": "Blaze cocktail highlighted by gin and lemon juice.",
+      "category": "cocktail",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 4,
+      "sugar_content": 10.3,
+      "calorie_content": 182,
+      "image_url": null,
+      "is_alcoholic": true,
+      "alcohol_content": 20.0,
+      "temperature": "cold",
+      "serving_size": 181.0,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Gin",
+        "quantity": "2 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Rosemary syrup",
+        "quantity": "0.5 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Solar Crema",
+      "description": "Solar coffee creation highlighted by dual espresso, steamed almond milk and maple syrup.",
+      "category": "coffee",
+      "price_tier": "$$$",
+      "sweetness_level": 3,
+      "caffeine_content": 153,
+      "sugar_content": 15.5,
+      "calorie_content": 164,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 272.9,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Dual espresso",
+        "quantity": "3 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed almond milk",
+        "quantity": "6 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Maple syrup",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Meadow Shakerato",
+      "description": "Meadow coffee creation highlighted by cold brew concentrate, steamed whole milk and vanilla bean syrup.",
+      "category": "coffee",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 92,
+      "sugar_content": 12.6,
+      "calorie_content": 139,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "cold",
+      "serving_size": 346.2,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Cold brew concentrate",
+        "quantity": "5 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Steamed whole milk",
+        "quantity": "6 oz",
+        "is_allergen": true
+      },
+      {
+        "ingredient_name": "Vanilla bean syrup",
+        "quantity": "0.75 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "Cinnamon stick",
+        "quantity": "1",
+        "is_allergen": false
+      }
+    ]
+  },
+  {
+    "drink": {
+      "name": "Aurora Velvet",
+      "description": "Aurora hot chocolate highlighted by oat milk and white chocolate.",
+      "category": "hot_chocolate",
+      "price_tier": "$$",
+      "sweetness_level": 6,
+      "caffeine_content": 10,
+      "sugar_content": 17.4,
+      "calorie_content": 299,
+      "image_url": null,
+      "is_alcoholic": false,
+      "alcohol_content": 0.0,
+      "temperature": "hot",
+      "serving_size": 258.4,
+      "serving_unit": "ml"
+    },
+    "ingredients": [
+      {
+        "ingredient_name": "Oat milk",
+        "quantity": "7 oz",
+        "is_allergen": false
+      },
+      {
+        "ingredient_name": "White chocolate",
+        "quantity": "2 oz",
+        "is_allergen": true
+      }
+    ]
+  }
+]
