@@ -37,10 +37,10 @@ A consolidated list of all 500 drink names from `data/generated` is at `data_dri
 ```bash
 python scrape_images.py \
   --names-file data_drink_names/drink_names.txt \
-  --target-per-category 5 \
+  --target-per-category 3 \
   --out data_drink_names \
-  --url-file data_drink_names/image_urls.txt \
+  --url-file data_drink_names/hi_res_urls.txt \
   --headful
 ```
 
-Adjust `--target-per-category` as needed. URLs append to `data_drink_names/image_urls.txt` (tab-separated `name<TAB>url`). The script does not download images.
+This run will attempt up to 3 URLs per drink name and write to `data_drink_names/hi_res_urls.txt` (tab-separated `name<TAB>url`). The script does not download images.
