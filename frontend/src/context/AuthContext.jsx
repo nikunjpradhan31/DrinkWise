@@ -88,18 +88,25 @@ export const AuthContextProvider = ({ children }) => {
   }, []);
 
   // GET /auth/me
-  const fetchMe = useCallback(async () => {
-    if (!user?.access_token) return null;
-    try {
-      const response = await axiosInstance.get("/auth/me");
-      const data = response.data;
-      saveUser({ ...user, ...data });
-      return data;
-    } catch (err) {
-      console.error(err);
-      return null;
-    }
-  }, [user]);
+const fetchMe = useCallback(async () => {
+  if (!user?.access_token) return null;
+
+  try {
+    const response = await axiosInstance.get("/auth/me");
+    const data = response.data;
+
+    saveUser({
+      ...data,
+      access_token: user.access_token,
+    });
+
+    return data;
+  } catch (err) {
+    console.error(err);
+    return null;
+  }
+}, [user?.access_token]);
+
 
   // PUT /auth/me
   const updateMe = useCallback(
