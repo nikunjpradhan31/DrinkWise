@@ -6,18 +6,17 @@ import App from "./App.jsx";
 import "./index.css";
 import { AuthContextProvider } from "./context/AuthContext";
 
-const enableMocking = async () => {
-  if (!import.meta.env.DEV) {
-    return;
-  }
+// const enableMocking = async () => {
+//   if (!import.meta.env.DEV) {
+//     return;
+//   }
 
-  const { worker } = await import("./mocks/browser");
-  await worker.start({
-    onUnhandledRequest: "bypass",
-  });
-};
+//   const { worker } = await import("./mocks/browser");
+//   await worker.start({
+//     onUnhandledRequest: "bypass",
+//   });
+// };
 
-enableMocking().then(() => {
   ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
       <BrowserRouter>
@@ -27,4 +26,4 @@ enableMocking().then(() => {
       </BrowserRouter>
     </React.StrictMode>
   );
-});
+

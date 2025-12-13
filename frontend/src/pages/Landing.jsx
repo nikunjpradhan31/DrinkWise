@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { axiosInstance } from "../utils/axiosHelper";
 import CustomPagination from "../components/CustomPagnation";
+import AdvancedSearch from "../components/AdvancedSearch";
+import PreferenceBasedRecommendations from "../components/PreferenceBasedRecommendations";
+import InteractionBasedRecommendations from "../components/InteractionBasedRecommendations";
 
 const LandingPage = () => {
   const [search, setSearch] = useState("");
@@ -57,9 +60,7 @@ const LandingPage = () => {
           <h1 className="text-2xl font-semibold">
             Discover your next favorite drink
           </h1>
-          <p className="text-sm text-slate-300">
-            Search across the DrinkWise catalog with your preferences.
-          </p>
+
 
           <form
             onSubmit={handleSubmit}
@@ -80,7 +81,24 @@ const LandingPage = () => {
           </form>
         </section>
 
+        <section className="space-y-6">
+          <AdvancedSearch />
+        </section>
+
+        <section className="space-y-6">
+          <PreferenceBasedRecommendations />
+        </section>
+
+        <section className="space-y-6">
+          <InteractionBasedRecommendations />
+        </section>
+
         <section className="space-y-3">
+          <h2 className="text-lg font-semibold">Browse All Drinks</h2>
+          <p className="text-sm text-slate-300">
+            Explore our full catalog of beverages
+          </p>
+
           {loading && (
             <p className="text-sm text-slate-300">Loading drinks…</p>
           )}

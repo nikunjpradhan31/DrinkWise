@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { axiosInstance } from "../utils/axiosHelper";
+import PreferenceComparison from "../components/PreferenceComparison";
 
 const DrinkPage = () => {
   const { id } = useParams();
@@ -19,7 +20,7 @@ const DrinkPage = () => {
         const [drinkRes, interRes, simRes] = await Promise.all([
           axiosInstance.get(`/catalog/drinks/${id}`),
           axiosInstance.get(`/user-drinks/${id}`).catch(() => null),
-          axiosInstance.get("/recommendations/drinks", {
+          axiosInstance.get("/catalog/similar-drink", {
             params: { drink_id: Number(id), limit: 6 },
           }),
         ]);
@@ -37,6 +38,7 @@ const DrinkPage = () => {
     if (id) load();
   }, [id]);
 
+  console.log(similar)
   const updateInteraction = async (patch) => {
     try {
       const response = await axiosInstance.put(`/user-drinks/${id}`, patch);
@@ -117,6 +119,10 @@ const DrinkPage = () => {
           </section>
         )}
 
+        <section className="space-y-4 border-t border-slate-800 pt-4">
+          <PreferenceComparison drink={drink} />
+        </section>
+
         <section className="space-y-3 border-t border-slate-800 pt-4">
           <h2 className="text-sm font-semibold">Your rating</h2>
           <div className="flex flex-wrap items-center gap-3 text-sm">
@@ -178,19 +184,33 @@ const DrinkPage = () => {
         {similar.length > 0 && (
           <section className="space-y-3 border-t border-slate-800 pt-4">
             <h2 className="text-sm font-semibold">Similar drinks</h2>
+            <p className="text-xs text-slate-400">
+              Drinks with similar taste profiles and characteristics
+            </p>
             <div className="grid gap-3 sm:grid-cols-2">
-              {similar.map((d) => (
-                <Link
-                  key={d.drink_id}
-                  to={`/drink/${d.drink_id}`}
-                  className="rounded-lg bg-slate-900 border border-slate-700/80 p-3 hover:border-purple-500/60 transition-all"
-                >
-                  <p className="text-sm font-medium">{d.name}</p>
-                  <p className="text-xs text-slate-400 line-clamp-2 mt-1">
-                    {d.description}
-                  </p>
-                </Link>
-              ))}
+{similar.map((d) => (
+  <Link
+    key={d.drink.drink_id}
+    to={`/drink/${d.drink.drink_id}`}
+    className="rounded-lg bg-slate-900 border border-slate-700/80 p-3 hover:border-purple-500/60 transition-all"
+  >
+    <p className="text-sm font-medium">{d.drink.name}</p>
+
+    <p className="text-xs text-slate-400 line-clamp-2 mt-1">
+      {d.drink.description}
+    </p>
+
+    <div className="flex gap-2 text-[10px] text-slate-500 mt-2">
+      <span>Sweetness: {d.drink.sweetness_level}/10</span>
+      <span>Similarity: {(d.similarity_score * 100).toFixed(0)}%</span>
+    </div>
+
+    <div className="text-[10px] text-slate-500 mt-1">
+      {d.drink.price_tier} • {d.drink.category}
+    </div>
+  </Link>
+))}
+
             </div>
           </section>
         )}

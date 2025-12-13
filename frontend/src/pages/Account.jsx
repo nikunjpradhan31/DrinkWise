@@ -9,6 +9,8 @@ const AccountPage = () => {
   const [prefs, setPrefs] = useState(null);
   const [favorites, setFavorites] = useState([]);
   const [recs, setRecs] = useState([]);
+  const [stats, setStats] = useState(null);
+  const [interactions, setInteractions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState("");
 
@@ -21,17 +23,20 @@ const AccountPage = () => {
       setErr("");
       try {
         await fetchMe();
-        const [prefsRes, favRes, recRes] = await Promise.all([
+        const [prefsRes, favRes, recRes, statsRes, interactionsRes] = await Promise.all([
           axiosInstance.get("/preferences"),
-          axiosInstance.get("/user-favorites"),
-          axiosInstance.get("/recommendations/users", {
-            params: { limit: 6, recommendation_type: "hybrid" },
+          axiosInstance.get("/user-drinks/favorites"),
+          axiosInstance.get("/catalog/similar-user", {
+            params: { limit: 6},
           }),
+          axiosInstance.get("/auth/statistics"),
+          axiosInstance.get("/user-drinks/statistics"),
         ]);
-
         setPrefs(prefsRes.data);
         setFavorites(favRes.data.favorites || []);
-        setRecs(recRes.data.recommendations || []);
+        setRecs(recRes.data.similar_drinks || []);
+        setStats(statsRes.data);
+        setInteractions(interactionsRes.data.interactions || []);
       } catch (e) {
         console.error(e);
         setErr(e?.message || e?.error || "Failed to load account data.");
@@ -108,6 +113,42 @@ const AccountPage = () => {
           </div>
         </section>
 
+        {stats && (
+          <section className="bg-slate-900/70 border border-slate-800 rounded-xl p-4 space-y-3">
+            <h2 className="text-sm font-semibold">Your Drink Statistics</h2>
+            <div className="grid grid-cols-2 gap-4 text-xs">
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-slate-400">Total Drinks Tried:</span>
+                  <span className="font-medium">{stats.total_drinks_tried || 0}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-400">Favorite Drinks:</span>
+                  <span className="font-medium">{stats.favorite_drinks_count || 0}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-400">Average Rating:</span>
+                  <span className="font-medium">{(stats.average_rating || 0).toFixed(1)}</span>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-slate-400">Most Consumed:</span>
+                  <span className="font-medium">{stats.most_consumed_drink || 'None'}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-400">Total Consumptions:</span>
+                  <span className="font-medium">{stats.total_consumptions || 0}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-400">Account Age:</span>
+                  <span className="font-medium">{stats.account_age_days || 0} days</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
         <section className="space-y-2">
           <h2 className="text-sm font-semibold">Favorite drinks</h2>
           {favorites.length === 0 ? (
@@ -132,6 +173,29 @@ const AccountPage = () => {
           )}
         </section>
 
+        {interactions.length > 0 && (
+          <section className="space-y-2">
+            <h2 className="text-sm font-semibold">Recently Interacted Drinks</h2>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {interactions.slice(0, 6).map((interaction) => (
+                <Link
+                  key={interaction.drink_id}
+                  to={`/drink/${interaction.drink_id}`}
+                  className="rounded-lg bg-slate-900 border border-slate-800 p-3 hover:border-purple-500/60 transition-all"
+                >
+                  <p className="text-sm font-medium">{interaction.drink_name}</p>
+                  <p className="text-xs text-slate-400 line-clamp-2 mt-1">
+                    {interaction.drink_description}
+                  </p>
+                  <div className="flex gap-2 text-[10px] text-slate-500 mt-2">
+                    <span>⭐ {interaction.rating || 'Not rated'}</span>
+                    <span>🍹 {interaction.times_consumed || 0}x</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
         <section className="space-y-2">
           <h2 className="text-sm font-semibold">Recommended for you</h2>
           {recs.length === 0 ? (
@@ -140,19 +204,22 @@ const AccountPage = () => {
             </p>
           ) : (
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {recs.map((r, idx) => (
+             {recs.map((d) => (
                 <Link
-                  key={`${r.drink?.drink_id}-${idx}`}
-                  to={`/drink/${r.drink.drink_id}`}
-                  className="rounded-lg bg-slate-900 border border-slate-800 p-3 hover:border-blue-500/60 transition-all"
+                  key={d.drink.drink_id}
+                  to={`/drink/${d.drink.drink_id}`}
+                  className="rounded-lg bg-slate-900 border border-slate-700/80 p-3 hover:border-purple-500/60 transition-all"
                 >
-                  <p className="text-sm font-medium">{r.drink.name}</p>
+                  <p className="text-sm font-medium">{d.drink.name}</p>
+
                   <p className="text-xs text-slate-400 line-clamp-2 mt-1">
-                    {r.drink.description}
+                    {d.drink.description}
                   </p>
-                  <p className="text-[10px] text-slate-500 mt-1">
-                    Score: {(r.score * 100).toFixed(1)}%
-                  </p>
+
+
+                  <div className="text-[10px] text-slate-500 mt-1">
+                    {d.drink.price_tier} • {d.drink.category}
+                  </div>
                 </Link>
               ))}
             </div>

@@ -16,6 +16,7 @@ const RegisterPage = () => {
   });
   const [error, setError] = useState("");
   const [showQuiz, setShowQuiz] = useState(false);
+  const [validationErrors, setValidationErrors] = useState({});
 
   if (!auth) throw new Error("AuthContext missing");
   const { registerUser, authLoading, fetchMe } = auth;
@@ -23,12 +24,65 @@ const RegisterPage = () => {
   const handleChange = (e) =>
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
+  const validateForm = () => {
+    const errors = {};
+
+    // Username validation
+    if (!form.username.trim()) {
+      errors.username = "Username is required";
+    } else if (form.username.length < 3) {
+      errors.username = "Username must be at least 3 characters";
+    } else if (form.username.length > 50) {
+      errors.username = "Username must be less than 50 characters";
+    }
+
+    // Email validation
+    if (!form.email.trim()) {
+      errors.email = "Email is required";
+    } else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email)) {
+      errors.email = "Please enter a valid email address";
+    }
+
+    // Password validation
+    if (!form.password) {
+      errors.password = "Password is required";
+    } else if (form.password.length < 8) {
+      errors.password = "Password must be at least 8 characters";
+    } else if (!/[A-Z]/.test(form.password)) {
+      errors.password = "Password must contain at least one uppercase letter";
+    } else if (!/[a-z]/.test(form.password)) {
+      errors.password = "Password must contain at least one lowercase letter";
+    } else if (!/[0-9]/.test(form.password)) {
+      errors.password = "Password must contain at least one number";
+    } else if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(form.password)) {
+      errors.password = "Password must contain at least one special character";
+    }
+
+    // Confirm password validation
+    if (form.password !== form.confirmpassword) {
+      errors.confirmpassword = "Passwords do not match";
+    }
+
+    // Date of birth validation (if provided)
+    if (form.date_of_birth) {
+      const dob = new Date(form.date_of_birth);
+      const today = new Date();
+      const minAgeDate = new Date(today.getFullYear() - 13, today.getMonth(), today.getDate());
+
+      if (dob > minAgeDate) {
+        errors.date_of_birth = "You must be at least 13 years old";
+      }
+    }
+
+    setValidationErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
     setError("");
 
-    if (form.password !== form.confirmpassword) {
-      setError("Passwords do not match.");
+    if (!validateForm()) {
       return;
     }
 
@@ -85,9 +139,12 @@ const RegisterPage = () => {
                   name="username"
                   value={form.username}
                   onChange={handleChange}
-                className="w-full rounded-md bg-slate-900 border border-slate-700 px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className={`w-full rounded-md bg-slate-900 border ${validationErrors.username ? 'border-red-500' : 'border-slate-700'} px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500`}
                 required
               />
+              {validationErrors.username && (
+                <p className="text-xs text-red-400 mt-1">{validationErrors.username}</p>
+              )}
             </div>
 
               <div>
@@ -99,9 +156,12 @@ const RegisterPage = () => {
                   type="email"
                   value={form.email}
                   onChange={handleChange}
-                className="w-full rounded-md bg-slate-900 border border-slate-700 px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className={`w-full rounded-md bg-slate-900 border ${validationErrors.email ? 'border-red-500' : 'border-slate-700'} px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500`}
                 required
               />
+              {validationErrors.email && (
+                <p className="text-xs text-red-400 mt-1">{validationErrors.email}</p>
+              )}
             </div>
 
               <div>
@@ -113,8 +173,11 @@ const RegisterPage = () => {
                   type="date"
                   value={form.date_of_birth}
                   onChange={handleChange}
-                className="w-full rounded-md bg-slate-900 border border-slate-700 px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className={`w-full rounded-md bg-slate-900 border ${validationErrors.date_of_birth ? 'border-red-500' : 'border-slate-700'} px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500`}
               />
+              {validationErrors.date_of_birth && (
+                <p className="text-xs text-red-400 mt-1">{validationErrors.date_of_birth}</p>
+              )}
             </div>
 
               <div>
@@ -126,9 +189,12 @@ const RegisterPage = () => {
                   type="password"
                   value={form.password}
                   onChange={handleChange}
-                className="w-full rounded-md bg-slate-900 border border-slate-700 px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className={`w-full rounded-md bg-slate-900 border ${validationErrors.password ? 'border-red-500' : 'border-slate-700'} px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500`}
                 required
               />
+              {validationErrors.password && (
+                <p className="text-xs text-red-400 mt-1">{validationErrors.password}</p>
+              )}
             </div>
 
               <div>
@@ -140,9 +206,12 @@ const RegisterPage = () => {
                   type="password"
                   value={form.confirmpassword}
                   onChange={handleChange}
-                className="w-full rounded-md bg-slate-900 border border-slate-700 px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className={`w-full rounded-md bg-slate-900 border ${validationErrors.confirmpassword ? 'border-red-500' : 'border-slate-700'} px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500`}
                 required
               />
+              {validationErrors.confirmpassword && (
+                <p className="text-xs text-red-400 mt-1">{validationErrors.confirmpassword}</p>
+              )}
             </div>
 
               <button

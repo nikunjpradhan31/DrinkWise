@@ -111,6 +111,11 @@ class PreferenceService(BaseService):
             )
             
             self.db.add(new_preferences)
+            await self.db.execute(
+                            update(Users)
+                            .where(Users.user_id == user_id)
+                            .values(preference_finished=True)
+                        )
             await self.db.commit()
             await self.db.refresh(new_preferences)
             
@@ -175,7 +180,12 @@ class PreferenceService(BaseService):
                 .where(UserPreference.user_id == user_id)
                 .values(**update_values)
             )
-            
+            await self.db.execute(
+                update(Users)
+                .where(Users.user_id == user_id)
+                .values(preference_finished=True)
+            )
+
             await self.db.commit()
             
             # Return updated preferences

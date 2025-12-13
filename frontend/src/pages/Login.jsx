@@ -2,12 +2,14 @@
 import { useState, useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import ForgotPassword from "../components/ForgotPassword";
 
 const LoginPage = () => {
   const auth = useContext(AuthContext);
   const navigate = useNavigate();
   const [form, setForm] = useState({ username: "", password: "" });
   const [error, setError] = useState("");
+  const [showForgotPassword, setShowForgotPassword] = useState(false);
 
   if (!auth) throw new Error("AuthContext missing");
   const { loginUser, authLoading } = auth;
@@ -70,6 +72,16 @@ const LoginPage = () => {
             />
           </div>
 
+          <div className="flex justify-end">
+            <button
+              type="button"
+              onClick={() => setShowForgotPassword(true)}
+              className="text-xs text-blue-200 hover:underline"
+            >
+              Forgot password?
+            </button>
+          </div>
+
           <button
             type="submit"
             disabled={authLoading}
@@ -80,12 +92,16 @@ const LoginPage = () => {
         </form>
 
         <p className="mt-4 text-xs text-slate-400">
-          Don&apos;t have an account?{" "}
+          Don't have an account?{" "}
           <Link to="/register" className="text-blue-200 hover:underline">
             Register here
           </Link>
         </p>
       </div>
+
+      {showForgotPassword && (
+        <ForgotPassword onClose={() => setShowForgotPassword(false)} />
+      )}
     </div>
   );
 };

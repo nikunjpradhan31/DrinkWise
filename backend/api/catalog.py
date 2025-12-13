@@ -241,7 +241,7 @@ async def get_drinks_by_ingredient(
 
 
 @router.get(
-    "/user/similar",
+    "/similar-user",
     responses={401: {"model": dict}}
 )
 async def get_user_similar_drinks(
@@ -279,7 +279,7 @@ async def get_user_similar_drinks(
 
 # GET /catalog/{drink_id}/similar - Get similar drinks
 @router.get(
-    "/{drink_id}/similar",
+    "/similar-drink",
     responses={
         404: {"model": ErrorResponse},
         500: {"model": ErrorResponse}

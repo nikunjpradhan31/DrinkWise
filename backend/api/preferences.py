@@ -62,7 +62,7 @@ async def get_user_preferences(
     preferences = await preference_service.get_user_preferences(current_user.user_id)
 
     return UserPreferenceResponse(
-        user_id=preferences.user_id,
+        user_id=current_user.user_id,
         sweetness_preference=preferences.sweetness_preference,
         bitterness_preference=preferences.bitterness_preference,
         caffeine_limit=preferences.caffeine_limit,

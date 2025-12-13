@@ -5,7 +5,7 @@ import React, {
   useEffect,
   useCallback,
 } from "react";
-import { axiosInstance } from "../utils/axiosHelper";
+import { axiosInstance, isTokenExpired } from "../utils/axiosHelper";
 
 export const AuthContext = createContext(undefined);
 
@@ -17,21 +17,32 @@ export const AuthContextProvider = ({ children }) => {
   const [authError, setAuthError] = useState(null);
 
   // Load from localStorage on mount
-  useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored) {
-      try {
-        const parsed = JSON.parse(stored);
-        setUser(parsed);
-        if (parsed?.access_token) {
-          axiosInstance.defaults.headers.common["Authorization"] =
-            `Bearer ${parsed.access_token}`;
+    useEffect(() => {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        try {
+          const parsed = JSON.parse(stored);
+          
+          // Check if token is expired before setting user
+          if (parsed?.access_token) {
+            const isExpired = isTokenExpired(parsed.access_token);
+            if (isExpired) {
+              console.log("Token expired on page load, logging out user...");
+              localStorage.removeItem(STORAGE_KEY);
+              setUser(null);
+              return;
+            }
+          }
+          
+          setUser(parsed);
+          saveUser(parsed)
+          console.log("User loaded from localStorage", parsed);
+          // Authorization header is now handled by axios interceptor automatically
+        } catch {
+          localStorage.removeItem(STORAGE_KEY);
         }
-      } catch {
-        localStorage.removeItem(STORAGE_KEY);
       }
-    }
-  }, []);
+    }, []);
 
   const saveUser = (data) => {
     setUser(data);
