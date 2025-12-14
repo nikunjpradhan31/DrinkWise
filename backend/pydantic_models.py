@@ -72,6 +72,11 @@ class LogoutResponse(BaseModel):
     """Logout response model."""
     message: str = "Logged out successfully"
 
+class VerifyEmail(BaseModel):
+    """Verify email request model."""
+    email: EmailStr
+    verification_code: str
+
 # =========================
 # USER PREFERENCES MODELS
 # =========================
@@ -427,7 +432,7 @@ def is_strong_password(password: str) -> bool:
 __all__ = [
     # Authentication
     "UserRegistration", "UserLogin", "UserResponse", "UserUpdate",
-    "ForgotPassword", "ForgotPasswordResponse", "LogoutResponse",
+    "ForgotPassword", "ForgotPasswordResponse", "LogoutResponse", "VerifyEmail",
     
     # Preferences
     "UserPreference", "UserPreferenceUpdate",

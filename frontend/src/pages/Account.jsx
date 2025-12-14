@@ -3,6 +3,8 @@ import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { axiosInstance } from "../utils/axiosHelper";
 import { AuthContext } from "../context/AuthContext";
+import PreferenceForm from "../components/PreferenceForm";
+import VerifyModal from "../components/VerificationModal";
 
 const AccountPage = () => {
   const auth = useContext(AuthContext);
@@ -13,9 +15,11 @@ const AccountPage = () => {
   const [interactions, setInteractions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState("");
-
+  const [userInteractions, setUserInteractions] = useState([]);
+  const [showPrefForm, setShowPrefForm] = useState(false);
+  
   if (!auth) throw new Error("AuthContext missing");
-  const { user, fetchMe } = auth;
+  const { user, fetchMe, setshowVerify, setverifyInfo } = auth;
 
   useEffect(() => {
     const load = async () => {
@@ -23,7 +27,7 @@ const AccountPage = () => {
       setErr("");
       try {
         await fetchMe();
-        const [prefsRes, favRes, recRes, statsRes, interactionsRes] = await Promise.all([
+        const [prefsRes, favRes, recRes, statsRes, interactionsRes, userInteractionsRes] = await Promise.all([
           axiosInstance.get("/preferences"),
           axiosInstance.get("/user-drinks/favorites"),
           axiosInstance.get("/catalog/similar-user", {
@@ -31,12 +35,14 @@ const AccountPage = () => {
           }),
           axiosInstance.get("/auth/statistics"),
           axiosInstance.get("/user-drinks/statistics"),
+          axiosInstance.get("/user-drinks/all")
         ]);
         setPrefs(prefsRes.data);
         setFavorites(favRes.data.favorites || []);
         setRecs(recRes.data.similar_drinks || []);
         setStats(statsRes.data);
-        setInteractions(interactionsRes.data.interactions || []);
+        setInteractions(interactionsRes.data || []);
+        setUserInteractions(userInteractionsRes.data || []);
       } catch (e) {
         console.error(e);
         setErr(e?.message || e?.error || "Failed to load account data.");
@@ -46,6 +52,26 @@ const AccountPage = () => {
     };
     load();
   }, [fetchMe]);
+
+  const handleSendVerificationCode = async () => {
+    try {
+      // Call the resend verification endpoint
+      await axiosInstance.post(
+        `/auth/resend-verification?email=${encodeURIComponent(user.email)}`
+      );
+      
+      // Set up verification info for the modal
+      setverifyInfo({
+        email: user.email,
+        type: 'email_verification'
+      });
+      
+      // Show the verification modal
+      setshowVerify(true);
+    } catch (error) {
+      console.error('Failed to send verification code:', error);
+    }
+  };
 
   if (loading) {
     return (
@@ -82,7 +108,20 @@ const AccountPage = () => {
                 ? new Date(user.joindate).toLocaleDateString()
                 : "—"}
             </p>
-            <p className="text-xs text-slate-400">Email: {user.email}</p>
+            <div className="flex justify-between items-center">
+              <p className="text-xs text-slate-400">Email: {user.email}</p>
+              {!user.is_verified && (
+                <button
+                  onClick={handleSendVerificationCode}
+                  className="text-xs text-purple-400 hover:text-purple-300 font-medium transition-colors duration-200"
+                >
+                  Verify Email
+                </button>
+              )}
+              {user.is_verified && (
+                <span className="text-xs text-green-400 font-medium">✓ Verified</span>
+              )}
+            </div>
             {user.date_of_birth && (
               <p className="text-xs text-slate-400">
                 Date of birth:{" "}
@@ -96,7 +135,15 @@ const AccountPage = () => {
           </div>
 
           <div className="bg-slate-900/70 border border-slate-800 rounded-xl p-4 space-y-2">
-            <h2 className="text-sm font-semibold mb-1">Preferences</h2>
+            <div className="flex justify-between items-center">
+              <h2 className="text-sm font-semibold mb-1">Preferences</h2>
+              <button
+                onClick={() => setShowPrefForm(true)}
+                className="text-xs text-blue-400 hover:text-blue-300 font-medium transition-colors duration-200"
+              >
+                Update Preferences
+              </button>
+            </div>
             {prefs ? (
               <ul className="text-xs text-slate-300 space-y-1">
                 <li>Sweetness: {prefs.sweetness_preference}/10</li>
@@ -113,32 +160,32 @@ const AccountPage = () => {
           </div>
         </section>
 
-        {stats && (
+        {(interactions && stats) && (
           <section className="bg-slate-900/70 border border-slate-800 rounded-xl p-4 space-y-3">
             <h2 className="text-sm font-semibold">Your Drink Statistics</h2>
             <div className="grid grid-cols-2 gap-4 text-xs">
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span className="text-slate-400">Total Drinks Tried:</span>
-                  <span className="font-medium">{stats.total_drinks_tried || 0}</span>
+                  <span className="font-medium">{interactions.consumed_drinks_count || 0}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-400">Favorite Drinks:</span>
-                  <span className="font-medium">{stats.favorite_drinks_count || 0}</span>
+                  <span className="font-medium">{interactions.favorites_count || 0}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-400">Average Rating:</span>
-                  <span className="font-medium">{(stats.average_rating || 0).toFixed(1)}</span>
+                  <span className="font-medium">{(interactions.average_rating || 0).toFixed(1)}</span>
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span className="text-slate-400">Most Consumed:</span>
-                  <span className="font-medium">{stats.most_consumed_drink || 'None'}</span>
+                  <span className="font-medium">{interactions.most_consumed_drink || 'None'}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-400">Total Consumptions:</span>
-                  <span className="font-medium">{stats.total_consumptions || 0}</span>
+                  <span className="font-medium">{interactions.total_consumption_count || 0}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-400">Account Age:</span>
@@ -153,7 +200,7 @@ const AccountPage = () => {
           <h2 className="text-sm font-semibold">Favorite drinks</h2>
           {favorites.length === 0 ? (
             <p className="text-xs text-slate-400">
-              You don&apos;t have any favorites yet.
+              You don't have any favorites yet.
             </p>
           ) : (
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -173,19 +220,19 @@ const AccountPage = () => {
           )}
         </section>
 
-        {interactions.length > 0 && (
+        {userInteractions.length > 0 && (
           <section className="space-y-2">
             <h2 className="text-sm font-semibold">Recently Interacted Drinks</h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {interactions.slice(0, 6).map((interaction) => (
+              {userInteractions.slice(0, 6).map((interaction) => (
                 <Link
-                  key={interaction.drink_id}
-                  to={`/drink/${interaction.drink_id}`}
+                  key={interaction.drink.drink_id}
+                  to={`/drink/${interaction.drink.drink_id}`}
                   className="rounded-lg bg-slate-900 border border-slate-800 p-3 hover:border-purple-500/60 transition-all"
                 >
-                  <p className="text-sm font-medium">{interaction.drink_name}</p>
+                  <p className="text-sm font-medium">{interaction.drink.name}</p>
                   <p className="text-xs text-slate-400 line-clamp-2 mt-1">
-                    {interaction.drink_description}
+                    {interaction.drink.description}
                   </p>
                   <div className="flex gap-2 text-[10px] text-slate-500 mt-2">
                     <span>⭐ {interaction.rating || 'Not rated'}</span>
@@ -226,6 +273,34 @@ const AccountPage = () => {
           )}
         </section>
       </div>
+      
+      {/* Preference Form Modal */}
+      {showPrefForm && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+          <div className="bg-slate-900/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 w-full max-w-md shadow-2xl relative">
+            <button
+              onClick={() => setShowPrefForm(false)}
+              className="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors"
+            >
+              ✕
+            </button>
+            <h2 className="text-xl font-bold text-white mb-4">Update Preferences</h2>
+            <div className="max-h-[70vh] overflow-y-auto pr-2">
+              <PreferenceForm onCompleted={() => {
+                setShowPrefForm(false);
+                // Refresh preferences after update
+                axiosInstance.get("/preferences")
+                  .then(res => setPrefs(res.data))
+                  .catch(e => console.error("Failed to refresh preferences:", e));
+              }} />
+            </div>
+          </div>
+        </div>
+      )}
+      
+      {/* Verification Modal */}
+      <VerifyModal />
+      
     </div>
   );
 };

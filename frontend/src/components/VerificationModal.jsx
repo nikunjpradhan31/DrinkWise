@@ -27,22 +27,22 @@ const VerifyModal = (type) => {
 
     const handleSubmit = async () => {
         const intCode = parseInt(code, 10);
-        
+
         if (isNaN(intCode) || code.length !== 6) {
             setverifyError("Please enter a valid 6-digit code.");
             return;
         }
-        
+
         const newVerifyInfo = {
             ...verifyInfo,
             code: intCode
         };
-        
+
         setverifyInfo(newVerifyInfo);
-        
-        await VerifyLoginUser(newVerifyInfo);
-        
-        if (user){
+
+        const result = await VerifyLoginUser(newVerifyInfo);
+
+        if (result.success) {
             setverifyInfo({});
             setCode("");
             handleClose();

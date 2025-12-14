@@ -184,12 +184,12 @@ class AuthService(BaseService):
             await self.db.commit()
             await self.db.refresh(new_user)
             
-            # Send verification email
-            await self.email_service.send_verification_email(
-                email=registration_data.email,
-                user_id=new_user.user_id,
-                verification_type="email_verification"
-            )
+            # # Send verification email
+            # await self.email_service.send_verification_email(
+            #     email=registration_data.email,
+            #     user_id=new_user.user_id,
+            #     verification_type="email_verification"
+            # )
             
             # Create JWT tokens
             access_token = create_access_token({

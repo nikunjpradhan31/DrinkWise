@@ -619,6 +619,8 @@ class CatalogService(BaseService):
             result = await self.db.execute(query)
             drinks = result.scalars().all()
             
+            if not drinks:
+                return []
             similar_drinks = []
             for drink in drinks:
                 drink_model = await self._convert_drink_to_model(drink)

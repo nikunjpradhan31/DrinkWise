@@ -32,7 +32,7 @@ const InteractionBasedRecommendations = () => {
       } catch (err) {
         console.error("Error fetching interaction-based recommendations:", err);
         // If no favorites or similar drinks, that's okay - just show empty
-        if (err.response?.status !== 404) {
+        if (response?.status !== 404) {
           setError("Failed to load recommendations based on your interactions.");
         }
       } finally {

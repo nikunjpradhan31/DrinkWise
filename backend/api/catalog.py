@@ -257,10 +257,12 @@ async def get_user_similar_drinks(
     drink_ids = [drink.drink_id for drink in user_favorites ]
     similar_drinks = await catalog_service.user_favorite_to_similar_drinks(user_favorites,drink_ids, limit)
     if not similar_drinks:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=f"Drink with ids {drink_ids} not found"
-        )
+        return {
+        "similar_drinks": [
+        ],
+        "count": 0,
+        "recommendation_type": "user-content"
+    }
     
     return {
         "drink_ids": drink_ids,

@@ -15,7 +15,7 @@ from services.auth_service import AuthService
 from services.email_service import EmailService
 from pydantic_models import (
     UserRegistration, UserLogin, UserResponse, UserUpdate,
-    ForgotPassword, ForgotPasswordResponse, LogoutResponse,
+    ForgotPassword, ForgotPasswordResponse, LogoutResponse, VerifyEmail,
     ErrorResponse
 )
 
@@ -258,34 +258,24 @@ async def resend_verification_email(
     responses={400: {"model": ErrorResponse}}
 )
 async def verify_email(
-    email: str,
-    verification_code: str,
+    verify_data: VerifyEmail,
     auth_service: AuthService = Depends(get_auth_service)
 ):
     """
     Verify email address using verification code.
-    
+
     - **email**: User's email address
     - **verification_code**: Code from email
     """
-    
-    try:
-        email_obj = validate_email(email, check_deliverability=False)
-        email_obj = email_obj.normalized
-    except:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Invalid email format"
-        )
-    
-    success, error_message = await auth_service.verify_user_email(email_obj, verification_code)
-    
+
+    success, error_message = await auth_service.verify_user_email(verify_data.email, verify_data.verification_code)
+
     if not success:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail=error_message
         )
-    
+
     return {"message": "Email verified successfully"}
 
 # Check username availability

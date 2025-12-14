@@ -67,6 +67,39 @@ class UserDrinksService(BaseService):
             self.log_error("get_user_drink_interaction", e, {"user_id": user_id, "drink_id": drink_id})
             return None
 
+
+
+    async def get_user_drink_interactions(self, user_id: int) -> dict:
+        """
+        Get user's interaction with a specific drink.
+
+        Args:
+            user_id: ID of user
+            drink_id: ID of drink
+
+        Returns:
+            User drink interaction model or None
+        """
+        try:
+            stmt = (
+                select(UserDrinkInteraction).options(selectinload(UserDrinkInteraction.drink).selectinload(Drink.ingredients))
+                .where(UserDrinkInteraction.user_id == user_id)
+            )
+
+            result = await self.db.execute(stmt)
+            interactions = result.scalars().all()
+
+
+            if not interactions:
+                return None
+
+            return interactions
+
+        except Exception as e:
+            self.log_error("get_user_drink_interaction", e, {"user_id": user_id})
+            return None
+
+
     async def ensure_user_drink_interaction(self, user_id: int, drink_id: int) -> Optional[UserDrinkInteractionModel]:
         """
         Ensure user has an interaction with a specific drink (create default if none exist).

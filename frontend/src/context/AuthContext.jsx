@@ -15,6 +15,9 @@ export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [authLoading, setAuthLoading] = useState(false);
   const [authError, setAuthError] = useState(null);
+  const [showVerify, setshowVerify] = useState(false);
+  const [verifyError, setverifyError] = useState('');
+  const [verifyInfo, setverifyInfo] = useState({});
 
   // Load from localStorage on mount
     useEffect(() => {
@@ -132,6 +135,30 @@ const fetchMe = useCallback(async () => {
     delete axiosInstance.defaults.headers.common["Authorization"];
   }, []);
 
+  const VerifyLoginUser = useCallback(async (verifyData) => {
+    setAuthLoading(true);
+    setverifyError('');
+
+    try {
+      // Call the verify email endpoint
+      const response = await axiosInstance.post('/auth/verify-email', {
+        email: user.email,
+        verification_code: String(verifyData.code)
+      });
+
+      // Refresh user data to update verification status
+      await fetchMe();
+      
+      return { success: true };
+    } catch (error) {
+      console.error('Verification failed:', error);
+      setverifyError(error?.response?.data?.detail || error?.message || 'Verification failed');
+      return { success: false, error: error?.response?.data?.detail || error?.message || 'Verification failed' };
+    } finally {
+      setAuthLoading(false);
+    }
+  }, [user?.email, fetchMe]);
+
   const value = {
     user,
     authLoading,
@@ -141,6 +168,13 @@ const fetchMe = useCallback(async () => {
     fetchMe,
     updateMe,
     logoutUser,
+    VerifyLoginUser,
+    showVerify,
+    setshowVerify,
+    verifyError,
+    verifyInfo,
+    setverifyInfo,
+    setverifyError,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

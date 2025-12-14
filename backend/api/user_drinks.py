@@ -65,6 +65,22 @@ async def get_user_drink_statistics(
     return stats
 
 
+@router.get("/all",    responses={404: {"model": ErrorResponse}, 401: {"model": ErrorResponse}}
+)
+async def get_all_drinks(
+    current_user: Users = Depends(get_current_user),
+    user_drinks_service: UserDrinksService = Depends(get_user_drinks_service)
+):
+    """
+    Get all drinks for the current user.
+    """
+    drinks = await user_drinks_service.get_user_drink_interactions(current_user.user_id)
+    if not drinks:
+        return []
+
+    return drinks
+
+
 # GET /user-drinks/{drink_id} - Gets the user interaction info about the drink
 @router.get(
     "/{drink_id}",
@@ -126,6 +142,8 @@ async def update_user_drink_interaction(
         )
     
     return interaction
+
+
 
 
 # # POST /user-drinks/{drink_id}/favorite - Add/remove from favorites
