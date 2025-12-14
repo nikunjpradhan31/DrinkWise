@@ -40,9 +40,14 @@ async def test_search_drinks(catalog_service, mock_db):
     mock_drink2.is_alcoholic = False
     mock_drink2.ingredients = []
 
-    # Mock database responses
-    mock_db.execute.return_value.scalar.return_value = 2  # Total count
-    mock_db.execute.return_value.scalars.return_value = [mock_drink1, mock_drink2]
+    # Mock database responses for count query and search query
+    mock_count_result = MagicMock()
+    mock_count_result.scalar.return_value = 2
+
+    mock_search_result = MagicMock()
+    mock_search_result.scalars.return_value = [mock_drink1, mock_drink2]
+
+    mock_db.execute.side_effect = [mock_count_result, mock_search_result]
 
     search_params = DrinkSearchParams(
         search_text="",
@@ -146,12 +151,27 @@ async def test_get_alcoholic_drinks(catalog_service, mock_db):
 async def test_get_drink_statistics(catalog_service, mock_db):
     """Test getting drink statistics."""
     # Mock statistics data
+    mock_total_result = MagicMock()
+    mock_total_result.scalar.return_value = 10
+
+    mock_category_result = MagicMock()
+    mock_category_result.all.return_value = [("Coffee", 5), ("Tea", 3), ("Smoothie", 2)]
+
+    mock_price_result = MagicMock()
+    mock_price_result.all.return_value = [(PriceTier.LOW, 2), (PriceTier.MEDIUM, 5), (PriceTier.HIGH, 3)]
+
+    mock_alcohol_result = MagicMock()
+    mock_alcohol_result.first.return_value = (3,)
+
+    mock_nutrition_result = MagicMock()
+    mock_nutrition_result.first.return_value = (5.0, 100.0, 10.0, 50.0)
+
     mock_db.execute.side_effect = [
-        MagicMock(scalar=10),  # Total drinks
-        MagicMock(all=[("Coffee", 5), ("Tea", 3), ("Smoothie", 2)]),  # Categories
-        MagicMock(all=[(PriceTier.LOW, 2), (PriceTier.MEDIUM, 5), (PriceTier.HIGH, 3)]),  # Price tiers
-        MagicMock(first=(3,)),  # Alcoholic count
-        MagicMock(first=(5.0, 100.0, 10.0, 50.0))  # Nutrition stats
+        mock_total_result,  # Total drinks
+        mock_category_result,  # Categories
+        mock_price_result,  # Price tiers
+        mock_alcohol_result,  # Alcoholic count
+        mock_nutrition_result  # Nutrition stats
     ]
 
     stats = await catalog_service.get_drink_statistics()
@@ -245,7 +265,7 @@ async def test_get_drinks_by_ingredients(catalog_service, mock_db):
 async def test_search_similar_drinks(catalog_service, mock_db):
     """Test searching for similar drinks."""
     # Mock reference drink
-    mock_ref_drink = MagicMock()
+    mock_ref_drink = MagicMock(spec=Drink)
     mock_ref_drink.drink_id = 1
     mock_ref_drink.name = "Coffee"
     mock_ref_drink.category = "Coffee"
@@ -253,6 +273,7 @@ async def test_search_similar_drinks(catalog_service, mock_db):
     mock_ref_drink.sweetness_level = 5
     mock_ref_drink.caffeine_content = 100
     mock_ref_drink.is_alcoholic = False
+    mock_ref_drink.ingredients = []
 
     # Mock similar drink
     mock_similar_drink = MagicMock(spec=Drink)
@@ -265,9 +286,16 @@ async def test_search_similar_drinks(catalog_service, mock_db):
     mock_similar_drink.is_alcoholic = False
     mock_similar_drink.ingredients = []
 
+    # Mock results
+    mock_ref_result = MagicMock()
+    mock_ref_result.scalar_one_or_none.return_value = mock_ref_drink
+
+    mock_search_result = MagicMock()
+    mock_search_result.scalars.return_value = [mock_similar_drink]
+
     mock_db.execute.side_effect = [
-        mock_ref_drink,  # get_drink_by_id
-        MagicMock(scalars=MagicMock(return_value=[mock_similar_drink]))  # search query
+        mock_ref_result,  # get_drink_by_id
+        mock_search_result  # search query
     ]
 
     similar_drinks = await catalog_service.search_similar_drinks(1, limit=5)

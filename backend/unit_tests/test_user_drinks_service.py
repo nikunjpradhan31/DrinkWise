@@ -41,9 +41,6 @@ async def test_get_user_drink_interaction(user_drinks_service, mock_db):
 @pytest.mark.asyncio
 async def test_ensure_user_drink_interaction_new(user_drinks_service, mock_db):
     """Test ensuring user drink interaction when none exists."""
-    # No existing interaction
-    mock_db.execute.return_value.scalar_one_or_none.return_value = None
-
     # Mock drink
     mock_drink = MagicMock(spec=Drink)
     mock_drink.drink_id = 1
@@ -60,11 +57,18 @@ async def test_ensure_user_drink_interaction_new(user_drinks_service, mock_db):
     mock_new_interaction.viewed_at = datetime.now()
     mock_new_interaction.last_consumed_at = None
 
+    # Mock results
+    mock_drink_result = MagicMock()
+    mock_drink_result.scalar_one_or_none.return_value = mock_drink
+
+    mock_interaction_result = MagicMock()
+    mock_interaction_result.scalar_one_or_none.return_value = None
+
     mock_db.execute.side_effect = [
-        mock_drink,  # get drink
-        None,  # get interaction
-        mock_new_interaction  # refresh
+        mock_drink_result,  # get drink
+        mock_interaction_result,  # get interaction
     ]
+    mock_db.refresh.return_value = mock_new_interaction
 
     interaction = await user_drinks_service.ensure_user_drink_interaction(1, 1)
 
@@ -97,9 +101,6 @@ async def test_ensure_user_drink_interaction_existing(user_drinks_service, mock_
 @pytest.mark.asyncio
 async def test_update_user_drink_interaction_new(user_drinks_service, mock_db):
     """Test updating user drink interaction when creating new one."""
-    # No existing interaction
-    mock_db.execute.return_value.scalar_one_or_none.return_value = None
-
     # Mock drink
     mock_drink = MagicMock(spec=Drink)
     mock_drink.drink_id = 1
@@ -127,12 +128,22 @@ async def test_update_user_drink_interaction_new(user_drinks_service, mock_db):
     mock_updated_interaction.viewed_at = datetime.now()
     mock_updated_interaction.last_consumed_at = datetime.now()
 
+    # Mock results
+    mock_drink_result = MagicMock()
+    mock_drink_result.scalar_one_or_none.return_value = mock_drink
+
+    mock_interaction_result = MagicMock()
+    mock_interaction_result.scalar_one_or_none.return_value = None
+
+    mock_updated_result = MagicMock()
+    mock_updated_result.scalar_one_or_none.return_value = mock_updated_interaction
+
     mock_db.execute.side_effect = [
-        mock_drink,  # get drink
-        None,  # get interaction
-        mock_new_interaction,  # refresh new interaction
-        mock_updated_interaction  # get interaction again
+        mock_drink_result,  # get drink
+        mock_interaction_result,  # get interaction
+        mock_updated_result  # get interaction again
     ]
+    mock_db.refresh.return_value = mock_new_interaction
 
     update_data = UserDrinkInteractionUpdate(
         times_consumed=5,

@@ -18,7 +18,8 @@ def preference_service(mock_db):
 @pytest.mark.asyncio
 async def test_get_user_preferences(preference_service, mock_db):
     """Test getting user preferences."""
-    # Mock preferences
+
+    # Mock the database result object
     mock_preferences = MagicMock(spec=UserPreference)
     mock_preferences.user_id = 1
     mock_preferences.sweetness_preference = 5
@@ -29,18 +30,26 @@ async def test_get_user_preferences(preference_service, mock_db):
     mock_preferences.created_at = datetime.now()
     mock_preferences.updated_at = datetime.now()
 
-    mock_db.execute.return_value.scalar_one_or_none.return_value = mock_preferences
+    # Mock the DB execute
+    mock_result = MagicMock()
+    mock_result.scalar_one_or_none.return_value = mock_preferences
+    mock_db.execute.return_value = mock_result
 
     preferences = await preference_service.get_user_preferences(1)
 
     assert preferences is not None
+    assert preferences.user_id == 1
     assert preferences.sweetness_preference == 5
     assert preferences.caffeine_limit == 400
+
 
 @pytest.mark.asyncio
 async def test_create_user_preferences(preference_service, mock_db):
     """Test creating user preferences."""
     # No existing preferences
+    from datetime import datetime
+    now = datetime.now()
+
     mock_db.execute.return_value.scalar_one_or_none.return_value = None
 
     # Mock new preferences
@@ -51,10 +60,12 @@ async def test_create_user_preferences(preference_service, mock_db):
     mock_new_preferences.caffeine_limit = 400
     mock_new_preferences.calorie_limit = 2000
     mock_new_preferences.preferred_price_tier = "$$"
-    mock_new_preferences.created_at = datetime.now()
-    mock_new_preferences.updated_at = datetime.now()
-
-    mock_db.refresh.return_value = mock_new_preferences
+    mock_new_preferences.created_at = now
+    mock_new_preferences.updated_at = now
+    
+    mock_result = MagicMock()
+    mock_result.scalar_one_or_none.return_value = mock_new_preferences
+    mock_result.refresh.return_value = mock_new_preferences
 
     update_data = UserPreferenceUpdate(
         sweetness_preference=5,
@@ -96,10 +107,20 @@ async def test_update_user_preferences(preference_service, mock_db):
     mock_updated_preferences.created_at = datetime.now()
     mock_updated_preferences.updated_at = datetime.now()
 
+    # Mock results
+    mock_get_existing_result = MagicMock()
+    mock_get_existing_result.scalar_one_or_none.return_value = mock_existing_preferences
+
+    mock_update_result = MagicMock()
+    mock_update_result.rowcount = 1
+
+    mock_get_updated_result = MagicMock()
+    mock_get_updated_result.scalar_one_or_none.return_value = mock_updated_preferences
+
     mock_db.execute.side_effect = [
-        mock_existing_preferences,  # get_user_preferences
-        None,  # update
-        mock_updated_preferences  # get_user_preferences again
+        mock_get_existing_result,  # get_user_preferences
+        mock_update_result,  # update
+        mock_get_updated_result  # get_user_preferences again
     ]
 
     update_data = UserPreferenceUpdate(
@@ -288,10 +309,20 @@ async def test_import_user_preferences(preference_service, mock_db):
     mock_updated_preferences.created_at = datetime.now()
     mock_updated_preferences.updated_at = datetime.now()
 
+    # Mock results
+    mock_get_existing_result = MagicMock()
+    mock_get_existing_result.scalar_one_or_none.return_value = mock_existing_preferences
+
+    mock_update_result = MagicMock()
+    mock_update_result.rowcount = 1
+
+    mock_get_updated_result = MagicMock()
+    mock_get_updated_result.scalar_one_or_none.return_value = mock_updated_preferences
+
     mock_db.execute.side_effect = [
-        mock_existing_preferences,  # get_user_preferences
-        None,  # update
-        mock_updated_preferences  # get_user_preferences again
+        mock_get_existing_result,  # get_user_preferences
+        mock_update_result,  # update
+        mock_get_updated_result  # get_user_preferences again
     ]
 
     import_data = {
